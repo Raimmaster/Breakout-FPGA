@@ -15,6 +15,7 @@ module Main(
     );
 	//VGA section
 	wire vga_clk;
+	wire clk_paddle;
 	wire [2:0] rgb;
 	wire hs;
 	wire vs;
@@ -22,15 +23,23 @@ module Main(
 	wire [9:0] hcount; 
 	wire [9:0] vcount;
 	
+	wire [9:0] paddle_pos;
+	
+	
 	// synthesis attribute CLKFX_DIVIDE of vga_clock_dcm is 4
 	// synthesis attribute CLKFX_MULTIPLY of vga_clock_dcm is 2
 	DCM vga_clock_dcm (.CLKIN(clk50mhz),.CLKFX(vga_clk));
 	
+	clk_divider #(.limit(32'h2625A0)) clk_paddle_p (
+			.clk(clk50mhz),
+			.clk_d(clk_paddle)
+	);
+	Paddle pd(sol_nota, do_nota, re_nota, clk_paddle, paddle_pos);
 	
 	wire [2:0] data;
 	
 	
-	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data);
+	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos);
 	
 	reg [13:0] address_vga;
 	
@@ -66,25 +75,25 @@ module Main(
 	wire clk_out_mi;
 	wire clk_out_sol;
 	//do
-	clk_divider #(.limit(12'hBAA)) clk_do (
+	clk_divider #(.limit(32'hBAA)) clk_do (
 			.clk(clk50mhz),
 			.clk_d(clk_out_do)
 	);
 	
 	//re
-	clk_divider #(.limit(12'hA64)) clk_re (
+	clk_divider #(.limit(32'hA64)) clk_re (
 			.clk(clk50mhz),
 			.clk_d(clk_out_re)
 	);
 	
 	//mi
-	clk_divider #(.limit(12'h941)) clk_mi (
+	clk_divider #(.limit(32'h941)) clk_mi (
 			.clk(clk50mhz),
 			.clk_d(clk_out_mi)
 	);
 	
 	//sol
-	clk_divider #(.limit(12'h7C9)) clk_sol (
+	clk_divider #(.limit(32'h7C9)) clk_sol (
 			.clk(clk50mhz),
 			.clk_d(clk_out_sol)
 	);

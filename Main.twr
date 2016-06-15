@@ -44,11 +44,9 @@ Clock clk50mhz to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-RGB<0>      |    9.238(R)|vga_clk           |   0.000|
-RGB<1>      |    8.663(R)|vga_clk           |   0.000|
-RGB<2>      |    9.435(R)|vga_clk           |   0.000|
-hsync       |    7.741(R)|vga_clk           |   0.000|
-vsync       |    7.741(R)|vga_clk           |   0.000|
+RGB<2>      |    8.711(R)|vga_clk           |   0.000|
+hsync       |    8.238(R)|vga_clk           |   0.000|
+vsync       |    9.974(R)|vga_clk           |   0.000|
 ------------+------------+------------------+--------+
 
 Clock do_nota to Pad
@@ -56,10 +54,10 @@ Clock do_nota to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-tono<0>     |    9.707(R)|temp              |   0.000|
-tono<1>     |    9.963(R)|temp              |   0.000|
-tono<2>     |    9.791(R)|temp              |   0.000|
-tono<3>     |    8.277(R)|temp              |   0.000|
+tono<0>     |   10.030(R)|temp              |   0.000|
+tono<1>     |   10.015(R)|temp              |   0.000|
+tono<2>     |   10.377(R)|temp              |   0.000|
+tono<3>     |    9.111(R)|temp              |   0.000|
 ------------+------------+------------------+--------+
 
 Clock mi_nota to Pad
@@ -67,10 +65,10 @@ Clock mi_nota to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-tono<0>     |   10.937(R)|temp              |   0.000|
-tono<1>     |   11.193(R)|temp              |   0.000|
-tono<2>     |   11.021(R)|temp              |   0.000|
-tono<3>     |    9.507(R)|temp              |   0.000|
+tono<0>     |   10.853(R)|temp              |   0.000|
+tono<1>     |   10.838(R)|temp              |   0.000|
+tono<2>     |   11.200(R)|temp              |   0.000|
+tono<3>     |    9.934(R)|temp              |   0.000|
 ------------+------------+------------------+--------+
 
 Clock re_nota to Pad
@@ -78,10 +76,10 @@ Clock re_nota to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-tono<0>     |   10.705(R)|temp              |   0.000|
-tono<1>     |   10.961(R)|temp              |   0.000|
-tono<2>     |   10.789(R)|temp              |   0.000|
-tono<3>     |    9.275(R)|temp              |   0.000|
+tono<0>     |   10.563(R)|temp              |   0.000|
+tono<1>     |   10.548(R)|temp              |   0.000|
+tono<2>     |   10.910(R)|temp              |   0.000|
+tono<3>     |    9.644(R)|temp              |   0.000|
 ------------+------------+------------------+--------+
 
 Clock sol_nota to Pad
@@ -89,10 +87,10 @@ Clock sol_nota to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-tono<0>     |   11.128(R)|temp              |   0.000|
-tono<1>     |   11.384(R)|temp              |   0.000|
-tono<2>     |   11.212(R)|temp              |   0.000|
-tono<3>     |    9.698(R)|temp              |   0.000|
+tono<0>     |   11.087(R)|temp              |   0.000|
+tono<1>     |   11.072(R)|temp              |   0.000|
+tono<2>     |   11.434(R)|temp              |   0.000|
+tono<3>     |   10.168(R)|temp              |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50mhz
@@ -100,7 +98,7 @@ Clock to Setup on destination clock clk50mhz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50mhz       |   11.013|         |         |         |
+clk50mhz       |    7.945|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock do_nota
@@ -108,10 +106,10 @@ Clock to Setup on destination clock do_nota
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-do_nota        |    2.477|         |         |         |
-mi_nota        |    2.477|         |         |         |
-re_nota        |    2.477|         |         |         |
-sol_nota       |    2.477|         |         |         |
+do_nota        |    3.039|         |         |         |
+mi_nota        |    3.039|         |         |         |
+re_nota        |    3.039|         |         |         |
+sol_nota       |    3.039|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mi_nota
@@ -119,10 +117,10 @@ Clock to Setup on destination clock mi_nota
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-do_nota        |    2.477|         |         |         |
-mi_nota        |    2.477|         |         |         |
-re_nota        |    2.477|         |         |         |
-sol_nota       |    2.477|         |         |         |
+do_nota        |    3.039|         |         |         |
+mi_nota        |    3.039|         |         |         |
+re_nota        |    3.039|         |         |         |
+sol_nota       |    3.039|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock re_nota
@@ -130,10 +128,10 @@ Clock to Setup on destination clock re_nota
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-do_nota        |    2.477|         |         |         |
-mi_nota        |    2.477|         |         |         |
-re_nota        |    2.477|         |         |         |
-sol_nota       |    2.477|         |         |         |
+do_nota        |    3.039|         |         |         |
+mi_nota        |    3.039|         |         |         |
+re_nota        |    3.039|         |         |         |
+sol_nota       |    3.039|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock sol_nota
@@ -141,21 +139,21 @@ Clock to Setup on destination clock sol_nota
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-do_nota        |    2.477|         |         |         |
-mi_nota        |    2.477|         |         |         |
-re_nota        |    2.477|         |         |         |
-sol_nota       |    2.477|         |         |         |
+do_nota        |    3.039|         |         |         |
+mi_nota        |    3.039|         |         |         |
+re_nota        |    3.039|         |         |         |
+sol_nota       |    3.039|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Wed Jun 15 10:28:04 2016 
+Analysis completed Wed Jun 15 14:03:52 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 125 MB
+Peak Memory Usage: 122 MB
 
 
 
