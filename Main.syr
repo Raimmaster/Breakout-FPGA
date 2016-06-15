@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: Main.prj
 
@@ -104,11 +104,13 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "VGA.v" in library work
+Compiling verilog file "sine_wave_rom_do.v" in library work
 Compiling verilog file "debian_rom.v" in library work
-Module <VGA> compiled
-Compiling verilog file "Main.v" in library work
+Module <sinewave_rom_do> compiled
+Compiling verilog file "clk_divider.v" in library work
 Module <debian_rom> compiled
+Compiling verilog file "Main.v" in library work
+Module <clk_divider> compiled
 Module <Main> compiled
 No errors in compilation
 Analysis of file <"Main.prj"> succeeded.
@@ -123,14 +125,30 @@ Analyzing hierarchy for module <VGA> in library <work>.
 
 Analyzing hierarchy for module <debian_rom> in library <work>.
 
-WARNING:Xst:2591 - "Main.v" line 20: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "Main.v" line 20: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+Analyzing hierarchy for module <clk_divider> in library <work> with parameters.
+	limit = "101110101010"
+
+Analyzing hierarchy for module <clk_divider> in library <work> with parameters.
+	limit = "101001100100"
+
+Analyzing hierarchy for module <clk_divider> in library <work> with parameters.
+	limit = "100101000001"
+
+Analyzing hierarchy for module <clk_divider> in library <work> with parameters.
+	limit = "011111001001"
+
+Analyzing hierarchy for module <sinewave_rom_do> in library <work>.
+
+WARNING:Xst:2591 - "Main.v" line 27: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "Main.v" line 27: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <Main>.
 WARNING:Xst:863 - "Main.v" line 5: Name conflict (<rgb> and <RGB>, renaming rgb as rgb_rnm0).
+WARNING:Xst:905 - "Main.v" line 107: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <clk_out_do>, <clk_out_re>, <clk_out_mi>, <clk_out_sol>
 Module <Main> is correct for synthesis.
  
     Set user-defined property "CLKDV_DIVIDE =  2.000000" for instance <vga_clock_dcm> in unit <Main>.
@@ -157,6 +175,25 @@ INFO:Xst:2546 - "debian_rom.v" line 14: reading initialization file "imagen.mif"
 WARNING:Xst:905 - "debian_rom.v" line 10: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <rom_content>
 Module <debian_rom> is correct for synthesis.
+ 
+Analyzing module <clk_divider.1> in library <work>.
+	limit = 12'b101110101010
+Module <clk_divider.1> is correct for synthesis.
+ 
+Analyzing module <clk_divider.2> in library <work>.
+	limit = 12'b101001100100
+Module <clk_divider.2> is correct for synthesis.
+ 
+Analyzing module <clk_divider.3> in library <work>.
+	limit = 12'b100101000001
+Module <clk_divider.3> is correct for synthesis.
+ 
+Analyzing module <clk_divider.4> in library <work>.
+	limit = 12'b011111001001
+Module <clk_divider.4> is correct for synthesis.
+ 
+Analyzing module <sinewave_rom_do> in library <work>.
+Module <sinewave_rom_do> is correct for synthesis.
  
 
 =========================================================================
@@ -205,13 +242,71 @@ WARNING:Xst:1781 - Signal <rom_content> is used but never assigned. Tied to defa
 Unit <debian_rom> synthesized.
 
 
-Synthesizing Unit <Main>.
-    Related source file is "Main.v".
-    Found 14-bit up counter for signal <address>.
-    Found 10-bit comparator less for signal <address$cmp_lt0000> created at line 35.
-    Found 10-bit comparator less for signal <address$cmp_lt0001> created at line 34.
+Synthesizing Unit <clk_divider_1>.
+    Related source file is "clk_divider.v".
+    Found 1-bit register for signal <clk_buf>.
+    Found 22-bit up counter for signal <counter>.
+    Found 22-bit adder for signal <old_counter_3$add0000> created at line 14.
     Summary:
 	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <clk_divider_1> synthesized.
+
+
+Synthesizing Unit <clk_divider_2>.
+    Related source file is "clk_divider.v".
+    Found 1-bit register for signal <clk_buf>.
+    Found 22-bit up counter for signal <counter>.
+    Found 22-bit adder for signal <old_counter_4$add0000> created at line 14.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <clk_divider_2> synthesized.
+
+
+Synthesizing Unit <clk_divider_3>.
+    Related source file is "clk_divider.v".
+    Found 1-bit register for signal <clk_buf>.
+    Found 22-bit up counter for signal <counter>.
+    Found 22-bit adder for signal <old_counter_5$add0000> created at line 14.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <clk_divider_3> synthesized.
+
+
+Synthesizing Unit <clk_divider_4>.
+    Related source file is "clk_divider.v".
+    Found 1-bit register for signal <clk_buf>.
+    Found 22-bit up counter for signal <counter>.
+    Found 22-bit adder for signal <old_counter_6$add0000> created at line 14.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <clk_divider_4> synthesized.
+
+
+Synthesizing Unit <sinewave_rom_do>.
+    Related source file is "sine_wave_rom_do.v".
+    Found 32x4-bit ROM for signal <data>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <sinewave_rom_do> synthesized.
+
+
+Synthesizing Unit <Main>.
+    Related source file is "Main.v".
+WARNING:Xst:647 - Input <clk_audio> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 5-bit up counter for signal <address_audio>.
+    Found 14-bit up counter for signal <address_vga>.
+    Found 10-bit comparator less for signal <address_vga$cmp_lt0000> created at line 42.
+    Found 10-bit comparator less for signal <address_vga$cmp_lt0001> created at line 41.
+    Summary:
+	inferred   2 Counter(s).
 	inferred   2 Comparator(s).
 Unit <Main> synthesized.
 
@@ -220,14 +315,18 @@ Unit <Main> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
+# ROMs                                                 : 2
  16384x3-bit ROM                                       : 1
-# Adders/Subtractors                                   : 2
+ 32x4-bit ROM                                          : 1
+# Adders/Subtractors                                   : 6
  10-bit adder                                          : 2
-# Counters                                             : 1
+ 22-bit adder                                          : 4
+# Counters                                             : 6
  14-bit up counter                                     : 1
-# Registers                                            : 7
- 1-bit register                                        : 5
+ 22-bit up counter                                     : 4
+ 5-bit up counter                                      : 1
+# Registers                                            : 11
+ 1-bit register                                        : 9
  10-bit register                                       : 2
 # Comparators                                          : 17
  10-bit comparator greatequal                          : 2
@@ -244,14 +343,18 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
+# ROMs                                                 : 2
  16384x3-bit ROM                                       : 1
-# Adders/Subtractors                                   : 2
+ 32x4-bit ROM                                          : 1
+# Adders/Subtractors                                   : 6
  10-bit adder                                          : 2
-# Counters                                             : 1
+ 22-bit adder                                          : 4
+# Counters                                             : 6
  14-bit up counter                                     : 1
-# Registers                                            : 25
- Flip-Flops                                            : 25
+ 22-bit up counter                                     : 4
+ 5-bit up counter                                      : 1
+# Registers                                            : 29
+ Flip-Flops                                            : 29
 # Comparators                                          : 17
  10-bit comparator greatequal                          : 2
  10-bit comparator less                                : 15
@@ -269,9 +372,7 @@ Optimizing unit <VGA> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 15.
-FlipFlop address_1 has been replicated 1 time(s)
-FlipFlop address_2 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 17.
 
 Final Macro Processing ...
 
@@ -279,8 +380,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 41
- Flip-Flops                                            : 41
+# Registers                                            : 136
+ Flip-Flops                                            : 136
 
 =========================================================================
 
@@ -306,38 +407,40 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 6
+# IOs                              : 15
 
 Cell Usage :
-# BELS                             : 1594
+# BELS                             : 2150
 #      GND                         : 1
-#      INV                         : 3
-#      LUT1                        : 31
-#      LUT2                        : 62
-#      LUT2_D                      : 11
-#      LUT2_L                      : 6
-#      LUT3                        : 306
-#      LUT3_D                      : 10
-#      LUT3_L                      : 14
-#      LUT4                        : 631
+#      INV                         : 16
+#      LUT1                        : 199
+#      LUT2                        : 65
+#      LUT2_D                      : 16
+#      LUT2_L                      : 8
+#      LUT3                        : 296
+#      LUT3_D                      : 13
+#      LUT3_L                      : 10
+#      LUT4                        : 641
 #      LUT4_D                      : 47
-#      LUT4_L                      : 55
-#      MUXCY                       : 31
-#      MUXF5                       : 276
-#      MUXF6                       : 62
+#      LUT4_L                      : 50
+#      MUXCY                       : 223
+#      MUXF5                       : 275
+#      MUXF6                       : 66
 #      MUXF7                       : 10
 #      MUXF8                       : 3
 #      VCC                         : 1
-#      XORCY                       : 34
-# FlipFlops/Latches                : 41
-#      FD                          : 10
-#      FDR                         : 15
-#      FDRE                        : 16
-# Clock Buffers                    : 1
-#      BUFG                        : 1
-# IO Buffers                       : 6
+#      XORCY                       : 210
+# FlipFlops/Latches                : 136
+#      FD                          : 14
+#      FDE                         : 4
+#      FDR                         : 104
+#      FDRE                        : 14
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 14
+#      IBUF                        : 4
 #      IBUFG                       : 1
-#      OBUF                        : 5
+#      OBUF                        : 9
 # DCMs                             : 1
 #      DCM_SP                      : 1
 =========================================================================
@@ -347,12 +450,12 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                      621  out of   4656    13%  
- Number of Slice Flip Flops:             41  out of   9312     0%  
- Number of 4 input LUTs:               1176  out of   9312    12%  
- Number of IOs:                           6
- Number of bonded IOBs:                   6  out of    190     3%  
- Number of GCLKs:                         1  out of     24     4%  
+ Number of Slices:                      712  out of   4656    15%  
+ Number of Slice Flip Flops:            136  out of   9312     1%  
+ Number of 4 input LUTs:               1361  out of   9312    14%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  14  out of    190     7%  
+ Number of GCLKs:                         2  out of     24     8%  
  Number of DCMs:                          1  out of      4    25%  
 
 ---------------------------
@@ -373,11 +476,17 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk50mhz                           | vga_clock_dcm:CLKFX    | 41    |
------------------------------------+------------------------+-------+
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+clk50mhz                           | IBUFG+BUFG              | 92    |
+temp(temp46:O)                     | NONE(*)(address_audio_1)| 5     |
+clk50mhz                           | vga_clock_dcm:CLKFX     | 39    |
+-----------------------------------+-------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -387,9 +496,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.454ns (Maximum Frequency: 183.353MHz)
+   Minimum period: 7.267ns (Maximum Frequency: 137.615MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 4.040ns
+   Maximum output required time after clock: 5.899ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -398,36 +507,70 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50mhz'
-  Clock period: 5.454ns (frequency: 183.353MHz)
-  Total number of paths / destination ports: 8744 / 86
+  Clock period: 7.267ns (frequency: 137.615MHz)
+  Total number of paths / destination ports: 31956 / 264
 -------------------------------------------------------------------------
-Delay:               10.908ns (Levels of Logic = 12)
-  Source:            address_3 (FF)
-  Destination:       vga/RGB_2 (FF)
-  Source Clock:      clk50mhz rising 0.5X
-  Destination Clock: clk50mhz rising 0.5X
+Delay:               7.267ns (Levels of Logic = 23)
+  Source:            clk_do/counter_1 (FF)
+  Destination:       clk_do/counter_0 (FF)
+  Source Clock:      clk50mhz rising
+  Destination Clock: clk50mhz rising
 
-  Data Path: address_3 to vga/RGB_2
+  Data Path: clk_do/counter_1 to clk_do/counter_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q           420   0.514   1.246  address_3 (address_3)
-     LUT3:I1->O            1   0.612   0.426  d_rom/Mrom_data1951_27_SW0 (N462)
-     LUT3:I1->O            2   0.612   0.449  d_rom/Mrom_data1951_27 (d_rom/Mrom_data1951_27)
-     LUT3:I1->O            1   0.612   0.000  address<7>4_SW0_F (N679)
-     MUXF5:I0->O           1   0.278   0.387  address<7>4_SW0 (N222)
-     LUT3:I2->O            1   0.612   0.387  address<7>4 (address<7>5)
-     LUT3:I2->O            1   0.612   0.000  d_rom/Mrom_data1951_13_f5_4_G (N688)
-     MUXF5:I1->O           2   0.278   0.410  d_rom/Mrom_data1951_13_f5_4 (d_rom/Mrom_data1951_13_f55)
-     LUT3:I2->O            1   0.612   0.000  d_rom/Mrom_data1951_10_f5_SW0_F (N719)
-     MUXF5:I0->O           1   0.278   0.426  d_rom/Mrom_data1951_10_f5_SW0 (N312)
-     LUT3:I1->O            1   0.612   0.000  d_rom/Mrom_data1951_4_f5_F (N729)
-     MUXF5:I0->O           1   0.278   0.387  d_rom/Mrom_data1951_4_f5 (d_rom/Mrom_data1951_4_f5)
-     LUT3:I2->O            1   0.612   0.000  vga/RGB_2_mux0000 (vga/RGB_2_mux0000)
-     FDR:D                     0.268          vga/RGB_2
+     FDR:C->Q              2   0.514   0.532  clk_do/counter_1 (clk_do/counter_1)
+     LUT1:I0->O            1   0.612   0.000  clk_do/Madd_old_counter_3_add0000_cy<1>_rt (clk_do/Madd_old_counter_3_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  clk_do/Madd_old_counter_3_add0000_cy<1> (clk_do/Madd_old_counter_3_add0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<2> (clk_do/Madd_old_counter_3_add0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<3> (clk_do/Madd_old_counter_3_add0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<4> (clk_do/Madd_old_counter_3_add0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<5> (clk_do/Madd_old_counter_3_add0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<6> (clk_do/Madd_old_counter_3_add0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<7> (clk_do/Madd_old_counter_3_add0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<8> (clk_do/Madd_old_counter_3_add0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<9> (clk_do/Madd_old_counter_3_add0000_cy<9>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<10> (clk_do/Madd_old_counter_3_add0000_cy<10>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<11> (clk_do/Madd_old_counter_3_add0000_cy<11>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<12> (clk_do/Madd_old_counter_3_add0000_cy<12>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<13> (clk_do/Madd_old_counter_3_add0000_cy<13>)
+     MUXCY:CI->O           1   0.051   0.000  clk_do/Madd_old_counter_3_add0000_cy<14> (clk_do/Madd_old_counter_3_add0000_cy<14>)
+     XORCY:CI->O           1   0.699   0.509  clk_do/Madd_old_counter_3_add0000_xor<15> (clk_do/old_counter_3_add0000<15>)
+     LUT2:I0->O            1   0.612   0.000  clk_do/clk_buf_cmp_eq00001_wg_lut<0> (clk_do/clk_buf_cmp_eq00001_wg_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  clk_do/clk_buf_cmp_eq00001_wg_cy<0> (clk_do/clk_buf_cmp_eq00001_wg_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  clk_do/clk_buf_cmp_eq00001_wg_cy<1> (clk_do/clk_buf_cmp_eq00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  clk_do/clk_buf_cmp_eq00001_wg_cy<2> (clk_do/clk_buf_cmp_eq00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  clk_do/clk_buf_cmp_eq00001_wg_cy<3> (clk_do/clk_buf_cmp_eq00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  clk_do/clk_buf_cmp_eq00001_wg_cy<4> (clk_do/clk_buf_cmp_eq00001_wg_cy<4>)
+     MUXCY:CI->O          23   0.289   1.022  clk_do/clk_buf_cmp_eq00001_wg_cy<5> (clk_do/clk_buf_cmp_eq0000)
+     FDR:R                     0.795          clk_do/counter_0
     ----------------------------------------
-    Total                     10.908ns (6.790ns logic, 4.118ns route)
-                                       (62.2% logic, 37.8% route)
+    Total                      7.267ns (5.204ns logic, 2.063ns route)
+                                       (71.6% logic, 28.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'temp'
+  Clock period: 2.641ns (frequency: 378.666MHz)
+  Total number of paths / destination ports: 19 / 5
+-------------------------------------------------------------------------
+Delay:               2.641ns (Levels of Logic = 2)
+  Source:            address_audio_0 (FF)
+  Destination:       address_audio_4 (FF)
+  Source Clock:      temp rising
+  Destination Clock: temp rising
+
+  Data Path: address_audio_0 to address_audio_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.514   0.969  address_audio_0 (address_audio_0)
+     LUT4:I0->O            1   0.612   0.000  Mcount_address_audio_xor<4>111 (Mcount_address_audio_xor<4>11)
+     MUXF5:I1->O           1   0.278   0.000  Mcount_address_audio_xor<4>11_f5 (Result<4>)
+     FD:D                      0.268          address_audio_4
+    ----------------------------------------
+    Total                      2.641ns (1.672ns logic, 0.969ns route)
+                                       (63.3% logic, 36.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
@@ -449,16 +592,37 @@ Offset:              4.040ns (Levels of Logic = 1)
                                        (91.2% logic, 8.8% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'temp'
+  Total number of paths / destination ports: 28 / 4
+-------------------------------------------------------------------------
+Offset:              5.899ns (Levels of Logic = 3)
+  Source:            address_audio_0 (FF)
+  Destination:       tono<0> (PAD)
+  Source Clock:      temp rising
+
+  Data Path: address_audio_0 to tono<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.514   0.969  address_audio_0 (address_audio_0)
+     LUT4:I0->O            1   0.612   0.000  rom_tono/Mrom_data111 (rom_tono/Mrom_data11)
+     MUXF5:I1->O           1   0.278   0.357  rom_tono/Mrom_data11_f5 (tono_0_OBUF)
+     OBUF:I->O                 3.169          tono_0_OBUF (tono<0>)
+    ----------------------------------------
+    Total                      5.899ns (4.573ns logic, 1.326ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
 
 
-Total REAL time to Xst completion: 173.00 secs
-Total CPU time to Xst completion: 173.47 secs
+Total REAL time to Xst completion: 46.00 secs
+Total CPU time to Xst completion: 46.60 secs
  
 --> 
 
-Total memory usage is 262084 kilobytes
+Total memory usage is 295492 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

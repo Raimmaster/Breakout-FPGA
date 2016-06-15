@@ -87,4 +87,4 @@ module VGA(
 		//vcount=0;
 	 //end
 
-endmodule
+endmodule0

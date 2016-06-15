@@ -9,36 +9,36 @@ Target Device  : xc3s500e
 Target Package : ft256
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Jun 15 07:47:28 2016
+Mapped Date    : Wed Jun 15 10:22:29 2016
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    3
+Number of warnings:    8
 Logic Utilization:
-  Number of Slice Flip Flops:            41 out of   9,312    1%
-  Number of 4 input LUTs:             1,153 out of   9,312   12%
+  Number of Slice Flip Flops:           136 out of   9,312    1%
+  Number of 4 input LUTs:             1,168 out of   9,312   12%
 Logic Distribution:
-  Number of occupied Slices:            734 out of   4,656   15%
-    Number of Slices containing only related logic:     734 out of     734 100%
-    Number of Slices containing unrelated logic:          0 out of     734   0%
+  Number of occupied Slices:            818 out of   4,656   17%
+    Number of Slices containing only related logic:     818 out of     818 100%
+    Number of Slices containing unrelated logic:          0 out of     818   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,187 out of   9,312   12%
-    Number used as logic:             1,153
-    Number used as a route-thru:         34
+  Total Number of 4 input LUTs:       1,375 out of   9,312   14%
+    Number used as logic:             1,168
+    Number used as a route-thru:        207
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                  6 out of     190    3%
-  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of bonded IOBs:                 14 out of     190    7%
+  Number of BUFGMUXs:                     2 out of      24    8%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                4.57
+Average Fanout of Non-Clock Nets:                3.93
 
-Peak Memory Usage:  231 MB
-Total REAL time to MAP completion:  43 secs 
-Total CPU time to MAP completion:   15 secs 
+Peak Memory Usage:  214 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -82,15 +82,31 @@ Section 2 - Warnings
 WARNING:Pack:266 - The function generator d_rom/Mrom_data1951_2024 failed to
    merge with F5 multiplexer d_rom/Mrom_data3341_20_f5_3.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
-WARNING:Pack:266 - The function generator d_rom/Mrom_data1951_2320 failed to
-   merge with F5 multiplexer d_rom/Mrom_data3341_21_f5_6.  There is a conflict
+WARNING:Pack:266 - The function generator d_rom/Mrom_data1951_1917 failed to
+   merge with F5 multiplexer d_rom/Mrom_data3341_24_f5_0.  There is a conflict
    for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator d_rom/Mrom_data1951_2124 failed to
+   merge with F5 multiplexer d_rom/Mrom_data3341_18_f5_4.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator d_rom/Mrom_data1951_183 failed to
+   merge with F5 multiplexer d_rom/Mrom_data3341_20_f5.  There is a conflict for
+   the FXMUX.  The design will exhibit suboptimal timing.
 WARNING:Pack:266 - The function generator d_rom/Mrom_data1951_262 failed to
    merge with F5 multiplexer d_rom/Mrom_data3341_22_f5.  There is a conflict for
    the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator d_rom/Mrom_data3341_18 failed to merge
+   with F5 multiplexer d_rom/Mrom_data3341_17_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator d_rom/Mrom_data1951_2221 failed to
+   merge with F5 multiplexer d_rom/Mrom_data1951_21_f5_11.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net temp is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
+INFO:LIT:243 - Logical network clk_audio has no load.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -125,7 +141,15 @@ Section 6 - IOB Properties
 | RGB<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 | RGB<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 | clk50mhz                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| do_nota                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | hsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| mi_nota                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| re_nota                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| sol_nota                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| tono<0>                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| tono<1>                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| tono<2>                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| tono<3>                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 | vsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
