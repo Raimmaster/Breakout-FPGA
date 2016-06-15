@@ -1,0 +1,13 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Jun 15 07:48:07 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "hsync" LOCATE = SITE "C8" LEVEL 1;
+COMP "vsync" LOCATE = SITE "D8" LEVEL 1;
+COMP "RGB<0>" LOCATE = SITE "A9" LEVEL 1;
+COMP "RGB<1>" LOCATE = SITE "D9" LEVEL 1;
+COMP "RGB<2>" LOCATE = SITE "E8" LEVEL 1;
+COMP "clk50mhz" LOCATE = SITE "B8" LEVEL 1;
+SCHEMATIC END;
+

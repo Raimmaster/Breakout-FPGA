@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Raim\Desktop\DLD\VGA\Main.ncd
+OUTFILE=C:\Users\Raim\Desktop\DLD\VGA\Main.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5ft256
+WORKINGDIR=C:\Users\Raim\Desktop\DLD\VGA
+LICENSE=WebPack
+USER_INFO=__0_0_0

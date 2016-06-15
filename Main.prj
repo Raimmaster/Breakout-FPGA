@@ -1,0 +1,3 @@
+verilog work "VGA.v"
+verilog work "debian_rom.v"
+verilog work "Main.v"
