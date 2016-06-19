@@ -24,13 +24,16 @@ module Main(
 	wire [9:0] vcount;
 	
 	wire [9:0] paddle_pos;
+	//ball coordinate
+	wire [9:0] ball_x;
+	wire [9:0] ball_y;
 	
 	
 	// synthesis attribute CLKFX_DIVIDE of vga_clock_dcm is 4
 	// synthesis attribute CLKFX_MULTIPLY of vga_clock_dcm is 2
 	DCM vga_clock_dcm (.CLKIN(clk50mhz),.CLKFX(vga_clk));
 	
-	clk_divider #(.limit(32'h2625A0)) clk_paddle_p (
+	clk_divider #(.limit(32'h2625A0)) clk_paddle_p (//'
 			.clk(clk50mhz),
 			.clk_d(clk_paddle)
 	);
@@ -39,8 +42,11 @@ module Main(
 	
 	wire [2:0] data;
 	//paddle end
+	//ball init
+	ball bola(reset_button, clk_paddle, ball_x, ball_y);
 	
-	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, reset_button);
+	
+	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button);
 	
 	reg [13:0] address_vga;
 	
@@ -93,7 +99,7 @@ module Main(
 	);
 	
 	//sol
-	clk_divider #(.limit(32'h7C9)) clk_sol (
+	clk_divider #(.limit(32'h7C9)) clk_sol (//'
 			.clk(clk50mhz),
 			.clk_d(clk_out_sol)
 	);
