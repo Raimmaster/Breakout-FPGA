@@ -95,11 +95,13 @@ module VGA(
 
         if (hcount < 640 && vcount < 480) begin
             RGB = 3'b000;//'
-
+				
+				//draw ball
         		if(vcount >= ball_y && vcount <= (ball_y + BALL_SIZE)
         			&& hcount >= ball_x && hcount <= (ball_x + BALL_SIZE) )
         			RGB = 3'b001;
-
+				
+				//draw paddle
 				if(vcount > 440 && vcount < 450 && hcount > paddle_pos && hcount < paddle_pos + 100)begin
 					RGB = 3'b001;
 				end
