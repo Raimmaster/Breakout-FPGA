@@ -6,10 +6,10 @@ module Main(
 		output hsync,
 		output vsync,
 		input clk_audio,
-		input do_nota,
-		input re_nota,
+		input right_button,
+		input reset_button,
 		input mi_nota,
-		input sol_nota,
+		input left_button,
 		
 		output [3:0] tono
     );
@@ -34,16 +34,17 @@ module Main(
 			.clk(clk50mhz),
 			.clk_d(clk_paddle)
 	);
-	Paddle pd(sol_nota, do_nota, re_nota, clk_paddle, paddle_pos);
+	//Paddle init
+	Paddle pd(left_button, right_button, reset_button, clk_paddle, paddle_pos);
 	
 	wire [2:0] data;
+	//paddle end
 	
-	
-	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos);
+	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, reset_button);
 	
 	reg [13:0] address_vga;
 	
-	debian_rom d_rom(address_vga, data);
+	//debian_rom d_rom(address_vga, data);
 	
 	always @(posedge vga_clk)
 		begin
@@ -61,15 +62,14 @@ module Main(
 	assign hsync = hs;
 	assign vsync = vs;
 	
-	//Audio section
+	////Audio section
 	/*
 	C	2986 BAA
 	D	2660 A64
 	E	2369 941
-	G	1993 7C9
-	
+	G	1993 7C9	
 	Dividir entre 2 para cambiar de posedge y negedge
-*/
+	*/
 	wire clk_out_do;
 	wire clk_out_re;
 	wire clk_out_mi;
@@ -112,14 +112,14 @@ module Main(
 		address_audio = address_audio + 1;
 	end	
 	
-	always @(do_nota or re_nota or mi_nota or sol_nota)
+	always @(right_button or reset_button or mi_nota or left_button)
 	begin
 		case(1)
-			do_nota:
+			right_button:
 			begin
 				temp = clk_out_do;
 			end
-			re_nota:
+			reset_button:
 			begin
 				temp = clk_out_re;
 			end
@@ -127,7 +127,7 @@ module Main(
 			begin			
 				temp = clk_out_mi;
 			end
-			sol_nota:
+			left_button:
 			begin
 				temp = clk_out_sol;
 			end

@@ -1,6 +1,5 @@
 verilog work "VGA.v"
 verilog work "sine_wave_rom_do.v"
 verilog work "Paddle.v"
-verilog work "debian_rom.v"
 verilog work "clk_divider.v"
 verilog work "Main.v"

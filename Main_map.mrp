@@ -9,22 +9,22 @@ Target Device  : xc3s500e
 Target Package : ft256
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Jun 15 14:03:30 2016
+Mapped Date    : Sun Jun 19 14:11:56 2016
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           203 out of   9,312    2%
-  Number of 4 input LUTs:               175 out of   9,312    1%
+  Number of Slice Flip Flops:           205 out of   9,312    2%
+  Number of 4 input LUTs:               223 out of   9,312    2%
 Logic Distribution:
-  Number of occupied Slices:            265 out of   4,656    5%
-    Number of Slices containing only related logic:     265 out of     265 100%
-    Number of Slices containing unrelated logic:          0 out of     265   0%
+  Number of occupied Slices:            291 out of   4,656    6%
+    Number of Slices containing only related logic:     291 out of     291 100%
+    Number of Slices containing unrelated logic:          0 out of     291   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         504 out of   9,312    5%
-    Number used as logic:               175
+  Total Number of 4 input LUTs:         552 out of   9,312    5%
+    Number used as logic:               223
     Number used as a route-thru:        329
 
   The Slice Logic Distribution report is not meaningful if the design is
@@ -34,7 +34,7 @@ Logic Distribution:
   Number of BUFGMUXs:                     2 out of      24    8%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                2.03
+Average Fanout of Non-Clock Nets:                2.08
 
 Peak Memory Usage:  212 MB
 Total REAL time to MAP completion:  1 secs 
@@ -120,11 +120,11 @@ Section 6 - IOB Properties
 | RGB<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 | RGB<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 | clk50mhz                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
-| do_nota                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | hsync                              | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
+| left_button                        | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | mi_nota                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
-| re_nota                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
-| sol_nota                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| reset_button                       | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| right_button                       | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | tono<0>                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 | tono<1>                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 | tono<2>                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |

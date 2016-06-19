@@ -109,10 +109,8 @@ Compiling verilog file "sine_wave_rom_do.v" in library work
 Module <VGA> compiled
 Compiling verilog file "Paddle.v" in library work
 Module <sinewave_rom_do> compiled
-Compiling verilog file "debian_rom.v" in library work
-Module <Paddle> compiled
 Compiling verilog file "clk_divider.v" in library work
-Module <debian_rom> compiled
+Module <Paddle> compiled
 Compiling verilog file "Main.v" in library work
 Module <clk_divider> compiled
 Module <Main> compiled
@@ -131,8 +129,6 @@ Analyzing hierarchy for module <clk_divider> in library <work> with parameters.
 Analyzing hierarchy for module <Paddle> in library <work>.
 
 Analyzing hierarchy for module <VGA> in library <work>.
-
-Analyzing hierarchy for module <debian_rom> in library <work>.
 
 Analyzing hierarchy for module <clk_divider> in library <work> with parameters.
 	limit = "00000000000000000000101110101010"
@@ -186,12 +182,6 @@ Module <Paddle> is correct for synthesis.
 Analyzing module <VGA> in library <work>.
 Module <VGA> is correct for synthesis.
  
-Analyzing module <debian_rom> in library <work>.
-INFO:Xst:2546 - "debian_rom.v" line 14: reading initialization file "imagen.mif".
-WARNING:Xst:905 - "debian_rom.v" line 10: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <rom_content>
-Module <debian_rom> is correct for synthesis.
- 
 Analyzing module <clk_divider.2> in library <work>.
 	limit = 32'b00000000000000000000101110101010
 Module <clk_divider.2> is correct for synthesis.
@@ -217,6 +207,82 @@ Module <sinewave_rom_do> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <i> in unit <VGA> has a constant value of 11001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<0>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<1>> in unit <VGA> has a constant value of 0010100000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<2>> in unit <VGA> has a constant value of 0100011000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<3>> in unit <VGA> has a constant value of 0110010000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<4>> in unit <VGA> has a constant value of 1000001000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<5>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<6>> in unit <VGA> has a constant value of 0010100000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<7>> in unit <VGA> has a constant value of 0100011000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<8>> in unit <VGA> has a constant value of 0110010000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<9>> in unit <VGA> has a constant value of 1000001000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<10>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<11>> in unit <VGA> has a constant value of 0010100000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<12>> in unit <VGA> has a constant value of 0100011000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<13>> in unit <VGA> has a constant value of 0110010000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<14>> in unit <VGA> has a constant value of 1000001000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<15>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<16>> in unit <VGA> has a constant value of 0010100000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<17>> in unit <VGA> has a constant value of 0100011000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<18>> in unit <VGA> has a constant value of 0110010000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<19>> in unit <VGA> has a constant value of 1000001000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<20>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<21>> in unit <VGA> has a constant value of 0010100000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<22>> in unit <VGA> has a constant value of 0100011000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<23>> in unit <VGA> has a constant value of 0110010000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_x<24>> in unit <VGA> has a constant value of 1000001000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<0>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<1>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<2>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<3>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<4>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<5>> in unit <VGA> has a constant value of 0001101110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<6>> in unit <VGA> has a constant value of 0001101110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<7>> in unit <VGA> has a constant value of 0001101110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<8>> in unit <VGA> has a constant value of 0001101110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<9>> in unit <VGA> has a constant value of 0001101110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<10>> in unit <VGA> has a constant value of 0010110100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<11>> in unit <VGA> has a constant value of 0010110100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<12>> in unit <VGA> has a constant value of 0010110100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<13>> in unit <VGA> has a constant value of 0010110100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<14>> in unit <VGA> has a constant value of 0010110100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<15>> in unit <VGA> has a constant value of 0011111010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<16>> in unit <VGA> has a constant value of 0011111010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<17>> in unit <VGA> has a constant value of 0011111010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<18>> in unit <VGA> has a constant value of 0011111010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<19>> in unit <VGA> has a constant value of 0011111010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<20>> in unit <VGA> has a constant value of 0101000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<21>> in unit <VGA> has a constant value of 0101000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<22>> in unit <VGA> has a constant value of 0101000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<23>> in unit <VGA> has a constant value of 0101000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <data_y<24>> in unit <VGA> has a constant value of 0101000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<0>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<1>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<2>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<3>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<4>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<5>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<6>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<7>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<8>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<9>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<10>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<11>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<12>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<13>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<14>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<15>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<16>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<17>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<18>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<19>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<20>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<21>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<22>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<23>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<24>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <clk_divider_1>.
     Related source file is "clk_divider.v".
@@ -246,37 +312,177 @@ Unit <Paddle> synthesized.
 Synthesizing Unit <VGA>.
     Related source file is "VGA.v".
 WARNING:Xst:647 - Input <rgb_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <data_x<16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <vsync>.
     Found 3-bit register for signal <RGB>.
     Found 1-bit register for signal <hsync>.
-    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 51.
+    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 85.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 214.
+    Found 10-bit adder carry out for signal <add0002$addsub0000> created at line 214.
+    Found 10-bit adder carry out for signal <add0003$addsub0000> created at line 209.
+    Found 10-bit adder carry out for signal <add0004$addsub0000> created at line 209.
+    Found 10-bit adder carry out for signal <add0005$addsub0000> created at line 204.
+    Found 10-bit adder carry out for signal <add0006$addsub0000> created at line 204.
+    Found 10-bit adder carry out for signal <add0007$addsub0000> created at line 199.
+    Found 10-bit adder carry out for signal <add0008$addsub0000> created at line 199.
+    Found 10-bit adder carry out for signal <add0009$addsub0000> created at line 194.
+    Found 10-bit adder carry out for signal <add0010$addsub0000> created at line 194.
+    Found 10-bit adder carry out for signal <add0011$addsub0000> created at line 188.
+    Found 10-bit adder carry out for signal <add0012$addsub0000> created at line 188.
+    Found 10-bit adder carry out for signal <add0013$addsub0000> created at line 183.
+    Found 10-bit adder carry out for signal <add0014$addsub0000> created at line 183.
+    Found 10-bit adder carry out for signal <add0015$addsub0000> created at line 178.
+    Found 10-bit adder carry out for signal <add0016$addsub0000> created at line 178.
+    Found 10-bit adder carry out for signal <add0017$addsub0000> created at line 173.
+    Found 10-bit adder carry out for signal <add0018$addsub0000> created at line 173.
+    Found 10-bit adder carry out for signal <add0019$addsub0000> created at line 168.
+    Found 10-bit adder carry out for signal <add0020$addsub0000> created at line 168.
+    Found 10-bit adder carry out for signal <add0021$addsub0000> created at line 162.
+    Found 10-bit adder carry out for signal <add0022$addsub0000> created at line 162.
+    Found 10-bit adder carry out for signal <add0023$addsub0000> created at line 157.
+    Found 10-bit adder carry out for signal <add0024$addsub0000> created at line 157.
+    Found 10-bit adder carry out for signal <add0025$addsub0000> created at line 152.
+    Found 10-bit adder carry out for signal <add0026$addsub0000> created at line 152.
+    Found 10-bit adder carry out for signal <add0027$addsub0000> created at line 147.
+    Found 10-bit adder carry out for signal <add0028$addsub0000> created at line 147.
+    Found 10-bit adder carry out for signal <add0029$addsub0000> created at line 142.
+    Found 10-bit adder carry out for signal <add0030$addsub0000> created at line 142.
+    Found 10-bit adder carry out for signal <add0031$addsub0000> created at line 136.
+    Found 10-bit adder carry out for signal <add0032$addsub0000> created at line 136.
+    Found 10-bit adder carry out for signal <add0033$addsub0000> created at line 131.
+    Found 10-bit adder carry out for signal <add0034$addsub0000> created at line 131.
+    Found 10-bit adder carry out for signal <add0035$addsub0000> created at line 126.
+    Found 10-bit adder carry out for signal <add0036$addsub0000> created at line 126.
+    Found 10-bit adder carry out for signal <add0037$addsub0000> created at line 121.
+    Found 10-bit adder carry out for signal <add0038$addsub0000> created at line 116.
+    Found 10-bit adder carry out for signal <add0039$addsub0000> created at line 116.
+    Found 10-bit adder carry out for signal <add0040$addsub0000> created at line 110.
+    Found 10-bit adder carry out for signal <add0041$addsub0000> created at line 110.
+    Found 10-bit adder carry out for signal <add0042$addsub0000> created at line 105.
+    Found 10-bit adder carry out for signal <add0043$addsub0000> created at line 105.
+    Found 10-bit adder carry out for signal <add0044$addsub0000> created at line 100.
+    Found 10-bit adder carry out for signal <add0045$addsub0000> created at line 100.
+    Found 10-bit adder carry out for signal <add0046$addsub0000> created at line 95.
+    Found 10-bit adder carry out for signal <add0047$addsub0000> created at line 95.
+    Found 10-bit adder carry out for signal <add0048$addsub0000> created at line 90.
+    Found 10-bit adder carry out for signal <add0049$addsub0000> created at line 90.
     Found 10-bit register for signal <hcount>.
-    Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 42.
-    Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 42.
-    Found 10-bit adder for signal <old_hcount_4$addsub0000> created at line 32.
-    Found 10-bit adder for signal <old_vcount_3$addsub0000> created at line 28.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0000> created at line 49.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0001> created at line 51.
-    Found 11-bit comparator greatequal for signal <RGB$cmp_ge0002> created at line 51.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0000> created at line 51.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0001> created at line 51.
+    Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 76.
+    Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 76.
+    Found 10-bit adder for signal <old_hcount_4$addsub0000> created at line 66.
+    Found 10-bit adder for signal <old_vcount_3$addsub0000> created at line 62.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0000> created at line 214.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0001> created at line 214.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0002> created at line 209.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0003> created at line 209.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0004> created at line 204.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0005> created at line 204.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0006> created at line 199.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0007> created at line 199.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0008> created at line 194.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0009> created at line 194.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0010> created at line 188.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0011> created at line 188.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0012> created at line 183.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0013> created at line 183.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0014> created at line 178.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0015> created at line 178.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0016> created at line 173.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0017> created at line 173.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0018> created at line 168.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0019> created at line 168.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0020> created at line 162.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0021> created at line 162.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0022> created at line 157.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0023> created at line 157.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0024> created at line 152.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0025> created at line 152.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0026> created at line 147.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0027> created at line 147.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0028> created at line 142.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0029> created at line 142.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0030> created at line 136.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0031> created at line 136.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0032> created at line 131.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0033> created at line 131.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0034> created at line 126.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0035> created at line 126.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0036> created at line 121.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0037> created at line 116.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0038> created at line 116.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0039> created at line 110.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0040> created at line 110.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0041> created at line 105.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0042> created at line 105.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0043> created at line 100.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0044> created at line 100.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0045> created at line 95.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0046> created at line 95.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0047> created at line 90.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0048> created at line 90.
+    Found 10-bit comparator greater for signal <RGB$cmp_gt0000> created at line 85.
+    Found 10-bit comparator greater for signal <RGB$cmp_gt0001> created at line 85.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0000> created at line 214.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0001> created at line 214.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0002> created at line 209.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0003> created at line 209.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0004> created at line 204.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0005> created at line 204.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0006> created at line 199.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0007> created at line 199.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0008> created at line 194.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0009> created at line 194.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0010> created at line 188.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0011> created at line 188.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0012> created at line 183.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0013> created at line 183.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0014> created at line 178.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0015> created at line 178.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0016> created at line 173.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0017> created at line 173.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0018> created at line 168.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0019> created at line 168.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0020> created at line 162.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0021> created at line 162.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0022> created at line 157.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0023> created at line 157.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0024> created at line 152.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0025> created at line 152.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0026> created at line 147.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0027> created at line 147.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0028> created at line 142.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0029> created at line 142.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0030> created at line 136.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0031> created at line 136.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0032> created at line 131.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0033> created at line 131.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0034> created at line 126.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0035> created at line 126.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0036> created at line 121.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0037> created at line 116.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0038> created at line 116.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0039> created at line 110.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0040> created at line 110.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0041> created at line 105.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0042> created at line 105.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0043> created at line 100.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0044> created at line 100.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0045> created at line 95.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0046> created at line 95.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0047> created at line 90.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0048> created at line 90.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0000> created at line 83.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0001> created at line 83.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0002> created at line 85.
+    Found 11-bit comparator less for signal <RGB$cmp_lt0003> created at line 85.
     Found 10-bit register for signal <vcount>.
-    Found 10-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 35.
-    Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 35.
+    Found 10-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 69.
+    Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 69.
     Summary:
 	inferred  25 D-type flip-flop(s).
-	inferred   3 Adder/Subtractor(s).
-	inferred   9 Comparator(s).
+	inferred  52 Adder/Subtractor(s).
+	inferred 108 Comparator(s).
 Unit <VGA> synthesized.
-
-
-Synthesizing Unit <debian_rom>.
-    Related source file is "debian_rom.v".
-WARNING:Xst:1781 - Signal <rom_content> is used but never assigned. Tied to default value.
-    Found 16384x3-bit ROM for signal <data>.
-    Summary:
-	inferred   1 ROM(s).
-Unit <debian_rom> synthesized.
 
 
 Synthesizing Unit <clk_divider_2>.
@@ -338,10 +544,11 @@ Unit <sinewave_rom_do> synthesized.
 Synthesizing Unit <Main>.
     Related source file is "Main.v".
 WARNING:Xst:647 - Input <clk_audio> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <data> is used but never assigned. This sourceless signal will be automatically connected to value 000.
     Found 5-bit up counter for signal <address_audio>.
     Found 14-bit up counter for signal <address_vga>.
-    Found 10-bit comparator less for signal <address_vga$cmp_lt0000> created at line 51.
-    Found 10-bit comparator less for signal <address_vga$cmp_lt0001> created at line 50.
+    Found 10-bit comparator less for signal <address_vga$cmp_lt0000> created at line 52.
+    Found 10-bit comparator less for signal <address_vga$cmp_lt0001> created at line 51.
     Summary:
 	inferred   2 Counter(s).
 	inferred   2 Comparator(s).
@@ -353,28 +560,26 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 2
- 16384x3-bit ROM                                       : 1
+# ROMs                                                 : 1
  32x4-bit ROM                                          : 1
-# Adders/Subtractors                                   : 9
+# Adders/Subtractors                                   : 58
  10-bit adder                                          : 2
- 10-bit adder carry out                                : 1
+ 10-bit adder carry out                                : 50
  10-bit addsub                                         : 1
  32-bit adder                                          : 5
-# Counters                                             : 7
- 14-bit up counter                                     : 1
+# Counters                                             : 6
  32-bit up counter                                     : 5
  5-bit up counter                                      : 1
 # Registers                                            : 11
  1-bit register                                        : 7
  10-bit register                                       : 3
  3-bit register                                        : 1
-# Comparators                                          : 13
- 10-bit comparator greatequal                          : 4
- 10-bit comparator greater                             : 1
- 10-bit comparator less                                : 5
- 10-bit comparator lessequal                           : 2
- 11-bit comparator greatequal                          : 1
+# Comparators                                          : 110
+ 10-bit comparator greatequal                          : 51
+ 10-bit comparator greater                             : 3
+ 10-bit comparator less                                : 6
+ 11-bit comparator less                                : 1
+ 11-bit comparator lessequal                           : 49
 
 =========================================================================
 
@@ -382,43 +587,35 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <d_rom> is unconnected in block <Main>.
-   It will be removed from the design.
-INFO:Xst:2261 - The FF/Latch <RGB_0> in Unit <vga> is equivalent to the following FF/Latch, which will be removed : <RGB_1> 
-WARNING:Xst:1710 - FF/Latch <RGB_0> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 2
- 16384x3-bit ROM                                       : 1
+# ROMs                                                 : 1
  32x4-bit ROM                                          : 1
-# Adders/Subtractors                                   : 9
+# Adders/Subtractors                                   : 58
  10-bit adder                                          : 2
- 10-bit adder carry out                                : 1
+ 10-bit adder carry out                                : 50
  10-bit addsub                                         : 1
  32-bit adder                                          : 5
-# Counters                                             : 7
- 14-bit up counter                                     : 1
+# Counters                                             : 6
  32-bit up counter                                     : 5
  5-bit up counter                                      : 1
 # Registers                                            : 40
  Flip-Flops                                            : 40
-# Comparators                                          : 13
- 10-bit comparator greatequal                          : 4
- 10-bit comparator greater                             : 1
- 10-bit comparator less                                : 5
- 10-bit comparator lessequal                           : 2
- 11-bit comparator greatequal                          : 1
+# Comparators                                          : 110
+ 10-bit comparator greatequal                          : 51
+ 10-bit comparator greater                             : 3
+ 10-bit comparator less                                : 6
+ 11-bit comparator less                                : 1
+ 11-bit comparator lessequal                           : 49
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <RGB_0> (without init value) has a constant value of 0 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <RGB_1> (without init value) has a constant value of 0 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:1901 - Instance vga_clock_dcm in unit Main of type DCM has been replaced by DCM_SP
 
 Optimizing unit <Main> ...
@@ -426,20 +623,6 @@ Optimizing unit <Main> ...
 Optimizing unit <Paddle> ...
 
 Optimizing unit <VGA> ...
-WARNING:Xst:2677 - Node <address_vga_0> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_1> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_2> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_3> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_4> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_5> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_6> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_7> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_8> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_9> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_10> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_11> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_12> of sequential type is unconnected in block <Main>.
-WARNING:Xst:2677 - Node <address_vga_13> of sequential type is unconnected in block <Main>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -451,8 +634,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 203
- Flip-Flops                                            : 203
+# Registers                                            : 205
+ Flip-Flops                                            : 205
 
 =========================================================================
 
@@ -481,25 +664,28 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 1279
+# BELS                             : 1318
 #      GND                         : 1
 #      INV                         : 19
 #      LUT1                        : 328
-#      LUT2                        : 11
-#      LUT2_L                      : 1
-#      LUT3                        : 25
-#      LUT4                        : 119
-#      LUT4_D                      : 3
-#      LUT4_L                      : 1
-#      MULT_AND                    : 15
+#      LUT2                        : 25
+#      LUT2_D                      : 1
+#      LUT2_L                      : 2
+#      LUT3                        : 24
+#      LUT3_D                      : 2
+#      LUT3_L                      : 5
+#      LUT4                        : 135
+#      LUT4_D                      : 5
+#      LUT4_L                      : 11
+#      MULT_AND                    : 5
 #      MUXCY                       : 398
-#      MUXF5                       : 7
+#      MUXF5                       : 6
 #      VCC                         : 1
 #      XORCY                       : 350
-# FlipFlops/Latches                : 203
-#      FD                          : 24
+# FlipFlops/Latches                : 205
+#      FD                          : 34
 #      FDE                         : 5
-#      FDR                         : 174
+#      FDR                         : 166
 # Clock Buffers                    : 2
 #      BUFG                        : 2
 # IO Buffers                       : 14
@@ -515,9 +701,9 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                      283  out of   4656     6%  
- Number of Slice Flip Flops:            203  out of   9312     2%  
- Number of 4 input LUTs:                507  out of   9312     5%  
+ Number of Slices:                      308  out of   4656     6%  
+ Number of Slice Flip Flops:            205  out of   9312     2%  
+ Number of 4 input LUTs:                557  out of   9312     5%  
  Number of IOs:                          15
  Number of bonded IOBs:                  14  out of    190     7%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -545,9 +731,9 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)   | Load  |
 -----------------------------------+-------------------------+-------+
 clk50mhz                           | IBUFG+BUFG              | 165   |
-temp(temp46:O)                     | NONE(*)(address_audio_1)| 5     |
+temp(temp45:O)                     | NONE(*)(address_audio_1)| 5     |
 clk_paddle_p/clk_buf               | NONE(pd/position_9)     | 10    |
-clk50mhz                           | vga_clock_dcm:CLKFX     | 23    |
+clk50mhz                           | vga_clock_dcm:CLKFX     | 25    |
 -----------------------------------+-------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -563,8 +749,8 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 7.736ns (Maximum Frequency: 129.272MHz)
-   Minimum input arrival time before clock: 8.177ns
-   Maximum output required time after clock: 5.899ns
+   Minimum input arrival time before clock: 10.356ns
+   Maximum output required time after clock: 5.875ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -574,7 +760,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50mhz'
   Clock period: 7.736ns (frequency: 129.272MHz)
-  Total number of paths / destination ports: 90935 / 363
+  Total number of paths / destination ports: 101410 / 358
 -------------------------------------------------------------------------
 Delay:               7.736ns (Levels of Logic = 34)
   Source:            clk_paddle_p/counter_1 (FF)
@@ -642,8 +828,8 @@ Delay:               2.641ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q             12   0.514   0.969  address_audio_0 (address_audio_0)
-     LUT4:I0->O            1   0.612   0.000  Mcount_address_audio_xor<4>111 (Mcount_address_audio_xor<4>11)
-     MUXF5:I1->O           1   0.278   0.000  Mcount_address_audio_xor<4>11_f5 (Result<4>)
+     LUT4:I0->O            1   0.612   0.000  Result<4>2 (Result<4>7)
+     MUXF5:I0->O           1   0.278   0.000  Result<4>_f5 (Result<4>)
      FD:D                      0.268          address_audio_4
     ----------------------------------------
     Total                      2.641ns (1.672ns logic, 0.969ns route)
@@ -689,18 +875,18 @@ Delay:               7.722ns (Levels of Logic = 15)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_paddle_p/clk_buf'
   Total number of paths / destination ports: 474 / 10
 -------------------------------------------------------------------------
-Offset:              8.177ns (Levels of Logic = 15)
-  Source:            re_nota (PAD)
+Offset:              8.058ns (Levels of Logic = 15)
+  Source:            reset_button (PAD)
   Destination:       pd/position_9 (FF)
   Destination Clock: clk_paddle_p/clk_buf rising
 
-  Data Path: re_nota to pd/position_9
+  Data Path: reset_button to pd/position_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            28   1.106   1.224  re_nota_IBUF (re_nota_IBUF)
-     LUT4:I0->O            4   0.612   0.651  pd/position_cmp_gt0000213 (pd/position_cmp_gt0000213)
-     LUT4_D:I0->O          7   0.612   0.605  pd/position_cmp_gt0000234 (pd/position_cmp_gt0000)
+     IBUF:I->O            40   1.106   1.227  reset_button_IBUF (reset_button_IBUF)
+     LUT4:I0->O            4   0.612   0.529  pd/position_cmp_gt0000213 (pd/position_cmp_gt0000213)
+     LUT4_D:I2->O          7   0.612   0.605  pd/position_cmp_gt0000234 (pd/position_cmp_gt0000)
      LUT4:I3->O            1   0.612   0.000  pd/Maddsub_position_share0000_lut<0> (pd/Maddsub_position_share0000_lut<0>)
      MUXCY:S->O            1   0.404   0.000  pd/Maddsub_position_share0000_cy<0> (pd/Maddsub_position_share0000_cy<0>)
      MUXCY:CI->O           1   0.052   0.000  pd/Maddsub_position_share0000_cy<1> (pd/Maddsub_position_share0000_cy<1>)
@@ -715,12 +901,38 @@ Offset:              8.177ns (Levels of Logic = 15)
      LUT4:I3->O            1   0.612   0.000  pd/position_mux0000<9>1 (pd/position_mux0000<9>)
      FD:D                      0.268          pd/position_9
     ----------------------------------------
-    Total                      8.177ns (5.337ns logic, 2.840ns route)
-                                       (65.3% logic, 34.7% route)
+    Total                      8.058ns (5.337ns logic, 2.721ns route)
+                                       (66.2% logic, 33.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50mhz'
+  Total number of paths / destination ports: 657 / 28
+-------------------------------------------------------------------------
+Offset:              10.356ns (Levels of Logic = 8)
+  Source:            reset_button (PAD)
+  Destination:       vga/RGB_2 (FF)
+  Destination Clock: clk50mhz rising 0.5X
+
+  Data Path: reset_button to vga/RGB_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            40   1.106   1.144  reset_button_IBUF (reset_button_IBUF)
+     LUT2:I1->O           10   0.612   0.902  vga/_old_vcount_3<0>11 (vga/N2)
+     LUT4:I0->O           13   0.612   0.988  vga/_old_vcount_3<6>1 (vga/_old_vcount_3<6>)
+     LUT4:I0->O            2   0.612   0.532  vga/RGB_and000029 (vga/RGB_and000029)
+     LUT3_L:I0->LO         1   0.612   0.103  vga/RGB_and000087_SW0_SW0 (N41)
+     LUT4:I3->O            1   0.612   0.426  vga/RGB_and000087_SW0 (N17)
+     LUT4:I1->O            3   0.612   0.603  vga/RGB_and000087 (vga/data_x<0><0>1)
+     LUT3:I0->O            1   0.612   0.000  vga/RGB_mux0000<0>11 (vga/RGB_mux0000<0>1)
+     FDR:D                     0.268          vga/RGB_2
+    ----------------------------------------
+    Total                     10.356ns (5.658ns logic, 4.698ns route)
+                                       (54.6% logic, 45.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
-  Total number of paths / destination ports: 3 / 3
+  Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
 Offset:              4.040ns (Levels of Logic = 1)
   Source:            vga/vsync (FF)
@@ -741,34 +953,34 @@ Offset:              4.040ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'temp'
   Total number of paths / destination ports: 28 / 4
 -------------------------------------------------------------------------
-Offset:              5.899ns (Levels of Logic = 3)
-  Source:            address_audio_0 (FF)
+Offset:              5.875ns (Levels of Logic = 3)
+  Source:            address_audio_1 (FF)
   Destination:       tono<0> (PAD)
   Source Clock:      temp rising
 
-  Data Path: address_audio_0 to tono<0>
+  Data Path: address_audio_1 to tono<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             12   0.514   0.969  address_audio_0 (address_audio_0)
-     LUT4:I0->O            1   0.612   0.000  rom_tono/Mrom_data111 (rom_tono/Mrom_data11)
-     MUXF5:I1->O           1   0.278   0.357  rom_tono/Mrom_data11_f5 (tono_0_OBUF)
+     FD:C->Q              11   0.514   0.945  address_audio_1 (address_audio_1)
+     LUT4:I0->O            1   0.612   0.000  tono<0>1 (tono<0>1)
+     MUXF5:I1->O           1   0.278   0.357  tono<0>_f5 (tono_0_OBUF)
      OBUF:I->O                 3.169          tono_0_OBUF (tono<0>)
     ----------------------------------------
-    Total                      5.899ns (4.573ns logic, 1.326ns route)
-                                       (77.5% logic, 22.5% route)
+    Total                      5.875ns (4.573ns logic, 1.302ns route)
+                                       (77.8% logic, 22.2% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 43.00 secs
-Total CPU time to Xst completion: 42.84 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.05 secs
  
 --> 
 
-Total memory usage is 296516 kilobytes
+Total memory usage is 219332 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   26 (   0 filtered)
-Number of infos    :    5 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :   79 (   0 filtered)
 

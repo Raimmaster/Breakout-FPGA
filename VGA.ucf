@@ -29,7 +29,7 @@ Net "tono[2]" LOC="E11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
 Net "tono[1]" LOC="E10" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
 Net "tono[0]" LOC="D10" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
 
-Net "do_nota" LOC="C13" | IOSTANDARD = LVCMOS33;
-Net "re_nota" LOC="D12" | IOSTANDARD = LVCMOS33;
+Net "right_button" LOC="C13" | IOSTANDARD = LVCMOS33;
+Net "reset_button" LOC="D12" | IOSTANDARD = LVCMOS33;
 Net "mi_nota" LOC="C12" | IOSTANDARD = LVCMOS33;
-Net "sol_nota" LOC="C10" | IOSTANDARD = LVCMOS33;
+Net "left_button" LOC="C10" | IOSTANDARD = LVCMOS33;
