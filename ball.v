@@ -25,23 +25,23 @@ module ball(
 	always @ (posedge clk) begin
 
 		if((ball_x) <= 0 || ball_x >= SCREEN_W - BALL_SIZE //screen boundaries check
-			|| ( ( (ball_y > 10'd40 && ball_y < 10'd70) //comparing columns; first column 
-				|| (ball_y > 10'd90 && ball_y < 10'd120) // second column
-				|| (ball_y > 10'd140 && ball_y < 10'd170) //third column
-				|| (ball_y > 10'd190 && ball_y < 10'd220) //fourth column
-				|| (ball_y > 10'd240 && ball_y < 10'd270) ) //fifth column
+			|| ( ( (ball_y > 10'd40 && ball_y < 10'd70) //comparing rows; first row 
+				|| (ball_y > 10'd90 && ball_y < 10'd120) // second row
+				|| (ball_y > 10'd140 && ball_y < 10'd170) //third row
+				|| (ball_y > 10'd190 && ball_y < 10'd220) //fourth row
+				|| (ball_y > 10'd240 && ball_y < 10'd270) ) //fifth row
 				&& (//left column
-					( ( (ball_x + BALL_SIZE) > 10'd38 && (ball_x - BALL_SIZE) < 10'd40 ) )//first row collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd158 && (ball_x - BALL_SIZE) < 10'd160 ) )//second row collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd278 && (ball_x - BALL_SIZE) < 10'd280 ) )//third row collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd398 && (ball_x - BALL_SIZE) < 10'd400 ) )//fourth row collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd518 && (ball_x - BALL_SIZE) < 10'd520 ) )//fifth row collision 
+					( ( (ball_x + BALL_SIZE) > 10'd38 && (ball_x - BALL_SIZE) < 10'd40 ) )//first column collision 
+					|| ( ( (ball_x + BALL_SIZE) > 10'd158 && (ball_x - BALL_SIZE) < 10'd160 ) )//second column collision 
+					|| ( ( (ball_x + BALL_SIZE) > 10'd278 && (ball_x - BALL_SIZE) < 10'd280 ) )//third column collision 
+					|| ( ( (ball_x + BALL_SIZE) > 10'd398 && (ball_x - BALL_SIZE) < 10'd400 ) )//fourth column collision 
+					|| ( ( (ball_x + BALL_SIZE) > 10'd518 && (ball_x - BALL_SIZE) < 10'd520 ) )//fifth column collision 
 					|| //right column
-					   ( ( (ball_x + BALL_SIZE) > 10'd120 && (ball_x - BALL_SIZE) < 10'd122 ) )//first row collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd240 && (ball_x - BALL_SIZE) < 10'd242 ) )//second row collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd360 && (ball_x - BALL_SIZE) < 10'd362 ) )//third row collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd480 && (ball_x - BALL_SIZE) < 10'd482 ) )//fourth row collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd600 && (ball_x - BALL_SIZE) < 10'd602 ) )//fifth row collision 
+					   ( ( (ball_x + BALL_SIZE) > 10'd120 && (ball_x - BALL_SIZE) < 10'd122 ) )//first column collision 
+					|| ( ( (ball_x + BALL_SIZE) > 10'd240 && (ball_x - BALL_SIZE) < 10'd242 ) )//second column collision 
+					|| ( ( (ball_x + BALL_SIZE) > 10'd360 && (ball_x - BALL_SIZE) < 10'd362 ) )//third column collision 
+					|| ( ( (ball_x + BALL_SIZE) > 10'd480 && (ball_x - BALL_SIZE) < 10'd482 ) )//fourth column collision 
+					|| ( ( (ball_x + BALL_SIZE) > 10'd600 && (ball_x - BALL_SIZE) < 10'd602 ) )//fifth column collision 
 					) 
 				)
 			)
