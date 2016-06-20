@@ -15,8 +15,8 @@ module VGA(
 	parameter
 		BALL_SIZE = 7,
 		BLOCK_SPACING_X = 10'd40,
-		BLOCK_WIDTH = 80,
-		BLOCK_HEIGHT = 30,
+		BLOCK_WIDTH = 10'd80,
+		BLOCK_HEIGHT = 10'd30,
 		FIRST_ROW_Y = 10'd40,
 		SECOND_ROW_Y = 10'd90,		
 		THIRD_ROW_Y = 10'd140,
