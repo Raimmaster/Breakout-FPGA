@@ -14,7 +14,7 @@ module Paddle(
 
 	always @ (posedge clk) begin
 		if(reset)begin
-			position = 10'd270;
+			position = 10'd270; //'
 		end
 		if(btn_left && position > 10)begin
 			position = position - 10;

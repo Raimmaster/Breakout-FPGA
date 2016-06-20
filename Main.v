@@ -43,7 +43,7 @@ module Main(
 	wire [2:0] data;
 	//paddle end
 	//ball init
-	ball bola(reset_button, clk_paddle, ball_x, ball_y);
+	ball bola(paddle_pos, reset_button, clk_paddle, ball_x, ball_y);
 	
 	
 	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button);

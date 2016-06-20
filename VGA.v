@@ -13,7 +13,7 @@ module VGA(
 	 input reset
 );
 	parameter
-		BALL_SIZE = 4,
+		BALL_SIZE = 7,
 		BLOCK_SPACING_X = 10'd40,
 		BLOCK_WIDTH = 80,
 		BLOCK_HEIGHT = 30,
@@ -95,63 +95,62 @@ module VGA(
 
         if (hcount < 640 && vcount < 480) begin
             RGB = 3'b000;//'
-				
-				//draw ball
-        		if(vcount >= ball_y && vcount <= (ball_y + BALL_SIZE)
+
+        		if(vcount >= ball_y && vcount <= (ball_y + BALL_SIZE)//ball
         			&& hcount >= ball_x && hcount <= (ball_x + BALL_SIZE) )
-        			RGB = 3'b001;
-				
-				//draw paddle
-				if(vcount > 440 && vcount < 450 && hcount > paddle_pos && hcount < paddle_pos + 100)begin
-					RGB = 3'b001;
+        			RGB = 3'b101;//'
+
+				if(vcount > 440 && vcount < 450 && 
+					hcount > paddle_pos && hcount < paddle_pos + 100)begin//paddle
+					RGB = 3'b001;//'
 				end
 				else begin
 					//first row of blocks (upper)
 					if(active[0] && (vcount >= data_y[0] && vcount <= (data_y[0] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[0] && hcount <= (data_x[0] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b010;
+						RGB = 3'b010;//'
 					end
 					if(active[1] && (vcount >= data_y[1] && vcount <= (data_y[1] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[1] && hcount <= (data_x[1] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b010;
+						RGB = 3'b010;//'
 					end
 					if(active[2] && (vcount >= data_y[2] && vcount <= (data_y[2] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[2] && hcount <= (data_x[2] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b010;
+						RGB = 3'b010;//'
 					end
 					if(active[3] && (vcount >= data_y[3] && vcount <= (data_y[3] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[3] && hcount <= (data_x[3] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b010;
+						RGB = 3'b010;//'
 					end
 					if(active[4] && (vcount >= data_y[4] && vcount <= (data_y[4] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[4] && hcount <= (data_x[4] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b010;
+						RGB = 3'b010;//'
 					end
 					//second row of blocks
 					if(active[5] && (vcount >= data_y[5] && vcount <= (data_y[5] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[5] && hcount <= (data_x[5] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b110;
+						RGB = 3'b110;//'
 					end
 					if(active[6] && (vcount >= data_y[6] && vcount <= (data_y[6] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[6] && hcount <= (data_x[6] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b110;
+						RGB = 3'b110;//'
 					end
 					if(active[7] && (vcount >= data_y[7] && vcount <= (data_y[7] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[7] && hcount <= (data_x[7] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b110;
+						RGB = 3'b110;//'
 					end
 					if(active[8] && (vcount >= data_y[8] && vcount <= (data_y[8] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[8] && hcount <= (data_x[8] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b110;
+						RGB = 3'b110;//'
 					end
 					if(active[9] && (vcount >= data_y[9] && vcount <= (data_y[9] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[9] && hcount <= (data_x[9] + BLOCK_WIDTH))

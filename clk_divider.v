@@ -4,7 +4,7 @@ module clk_divider(
 );
 
     parameter 
-		limit = 32'hbaa;
+		limit = 32'hbaa; //'
     
 	 reg [31:0] counter;
 	 reg clk_buf;

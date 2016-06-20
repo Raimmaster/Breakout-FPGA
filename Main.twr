@@ -44,11 +44,11 @@ Clock clk50mhz to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-RGB<0>      |    9.206(R)|vga_clk           |   0.000|
-RGB<1>      |    9.484(R)|vga_clk           |   0.000|
-RGB<2>      |    9.230(R)|vga_clk           |   0.000|
-hsync       |    8.994(R)|vga_clk           |   0.000|
-vsync       |    8.220(R)|vga_clk           |   0.000|
+RGB<0>      |    9.156(R)|vga_clk           |   0.000|
+RGB<1>      |    9.441(R)|vga_clk           |   0.000|
+RGB<2>      |    9.446(R)|vga_clk           |   0.000|
+hsync       |    8.050(R)|vga_clk           |   0.000|
+vsync       |    8.075(R)|vga_clk           |   0.000|
 ------------+------------+------------------+--------+
 
 Clock left_button to Pad
@@ -56,10 +56,10 @@ Clock left_button to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-tono<0>     |   11.050(R)|temp              |   0.000|
-tono<1>     |   10.912(R)|temp              |   0.000|
-tono<2>     |   11.699(R)|temp              |   0.000|
-tono<3>     |   10.062(R)|temp              |   0.000|
+tono<0>     |   11.396(R)|temp              |   0.000|
+tono<1>     |   11.567(R)|temp              |   0.000|
+tono<2>     |   11.541(R)|temp              |   0.000|
+tono<3>     |    9.598(R)|temp              |   0.000|
 ------------+------------+------------------+--------+
 
 Clock mi_nota to Pad
@@ -67,10 +67,10 @@ Clock mi_nota to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-tono<0>     |   11.042(R)|temp              |   0.000|
-tono<1>     |   10.904(R)|temp              |   0.000|
-tono<2>     |   11.691(R)|temp              |   0.000|
-tono<3>     |   10.054(R)|temp              |   0.000|
+tono<0>     |   11.395(R)|temp              |   0.000|
+tono<1>     |   11.566(R)|temp              |   0.000|
+tono<2>     |   11.540(R)|temp              |   0.000|
+tono<3>     |    9.597(R)|temp              |   0.000|
 ------------+------------+------------------+--------+
 
 Clock reset_button to Pad
@@ -78,10 +78,10 @@ Clock reset_button to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-tono<0>     |   11.041(R)|temp              |   0.000|
-tono<1>     |   10.903(R)|temp              |   0.000|
-tono<2>     |   11.690(R)|temp              |   0.000|
-tono<3>     |   10.053(R)|temp              |   0.000|
+tono<0>     |   11.345(R)|temp              |   0.000|
+tono<1>     |   11.516(R)|temp              |   0.000|
+tono<2>     |   11.490(R)|temp              |   0.000|
+tono<3>     |    9.547(R)|temp              |   0.000|
 ------------+------------+------------------+--------+
 
 Clock right_button to Pad
@@ -89,10 +89,10 @@ Clock right_button to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-tono<0>     |    9.413(R)|temp              |   0.000|
-tono<1>     |    9.275(R)|temp              |   0.000|
-tono<2>     |   10.062(R)|temp              |   0.000|
-tono<3>     |    8.425(R)|temp              |   0.000|
+tono<0>     |   10.432(R)|temp              |   0.000|
+tono<1>     |   10.603(R)|temp              |   0.000|
+tono<2>     |   10.577(R)|temp              |   0.000|
+tono<3>     |    8.634(R)|temp              |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50mhz
@@ -100,8 +100,8 @@ Clock to Setup on destination clock clk50mhz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50mhz       |   12.274|         |         |         |
-reset_button   |   10.759|   10.759|         |         |
+clk50mhz       |   11.570|         |         |         |
+reset_button   |   10.235|   10.235|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock left_button
@@ -109,10 +109,10 @@ Clock to Setup on destination clock left_button
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-left_button    |    2.586|         |         |         |
-mi_nota        |    2.586|         |         |         |
-reset_button   |    2.586|         |         |         |
-right_button   |    2.586|         |         |         |
+left_button    |    2.603|         |         |         |
+mi_nota        |    2.603|         |         |         |
+reset_button   |    2.603|         |         |         |
+right_button   |    2.603|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock mi_nota
@@ -120,10 +120,10 @@ Clock to Setup on destination clock mi_nota
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-left_button    |    2.586|         |         |         |
-mi_nota        |    2.586|         |         |         |
-reset_button   |    2.586|         |         |         |
-right_button   |    2.586|         |         |         |
+left_button    |    2.603|         |         |         |
+mi_nota        |    2.603|         |         |         |
+reset_button   |    2.603|         |         |         |
+right_button   |    2.603|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock reset_button
@@ -131,10 +131,10 @@ Clock to Setup on destination clock reset_button
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-left_button    |    2.586|         |         |         |
-mi_nota        |    2.586|         |         |         |
-reset_button   |    2.586|         |         |         |
-right_button   |    2.586|         |         |         |
+left_button    |    2.603|         |         |         |
+mi_nota        |    2.603|         |         |         |
+reset_button   |    2.603|         |         |         |
+right_button   |    2.603|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock right_button
@@ -142,14 +142,14 @@ Clock to Setup on destination clock right_button
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-left_button    |    2.586|         |         |         |
-mi_nota        |    2.586|         |         |         |
-reset_button   |    2.586|         |         |         |
-right_button   |    2.586|         |         |         |
+left_button    |    2.603|         |         |         |
+mi_nota        |    2.603|         |         |         |
+reset_button   |    2.603|         |         |         |
+right_button   |    2.603|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Jun 19 17:01:28 2016 
+Analysis completed Sun Jun 19 20:42:46 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
