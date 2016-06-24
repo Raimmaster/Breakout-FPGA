@@ -27,6 +27,8 @@ module Main(
 	//ball coordinate
 	wire [9:0] ball_x;
 	wire [9:0] ball_y;
+	wire erase_enable;
+	wire [5:0] erase_pos;
 	
 	
 	// synthesis attribute CLKFX_DIVIDE of vga_clock_dcm is 4
@@ -43,10 +45,10 @@ module Main(
 	wire [2:0] data;
 	//paddle end
 	//ball init
-	ball bola(paddle_pos, reset_button, clk_paddle, ball_x, ball_y);
+	ball bola(paddle_pos, reset_button, clk_paddle, ball_x, ball_y, erase_enable, erase_pos);
 	
 	
-	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button);
+	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button, erase_enable, erase_pos);
 	
 	reg [13:0] address_vga;
 	

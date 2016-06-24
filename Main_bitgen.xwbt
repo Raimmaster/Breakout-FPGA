@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Raim\Documents\Xilin-Projects\Breakout-FPGA solo paddle\Main.ncd
-OUTFILE=C:\Users\Raim\Documents\Xilin-Projects\Breakout-FPGA solo paddle\Main.bit
+INFILE=C:\Users\Raim\Desktop\Breakout-FPGA-master\Main.ncd
+OUTFILE=C:\Users\Raim\Desktop\Breakout-FPGA-master\Main.bit
 FAMILY=Spartan3E
 PART=xc3s500e-5ft256
-WORKINGDIR=C:\Users\Raim\Documents\Xilin-Projects\Breakout-FPGA solo paddle
+WORKINGDIR=C:\Users\Raim\Desktop\Breakout-FPGA-master
 LICENSE=WebPack
 USER_INFO=__0_0_0

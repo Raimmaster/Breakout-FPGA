@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: Main.prj
 
@@ -132,8 +132,16 @@ Analyzing hierarchy for module <Paddle> in library <work>.
 
 Analyzing hierarchy for module <ball> in library <work> with parameters.
 	BALL_SIZE = "00000000000000000000000000000111"
+	BLOCK_HEIGHT = "0000011110"
+	BLOCK_SPACING_X = "0000101000"
+	BLOCK_WIDTH = "0001010000"
+	FIFTH_ROW_Y = "0011110000"
+	FIRST_ROW_Y = "0000101000"
+	FOURTH_ROW_Y = "0010111110"
 	SCREEN_H = "00000000000000000000000111100000"
 	SCREEN_W = "00000000000000000000001010000000"
+	SECOND_ROW_Y = "0001011010"
+	THIRD_ROW_Y = "0010001100"
 
 Analyzing hierarchy for module <VGA> in library <work> with parameters.
 	BALL_SIZE = "00000000000000000000000000000111"
@@ -160,15 +168,15 @@ Analyzing hierarchy for module <clk_divider> in library <work> with parameters.
 
 Analyzing hierarchy for module <sinewave_rom_do> in library <work>.
 
-WARNING:Xst:2591 - "Main.v" line 34: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "Main.v" line 34: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "Main.v" line 36: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "Main.v" line 36: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <Main>.
 WARNING:Xst:863 - "Main.v" line 5: Name conflict (<rgb> and <RGB>, renaming rgb as rgb_rnm0).
-WARNING:Xst:905 - "Main.v" line 122: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:905 - "Main.v" line 124: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <clk_out_do>, <clk_out_re>, <clk_out_mi>, <clk_out_sol>
 Module <Main> is correct for synthesis.
  
@@ -197,8 +205,16 @@ Module <Paddle> is correct for synthesis.
  
 Analyzing module <ball> in library <work>.
 	BALL_SIZE = 32'sb00000000000000000000000000000111
+	BLOCK_HEIGHT = 10'b0000011110
+	BLOCK_SPACING_X = 10'b0000101000
+	BLOCK_WIDTH = 10'b0001010000
+	FIFTH_ROW_Y = 10'b0011110000
+	FIRST_ROW_Y = 10'b0000101000
+	FOURTH_ROW_Y = 10'b0010111110
 	SCREEN_H = 32'sb00000000000000000000000111100000
 	SCREEN_W = 32'sb00000000000000000000001010000000
+	SECOND_ROW_Y = 10'b0001011010
+	THIRD_ROW_Y = 10'b0010001100
 Module <ball> is correct for synthesis.
  
 Analyzing module <VGA> in library <work>.
@@ -238,6 +254,32 @@ Module <sinewave_rom_do> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <erase_pos> in unit <ball> has a constant value of 000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<1>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<2>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<3>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<4>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<5>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<6>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<7>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<8>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<9>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<10>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<11>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<12>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<13>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<14>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<15>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<16>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<17>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<18>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<19>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<20>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<21>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<22>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<23>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <active<24>> in unit <ball> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <i> in unit <ball> has a constant value of 11001 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <i> in unit <VGA> has a constant value of 11001 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <data_x<0>> in unit <VGA> has a constant value of 0000101000 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <data_x<1>> in unit <VGA> has a constant value of 0010100000 during circuit operation. The register is replaced by logic.
@@ -289,31 +331,6 @@ INFO:Xst:2679 - Register <data_y<21>> in unit <VGA> has a constant value of 0011
 INFO:Xst:2679 - Register <data_y<22>> in unit <VGA> has a constant value of 0011110000 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <data_y<23>> in unit <VGA> has a constant value of 0011110000 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <data_y<24>> in unit <VGA> has a constant value of 0011110000 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<0>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<1>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<2>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<3>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<4>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<5>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<6>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<7>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<8>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<9>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<10>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<11>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<12>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<13>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<14>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<15>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<16>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<17>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<18>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<19>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<20>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<21>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<22>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<23>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <active<24>> in unit <VGA> has a constant value of 1 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <clk_divider_1>.
     Related source file is "clk_divider.v".
@@ -342,271 +359,265 @@ Unit <Paddle> synthesized.
 
 Synthesizing Unit <ball>.
     Related source file is "ball.v".
-    Found 12-bit subtractor for signal <$sub0000> created at line 27.
-    Found 12-bit subtractor for signal <$sub0001> created at line 52.
-    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 77.
+WARNING:Xst:646 - Signal <active<24><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<23><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<22><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<21><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<20><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<19><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<18><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<17><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<16><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<15><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<14><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<13><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<12><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<11><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<10><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<9><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<8><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<7><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<6><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<5><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<4><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<3><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<2><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <active<1><0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 12-bit subtractor for signal <$sub0000> created at line 61.
+    Found 12-bit subtractor for signal <$sub0001> created at line 74.
+    Found 1-bit register for signal <active<0>>.
+    Found 10-bit comparator greatequal for signal <active_0$cmp_ge0000> created at line 61.
+    Found 12-bit comparator greatequal for signal <active_0$cmp_ge0001> created at line 61.
+    Found 12-bit comparator greatequal for signal <active_0$cmp_ge0002> created at line 61.
+    Found 10-bit comparator greatequal for signal <active_0$cmp_ge0003> created at line 74.
+    Found 12-bit comparator greatequal for signal <active_0$cmp_ge0004> created at line 74.
+    Found 12-bit comparator greatequal for signal <active_0$cmp_ge0005> created at line 74.
+    Found 10-bit comparator lessequal for signal <active_0$cmp_le0000> created at line 61.
+    Found 11-bit comparator lessequal for signal <active_0$cmp_le0001> created at line 61.
+    Found 11-bit comparator lessequal for signal <active_0$cmp_le0002> created at line 61.
+    Found 10-bit comparator lessequal for signal <active_0$cmp_le0003> created at line 74.
+    Found 11-bit comparator lessequal for signal <active_0$cmp_le0004> created at line 74.
+    Found 11-bit comparator lessequal for signal <active_0$cmp_le0005> created at line 74.
+    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 94.
     Found 10-bit register for signal <ball_dx>.
     Found 10-bit register for signal <ball_dy>.
     Found 10-bit up accumulator for signal <ball_x>.
     Found 10-bit up accumulator for signal <ball_y>.
-    Found 10-bit adder for signal <old_ball_dx_4$addsub0001>.
-    Found 10-bit adder carry out for signal <old_ball_dx_4$addsub0002> created at line 27.
-    Found 10-bit comparator greatequal for signal <old_ball_dx_4$cmp_ge0000> created at line 27.
-    Found 10-bit comparator greater for signal <old_ball_dx_4$cmp_gt0000> created at line 27.
-    Found 10-bit comparator greater for signal <old_ball_dx_4$cmp_gt0001> created at line 27.
-    Found 10-bit comparator greater for signal <old_ball_dx_4$cmp_gt0002> created at line 27.
-    Found 10-bit comparator greater for signal <old_ball_dx_4$cmp_gt0003> created at line 27.
-    Found 10-bit comparator greater for signal <old_ball_dx_4$cmp_gt0004> created at line 27.
-    Found 11-bit comparator greater for signal <old_ball_dx_4$cmp_gt0005> created at line 27.
-    Found 11-bit comparator greater for signal <old_ball_dx_4$cmp_gt0006> created at line 27.
-    Found 11-bit comparator greater for signal <old_ball_dx_4$cmp_gt0007> created at line 27.
-    Found 11-bit comparator greater for signal <old_ball_dx_4$cmp_gt0008> created at line 27.
-    Found 11-bit comparator greater for signal <old_ball_dx_4$cmp_gt0009> created at line 27.
-    Found 11-bit comparator greater for signal <old_ball_dx_4$cmp_gt0010> created at line 27.
-    Found 11-bit comparator greater for signal <old_ball_dx_4$cmp_gt0011> created at line 27.
-    Found 11-bit comparator greater for signal <old_ball_dx_4$cmp_gt0012> created at line 27.
-    Found 11-bit comparator greater for signal <old_ball_dx_4$cmp_gt0013> created at line 27.
-    Found 11-bit comparator greater for signal <old_ball_dx_4$cmp_gt0014> created at line 27.
-    Found 10-bit comparator lessequal for signal <old_ball_dx_4$cmp_le0000> created at line 27.
-    Found 10-bit comparator less for signal <old_ball_dx_4$cmp_lt0000> created at line 27.
-    Found 10-bit comparator less for signal <old_ball_dx_4$cmp_lt0001> created at line 27.
-    Found 10-bit comparator less for signal <old_ball_dx_4$cmp_lt0002> created at line 27.
-    Found 10-bit comparator less for signal <old_ball_dx_4$cmp_lt0003> created at line 27.
-    Found 10-bit comparator less for signal <old_ball_dx_4$cmp_lt0004> created at line 27.
-    Found 12-bit comparator less for signal <old_ball_dx_4$cmp_lt0005> created at line 27.
-    Found 12-bit comparator less for signal <old_ball_dx_4$cmp_lt0006> created at line 27.
-    Found 12-bit comparator less for signal <old_ball_dx_4$cmp_lt0007> created at line 27.
-    Found 12-bit comparator less for signal <old_ball_dx_4$cmp_lt0008> created at line 27.
-    Found 12-bit comparator less for signal <old_ball_dx_4$cmp_lt0009> created at line 27.
-    Found 12-bit comparator less for signal <old_ball_dx_4$cmp_lt0010> created at line 27.
-    Found 12-bit comparator less for signal <old_ball_dx_4$cmp_lt0011> created at line 27.
-    Found 12-bit comparator less for signal <old_ball_dx_4$cmp_lt0012> created at line 27.
-    Found 12-bit comparator less for signal <old_ball_dx_4$cmp_lt0013> created at line 27.
-    Found 12-bit comparator less for signal <old_ball_dx_4$cmp_lt0014> created at line 27.
-    Found 10-bit adder for signal <old_ball_dy_3$addsub0000>.
-    Found 10-bit adder carry out for signal <old_ball_dy_3$addsub0001> created at line 52.
-    Found 10-bit comparator greater for signal <old_ball_dy_3$cmp_gt0000> created at line 52.
-    Found 10-bit comparator greater for signal <old_ball_dy_3$cmp_gt0001> created at line 52.
-    Found 10-bit comparator greater for signal <old_ball_dy_3$cmp_gt0002> created at line 52.
-    Found 10-bit comparator greater for signal <old_ball_dy_3$cmp_gt0003> created at line 52.
-    Found 10-bit comparator greater for signal <old_ball_dy_3$cmp_gt0004> created at line 52.
-    Found 10-bit comparator greater for signal <old_ball_dy_3$cmp_gt0005> created at line 52.
-    Found 11-bit comparator greater for signal <old_ball_dy_3$cmp_gt0006> created at line 52.
-    Found 11-bit comparator greater for signal <old_ball_dy_3$cmp_gt0007> created at line 52.
-    Found 11-bit comparator greater for signal <old_ball_dy_3$cmp_gt0008> created at line 52.
-    Found 11-bit comparator greater for signal <old_ball_dy_3$cmp_gt0009> created at line 52.
-    Found 11-bit comparator greater for signal <old_ball_dy_3$cmp_gt0010> created at line 52.
-    Found 11-bit comparator greater for signal <old_ball_dy_3$cmp_gt0011> created at line 52.
-    Found 11-bit comparator greater for signal <old_ball_dy_3$cmp_gt0012> created at line 52.
-    Found 11-bit comparator greater for signal <old_ball_dy_3$cmp_gt0013> created at line 52.
-    Found 11-bit comparator greater for signal <old_ball_dy_3$cmp_gt0014> created at line 52.
-    Found 11-bit comparator greater for signal <old_ball_dy_3$cmp_gt0015> created at line 52.
-    Found 10-bit comparator lessequal for signal <old_ball_dy_3$cmp_le0000> created at line 52.
-    Found 10-bit comparator less for signal <old_ball_dy_3$cmp_lt0000> created at line 52.
-    Found 10-bit comparator less for signal <old_ball_dy_3$cmp_lt0001> created at line 52.
-    Found 10-bit comparator less for signal <old_ball_dy_3$cmp_lt0002> created at line 52.
-    Found 10-bit comparator less for signal <old_ball_dy_3$cmp_lt0003> created at line 52.
-    Found 10-bit comparator less for signal <old_ball_dy_3$cmp_lt0004> created at line 52.
-    Found 12-bit comparator less for signal <old_ball_dy_3$cmp_lt0005> created at line 52.
-    Found 12-bit comparator less for signal <old_ball_dy_3$cmp_lt0006> created at line 52.
-    Found 12-bit comparator less for signal <old_ball_dy_3$cmp_lt0007> created at line 52.
-    Found 12-bit comparator less for signal <old_ball_dy_3$cmp_lt0008> created at line 52.
-    Found 12-bit comparator less for signal <old_ball_dy_3$cmp_lt0009> created at line 52.
-    Found 12-bit comparator less for signal <old_ball_dy_3$cmp_lt0010> created at line 52.
-    Found 12-bit comparator less for signal <old_ball_dy_3$cmp_lt0011> created at line 52.
-    Found 12-bit comparator less for signal <old_ball_dy_3$cmp_lt0012> created at line 52.
-    Found 12-bit comparator less for signal <old_ball_dy_3$cmp_lt0013> created at line 52.
-    Found 12-bit comparator less for signal <old_ball_dy_3$cmp_lt0014> created at line 52.
+    Found 1-bit register for signal <erase_e>.
+    Found 10-bit adder for signal <old_ball_dx_3$addsub0000>.
+    Found 10-bit comparator greatequal for signal <old_ball_dx_3$cmp_ge0000> created at line 49.
+    Found 10-bit comparator lessequal for signal <old_ball_dx_3$cmp_le0000> created at line 49.
+    Found 10-bit adder for signal <old_ball_dx_6$addsub0000>.
+    Found 10-bit adder carry out for signal <old_ball_dx_6$addsub0001> created at line 61.
+    Found 10-bit comparator greater for signal <old_ball_dx_6$cmp_gt0000> created at line 61.
+    Found 11-bit comparator greater for signal <old_ball_dx_6$cmp_gt0001> created at line 61.
+    Found 11-bit comparator greater for signal <old_ball_dx_6$cmp_gt0002> created at line 61.
+    Found 10-bit comparator less for signal <old_ball_dx_6$cmp_lt0000> created at line 61.
+    Found 12-bit comparator less for signal <old_ball_dx_6$cmp_lt0001> created at line 61.
+    Found 12-bit comparator less for signal <old_ball_dx_6$cmp_lt0002> created at line 61.
+    Found 10-bit adder for signal <old_ball_dy_4$addsub0000>.
+    Found 10-bit adder carry out for signal <old_ball_dy_4$addsub0001> created at line 74.
+    Found 10-bit comparator greater for signal <old_ball_dy_4$cmp_gt0000> created at line 74.
+    Found 11-bit comparator greater for signal <old_ball_dy_4$cmp_gt0001> created at line 74.
+    Found 11-bit comparator greater for signal <old_ball_dy_4$cmp_gt0002> created at line 74.
+    Found 10-bit comparator less for signal <old_ball_dy_4$cmp_lt0000> created at line 74.
+    Found 12-bit comparator less for signal <old_ball_dy_4$cmp_lt0001> created at line 74.
+    Found 12-bit comparator less for signal <old_ball_dy_4$cmp_lt0002> created at line 74.
     Found 10-bit adder for signal <old_ball_dy_5$addsub0000>.
-    Found 11-bit comparator greatequal for signal <old_ball_dy_5$cmp_ge0000> created at line 77.
-    Found 10-bit comparator greater for signal <old_ball_dy_5$cmp_gt0000> created at line 77.
-    Found 11-bit comparator less for signal <old_ball_dy_5$cmp_lt0000> created at line 77.
-    Found 12-bit comparator less for signal <old_ball_dy_5$cmp_lt0001> created at line 77.
+    Found 10-bit comparator greater for signal <old_ball_dy_5$cmp_gt0000> created at line 88.
+    Found 10-bit comparator lessequal for signal <old_ball_dy_5$cmp_le0000> created at line 88.
+    Found 10-bit adder for signal <old_ball_dy_7$addsub0000>.
+    Found 11-bit comparator greatequal for signal <old_ball_dy_7$cmp_ge0000> created at line 94.
+    Found 10-bit comparator greater for signal <old_ball_dy_7$cmp_gt0000> created at line 94.
+    Found 11-bit comparator less for signal <old_ball_dy_7$cmp_lt0000> created at line 94.
+    Found 12-bit comparator less for signal <old_ball_dy_7$cmp_lt0001> created at line 94.
     Summary:
 	inferred   2 Accumulator(s).
-	inferred  20 D-type flip-flop(s).
-	inferred   8 Adder/Subtractor(s).
-	inferred  68 Comparator(s).
+	inferred  22 D-type flip-flop(s).
+	inferred  10 Adder/Subtractor(s).
+	inferred  32 Comparator(s).
 Unit <ball> synthesized.
 
 
 Synthesizing Unit <VGA>.
     Related source file is "VGA.v".
+WARNING:Xst:647 - Input <erase_pos<5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rgb_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:646 - Signal <data_x<16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <vsync>.
     Found 3-bit register for signal <RGB>.
     Found 1-bit register for signal <hsync>.
-    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 103.
-    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 99.
-    Found 10-bit adder carry out for signal <add0002$addsub0000> created at line 99.
+    Found 25-bit register for signal <active>.
+    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 107.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 103.
+    Found 10-bit adder carry out for signal <add0002$addsub0000> created at line 103.
     Found 10-bit register for signal <hcount>.
-    Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 89.
-    Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 89.
-    Found 10-bit adder for signal <old_hcount_7$addsub0000> created at line 79.
-    Found 10-bit adder for signal <old_vcount_6$addsub0000> created at line 75.
-    Found 10-bit adder for signal <RGB$addsub0000> created at line 233.
-    Found 10-bit adder for signal <RGB$addsub0001> created at line 233.
-    Found 10-bit adder for signal <RGB$addsub0002> created at line 228.
-    Found 10-bit adder for signal <RGB$addsub0003> created at line 228.
-    Found 10-bit adder for signal <RGB$addsub0004> created at line 223.
-    Found 10-bit adder for signal <RGB$addsub0005> created at line 223.
-    Found 10-bit adder for signal <RGB$addsub0006> created at line 218.
-    Found 10-bit adder for signal <RGB$addsub0007> created at line 218.
-    Found 10-bit adder for signal <RGB$addsub0008> created at line 213.
-    Found 10-bit adder for signal <RGB$addsub0009> created at line 213.
-    Found 10-bit adder for signal <RGB$addsub0010> created at line 207.
-    Found 10-bit adder for signal <RGB$addsub0011> created at line 207.
-    Found 10-bit adder for signal <RGB$addsub0012> created at line 202.
-    Found 10-bit adder for signal <RGB$addsub0013> created at line 202.
-    Found 10-bit adder for signal <RGB$addsub0014> created at line 197.
-    Found 10-bit adder for signal <RGB$addsub0015> created at line 197.
-    Found 10-bit adder for signal <RGB$addsub0016> created at line 192.
-    Found 10-bit adder for signal <RGB$addsub0017> created at line 192.
-    Found 10-bit adder for signal <RGB$addsub0018> created at line 187.
-    Found 10-bit adder for signal <RGB$addsub0019> created at line 187.
-    Found 10-bit adder for signal <RGB$addsub0020> created at line 181.
-    Found 10-bit adder for signal <RGB$addsub0021> created at line 181.
-    Found 10-bit adder for signal <RGB$addsub0022> created at line 176.
-    Found 10-bit adder for signal <RGB$addsub0023> created at line 176.
-    Found 10-bit adder for signal <RGB$addsub0024> created at line 171.
-    Found 10-bit adder for signal <RGB$addsub0025> created at line 171.
-    Found 10-bit adder for signal <RGB$addsub0026> created at line 166.
-    Found 10-bit adder for signal <RGB$addsub0027> created at line 166.
-    Found 10-bit adder for signal <RGB$addsub0028> created at line 161.
-    Found 10-bit adder for signal <RGB$addsub0029> created at line 161.
-    Found 10-bit adder for signal <RGB$addsub0030> created at line 155.
-    Found 10-bit adder for signal <RGB$addsub0031> created at line 155.
-    Found 10-bit adder for signal <RGB$addsub0032> created at line 150.
-    Found 10-bit adder for signal <RGB$addsub0033> created at line 150.
-    Found 10-bit adder for signal <RGB$addsub0034> created at line 145.
-    Found 10-bit adder for signal <RGB$addsub0035> created at line 145.
-    Found 10-bit adder for signal <RGB$addsub0036> created at line 140.
-    Found 10-bit adder for signal <RGB$addsub0037> created at line 135.
-    Found 10-bit adder for signal <RGB$addsub0038> created at line 135.
-    Found 10-bit adder for signal <RGB$addsub0039> created at line 129.
-    Found 10-bit adder for signal <RGB$addsub0040> created at line 129.
-    Found 10-bit adder for signal <RGB$addsub0041> created at line 124.
-    Found 10-bit adder for signal <RGB$addsub0042> created at line 124.
-    Found 10-bit adder for signal <RGB$addsub0043> created at line 119.
-    Found 10-bit adder for signal <RGB$addsub0044> created at line 119.
-    Found 10-bit adder for signal <RGB$addsub0045> created at line 114.
-    Found 10-bit adder for signal <RGB$addsub0046> created at line 114.
-    Found 10-bit adder for signal <RGB$addsub0047> created at line 109.
-    Found 10-bit adder for signal <RGB$addsub0048> created at line 109.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0000> created at line 233.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0001> created at line 233.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0002> created at line 228.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0003> created at line 228.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0004> created at line 223.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0005> created at line 223.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0006> created at line 218.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0007> created at line 218.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0008> created at line 213.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0009> created at line 213.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0010> created at line 207.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0011> created at line 207.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0012> created at line 202.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0013> created at line 202.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0014> created at line 197.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0015> created at line 197.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0016> created at line 192.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0017> created at line 192.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0018> created at line 187.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0019> created at line 187.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0020> created at line 181.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0021> created at line 181.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0022> created at line 176.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0023> created at line 176.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0024> created at line 171.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0025> created at line 171.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0026> created at line 166.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0027> created at line 166.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0028> created at line 161.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0029> created at line 161.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0030> created at line 155.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0031> created at line 155.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0032> created at line 150.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0033> created at line 150.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0034> created at line 145.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0035> created at line 145.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0036> created at line 140.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0037> created at line 135.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0038> created at line 135.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0039> created at line 129.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0040> created at line 129.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0041> created at line 124.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0042> created at line 124.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0043> created at line 119.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0044> created at line 119.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0045> created at line 114.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0046> created at line 114.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0047> created at line 109.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0048> created at line 109.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0049> created at line 99.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0050> created at line 99.
-    Found 10-bit comparator greater for signal <RGB$cmp_gt0000> created at line 103.
-    Found 10-bit comparator greater for signal <RGB$cmp_gt0001> created at line 103.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0000> created at line 233.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0001> created at line 233.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0002> created at line 228.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0003> created at line 228.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0004> created at line 223.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0005> created at line 223.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0006> created at line 218.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0007> created at line 218.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0008> created at line 213.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0009> created at line 213.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0010> created at line 207.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0011> created at line 207.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0012> created at line 202.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0013> created at line 202.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0014> created at line 197.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0015> created at line 197.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0016> created at line 192.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0017> created at line 192.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0018> created at line 187.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0019> created at line 187.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0020> created at line 181.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0021> created at line 181.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0022> created at line 176.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0023> created at line 176.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0024> created at line 171.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0025> created at line 171.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0026> created at line 166.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0027> created at line 166.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0028> created at line 161.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0029> created at line 161.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0030> created at line 155.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0031> created at line 155.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0032> created at line 150.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0033> created at line 150.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0034> created at line 145.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0035> created at line 145.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0036> created at line 140.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0037> created at line 135.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0038> created at line 135.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0039> created at line 129.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0040> created at line 129.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0041> created at line 124.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0042> created at line 124.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0043> created at line 119.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0044> created at line 119.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0045> created at line 114.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0046> created at line 114.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0047> created at line 109.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0048> created at line 109.
-    Found 11-bit comparator lessequal for signal <RGB$cmp_le0049> created at line 99.
-    Found 11-bit comparator lessequal for signal <RGB$cmp_le0050> created at line 99.
-    Found 10-bit comparator less for signal <RGB$cmp_lt0000> created at line 96.
-    Found 10-bit comparator less for signal <RGB$cmp_lt0001> created at line 96.
-    Found 10-bit comparator less for signal <RGB$cmp_lt0002> created at line 103.
-    Found 11-bit comparator less for signal <RGB$cmp_lt0003> created at line 103.
+    Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 93.
+    Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 93.
+    Found 10-bit adder for signal <old_hcount_9$addsub0000> created at line 83.
+    Found 10-bit adder for signal <old_vcount_8$addsub0000> created at line 79.
+    Found 10-bit adder for signal <RGB$addsub0000> created at line 237.
+    Found 10-bit adder for signal <RGB$addsub0001> created at line 237.
+    Found 10-bit adder for signal <RGB$addsub0002> created at line 232.
+    Found 10-bit adder for signal <RGB$addsub0003> created at line 232.
+    Found 10-bit adder for signal <RGB$addsub0004> created at line 227.
+    Found 10-bit adder for signal <RGB$addsub0005> created at line 227.
+    Found 10-bit adder for signal <RGB$addsub0006> created at line 222.
+    Found 10-bit adder for signal <RGB$addsub0007> created at line 222.
+    Found 10-bit adder for signal <RGB$addsub0008> created at line 217.
+    Found 10-bit adder for signal <RGB$addsub0009> created at line 217.
+    Found 10-bit adder for signal <RGB$addsub0010> created at line 211.
+    Found 10-bit adder for signal <RGB$addsub0011> created at line 211.
+    Found 10-bit adder for signal <RGB$addsub0012> created at line 206.
+    Found 10-bit adder for signal <RGB$addsub0013> created at line 206.
+    Found 10-bit adder for signal <RGB$addsub0014> created at line 201.
+    Found 10-bit adder for signal <RGB$addsub0015> created at line 201.
+    Found 10-bit adder for signal <RGB$addsub0016> created at line 196.
+    Found 10-bit adder for signal <RGB$addsub0017> created at line 196.
+    Found 10-bit adder for signal <RGB$addsub0018> created at line 191.
+    Found 10-bit adder for signal <RGB$addsub0019> created at line 191.
+    Found 10-bit adder for signal <RGB$addsub0020> created at line 185.
+    Found 10-bit adder for signal <RGB$addsub0021> created at line 185.
+    Found 10-bit adder for signal <RGB$addsub0022> created at line 180.
+    Found 10-bit adder for signal <RGB$addsub0023> created at line 180.
+    Found 10-bit adder for signal <RGB$addsub0024> created at line 175.
+    Found 10-bit adder for signal <RGB$addsub0025> created at line 175.
+    Found 10-bit adder for signal <RGB$addsub0026> created at line 170.
+    Found 10-bit adder for signal <RGB$addsub0027> created at line 170.
+    Found 10-bit adder for signal <RGB$addsub0028> created at line 165.
+    Found 10-bit adder for signal <RGB$addsub0029> created at line 165.
+    Found 10-bit adder for signal <RGB$addsub0030> created at line 159.
+    Found 10-bit adder for signal <RGB$addsub0031> created at line 159.
+    Found 10-bit adder for signal <RGB$addsub0032> created at line 154.
+    Found 10-bit adder for signal <RGB$addsub0033> created at line 154.
+    Found 10-bit adder for signal <RGB$addsub0034> created at line 149.
+    Found 10-bit adder for signal <RGB$addsub0035> created at line 149.
+    Found 10-bit adder for signal <RGB$addsub0036> created at line 144.
+    Found 10-bit adder for signal <RGB$addsub0037> created at line 139.
+    Found 10-bit adder for signal <RGB$addsub0038> created at line 139.
+    Found 10-bit adder for signal <RGB$addsub0039> created at line 133.
+    Found 10-bit adder for signal <RGB$addsub0040> created at line 133.
+    Found 10-bit adder for signal <RGB$addsub0041> created at line 128.
+    Found 10-bit adder for signal <RGB$addsub0042> created at line 128.
+    Found 10-bit adder for signal <RGB$addsub0043> created at line 123.
+    Found 10-bit adder for signal <RGB$addsub0044> created at line 123.
+    Found 10-bit adder for signal <RGB$addsub0045> created at line 118.
+    Found 10-bit adder for signal <RGB$addsub0046> created at line 118.
+    Found 10-bit adder for signal <RGB$addsub0047> created at line 113.
+    Found 10-bit adder for signal <RGB$addsub0048> created at line 113.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0000> created at line 237.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0001> created at line 237.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0002> created at line 232.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0003> created at line 232.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0004> created at line 227.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0005> created at line 227.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0006> created at line 222.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0007> created at line 222.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0008> created at line 217.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0009> created at line 217.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0010> created at line 211.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0011> created at line 211.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0012> created at line 206.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0013> created at line 206.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0014> created at line 201.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0015> created at line 201.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0016> created at line 196.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0017> created at line 196.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0018> created at line 191.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0019> created at line 191.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0020> created at line 185.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0021> created at line 185.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0022> created at line 180.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0023> created at line 180.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0024> created at line 175.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0025> created at line 175.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0026> created at line 170.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0027> created at line 170.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0028> created at line 165.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0029> created at line 165.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0030> created at line 159.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0031> created at line 159.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0032> created at line 154.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0033> created at line 154.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0034> created at line 149.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0035> created at line 149.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0036> created at line 144.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0037> created at line 139.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0038> created at line 139.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0039> created at line 133.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0040> created at line 133.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0041> created at line 128.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0042> created at line 128.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0043> created at line 123.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0044> created at line 123.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0045> created at line 118.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0046> created at line 118.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0047> created at line 113.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0048> created at line 113.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0049> created at line 103.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0050> created at line 103.
+    Found 10-bit comparator greater for signal <RGB$cmp_gt0000> created at line 107.
+    Found 10-bit comparator greater for signal <RGB$cmp_gt0001> created at line 107.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0000> created at line 237.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0001> created at line 237.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0002> created at line 232.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0003> created at line 232.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0004> created at line 227.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0005> created at line 227.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0006> created at line 222.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0007> created at line 222.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0008> created at line 217.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0009> created at line 217.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0010> created at line 211.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0011> created at line 211.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0012> created at line 206.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0013> created at line 206.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0014> created at line 201.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0015> created at line 201.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0016> created at line 196.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0017> created at line 196.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0018> created at line 191.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0019> created at line 191.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0020> created at line 185.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0021> created at line 185.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0022> created at line 180.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0023> created at line 180.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0024> created at line 175.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0025> created at line 175.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0026> created at line 170.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0027> created at line 170.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0028> created at line 165.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0029> created at line 165.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0030> created at line 159.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0031> created at line 159.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0032> created at line 154.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0033> created at line 154.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0034> created at line 149.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0035> created at line 149.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0036> created at line 144.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0037> created at line 139.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0038> created at line 139.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0039> created at line 133.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0040> created at line 133.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0041> created at line 128.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0042> created at line 128.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0043> created at line 123.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0044> created at line 123.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0045> created at line 118.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0046> created at line 118.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0047> created at line 113.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0048> created at line 113.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0049> created at line 103.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0050> created at line 103.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0000> created at line 100.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0001> created at line 100.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0002> created at line 107.
+    Found 11-bit comparator less for signal <RGB$cmp_lt0003> created at line 107.
     Found 10-bit register for signal <vcount>.
-    Found 10-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 82.
-    Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 82.
+    Found 10-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 86.
+    Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 86.
     Summary:
-	inferred  25 D-type flip-flop(s).
+	inferred  50 D-type flip-flop(s).
 	inferred  54 Adder/Subtractor(s).
 	inferred 112 Comparator(s).
 Unit <VGA> synthesized.
@@ -616,7 +627,7 @@ Synthesizing Unit <clk_divider_2>.
     Related source file is "clk_divider.v".
     Found 1-bit register for signal <clk_buf>.
     Found 32-bit up counter for signal <counter>.
-    Found 32-bit adder for signal <old_counter_8$add0000> created at line 14.
+    Found 32-bit adder for signal <old_counter_10$add0000> created at line 14.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -628,7 +639,7 @@ Synthesizing Unit <clk_divider_3>.
     Related source file is "clk_divider.v".
     Found 1-bit register for signal <clk_buf>.
     Found 32-bit up counter for signal <counter>.
-    Found 32-bit adder for signal <old_counter_9$add0000> created at line 14.
+    Found 32-bit adder for signal <old_counter_11$add0000> created at line 14.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -640,7 +651,7 @@ Synthesizing Unit <clk_divider_4>.
     Related source file is "clk_divider.v".
     Found 1-bit register for signal <clk_buf>.
     Found 32-bit up counter for signal <counter>.
-    Found 32-bit adder for signal <old_counter_10$add0000> created at line 14.
+    Found 32-bit adder for signal <old_counter_12$add0000> created at line 14.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -652,7 +663,7 @@ Synthesizing Unit <clk_divider_5>.
     Related source file is "clk_divider.v".
     Found 1-bit register for signal <clk_buf>.
     Found 32-bit up counter for signal <counter>.
-    Found 32-bit adder for signal <old_counter_11$add0000> created at line 14.
+    Found 32-bit adder for signal <old_counter_13$add0000> created at line 14.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -674,8 +685,8 @@ WARNING:Xst:647 - Input <clk_audio> is never used. This port will be preserved a
 WARNING:Xst:653 - Signal <data> is used but never assigned. This sourceless signal will be automatically connected to value 000.
     Found 5-bit up counter for signal <address_audio>.
     Found 14-bit up counter for signal <address_vga>.
-    Found 10-bit comparator less for signal <address_vga$cmp_lt0000> created at line 58.
-    Found 10-bit comparator less for signal <address_vga$cmp_lt0001> created at line 57.
+    Found 10-bit comparator less for signal <address_vga$cmp_lt0000> created at line 60.
+    Found 10-bit comparator less for signal <address_vga$cmp_lt0001> created at line 59.
     Summary:
 	inferred   2 Counter(s).
 	inferred   2 Comparator(s).
@@ -689,8 +700,8 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  32x4-bit ROM                                          : 1
-# Adders/Subtractors                                   : 68
- 10-bit adder                                          : 54
+# Adders/Subtractors                                   : 70
+ 10-bit adder                                          : 56
  10-bit adder carry out                                : 6
  10-bit addsub                                         : 1
  12-bit subtractor                                     : 2
@@ -700,20 +711,21 @@ Macro Statistics
  5-bit up counter                                      : 1
 # Accumulators                                         : 2
  10-bit up accumulator                                 : 2
-# Registers                                            : 13
- 1-bit register                                        : 7
+# Registers                                            : 40
+ 1-bit register                                        : 34
  10-bit register                                       : 5
  3-bit register                                        : 1
-# Comparators                                          : 182
- 10-bit comparator greatequal                          : 54
- 10-bit comparator greater                             : 15
- 10-bit comparator less                                : 16
- 10-bit comparator lessequal                           : 51
+# Comparators                                          : 146
+ 10-bit comparator greatequal                          : 56
+ 10-bit comparator greater                             : 7
+ 10-bit comparator less                                : 8
+ 10-bit comparator lessequal                           : 53
  11-bit comparator greatequal                          : 1
- 11-bit comparator greater                             : 20
+ 11-bit comparator greater                             : 4
  11-bit comparator less                                : 2
- 11-bit comparator lessequal                           : 2
- 12-bit comparator less                                : 21
+ 11-bit comparator lessequal                           : 6
+ 12-bit comparator greatequal                          : 4
+ 12-bit comparator less                                : 5
 
 =========================================================================
 
@@ -721,6 +733,8 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+INFO:Xst:2261 - The FF/Latch <active_1> in Unit <vga> is equivalent to the following 23 FFs/Latches, which will be removed : <active_2> <active_3> <active_6> <active_4> <active_5> <active_9> <active_7> <active_8> <active_12> <active_10> <active_11> <active_15> <active_13> <active_14> <active_18> <active_16> <active_17> <active_21> <active_19> <active_20> <active_24> <active_22> <active_23> 
+WARNING:Xst:1710 - FF/Latch <active_1> (without init value) has a constant value of 1 in block <vga>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -728,8 +742,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  32x4-bit ROM                                          : 1
-# Adders/Subtractors                                   : 68
- 10-bit adder                                          : 54
+# Adders/Subtractors                                   : 70
+ 10-bit adder                                          : 56
  10-bit adder carry out                                : 6
  10-bit addsub                                         : 1
  12-bit subtractor                                     : 2
@@ -739,18 +753,19 @@ Macro Statistics
  5-bit up counter                                      : 1
 # Accumulators                                         : 2
  10-bit up accumulator                                 : 2
-# Registers                                            : 60
- Flip-Flops                                            : 60
-# Comparators                                          : 182
- 10-bit comparator greatequal                          : 54
- 10-bit comparator greater                             : 15
- 10-bit comparator less                                : 16
- 10-bit comparator lessequal                           : 51
+# Registers                                            : 87
+ Flip-Flops                                            : 87
+# Comparators                                          : 146
+ 10-bit comparator greatequal                          : 56
+ 10-bit comparator greater                             : 7
+ 10-bit comparator less                                : 8
+ 10-bit comparator lessequal                           : 53
  11-bit comparator greatequal                          : 1
- 11-bit comparator greater                             : 20
+ 11-bit comparator greater                             : 4
  11-bit comparator less                                : 2
- 11-bit comparator lessequal                           : 2
- 12-bit comparator less                                : 21
+ 11-bit comparator lessequal                           : 6
+ 12-bit comparator greatequal                          : 4
+ 12-bit comparator less                                : 5
 
 =========================================================================
 
@@ -766,11 +781,34 @@ Optimizing unit <Paddle> ...
 Optimizing unit <ball> ...
 
 Optimizing unit <VGA> ...
+WARNING:Xst:1710 - FF/Latch <vga/active_1> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_2> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_3> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_6> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_4> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_5> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_9> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_7> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_8> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_12> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_10> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_11> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_15> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_13> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_14> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_18> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_16> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_17> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_21> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_19> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_20> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_24> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_22> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vga/active_23> (without init value) has a constant value of 1 in block <Main>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 12.
-FlipFlop bola/ball_x_7 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 10.
 
 Final Macro Processing ...
 
@@ -778,8 +816,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 246
- Flip-Flops                                            : 246
+# Registers                                            : 248
+ Flip-Flops                                            : 248
 
 =========================================================================
 
@@ -808,31 +846,30 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 2290
+# BELS                             : 2041
 #      GND                         : 1
-#      INV                         : 106
-#      LUT1                        : 400
-#      LUT2                        : 122
-#      LUT2_D                      : 3
-#      LUT2_L                      : 3
-#      LUT3                        : 85
-#      LUT3_D                      : 10
-#      LUT3_L                      : 5
-#      LUT4                        : 302
-#      LUT4_D                      : 11
-#      LUT4_L                      : 20
+#      INV                         : 75
+#      LUT1                        : 369
+#      LUT2                        : 105
+#      LUT2_L                      : 10
+#      LUT3                        : 72
+#      LUT3_D                      : 1
+#      LUT3_L                      : 8
+#      LUT4                        : 255
+#      LUT4_D                      : 12
+#      LUT4_L                      : 8
 #      MULT_AND                    : 5
-#      MUXCY                       : 728
-#      MUXF5                       : 25
+#      MUXCY                       : 621
+#      MUXF5                       : 15
 #      VCC                         : 1
-#      XORCY                       : 463
-# FlipFlops/Latches                : 246
+#      XORCY                       : 483
+# FlipFlops/Latches                : 248
 #      FD                          : 34
 #      FDE                         : 5
-#      FDR                         : 180
-#      FDRE                        : 2
-#      FDRS                        : 1
+#      FDR                         : 181
+#      FDRS                        : 2
 #      FDS                         : 24
+#      FDSE                        : 2
 # Clock Buffers                    : 3
 #      BUFG                        : 3
 # IO Buffers                       : 14
@@ -848,9 +885,9 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                      576  out of   4656    12%  
- Number of Slice Flip Flops:            246  out of   9312     2%  
- Number of 4 input LUTs:               1067  out of   9312    11%  
+ Number of Slices:                      503  out of   4656    10%  
+ Number of Slice Flip Flops:            248  out of   9312     2%  
+ Number of 4 input LUTs:                915  out of   9312     9%  
  Number of IOs:                          15
  Number of bonded IOBs:                  14  out of    190     7%  
  Number of GCLKs:                         3  out of     24    12%  
@@ -879,8 +916,8 @@ Clock Signal                       | Clock buffer(FF name)   | Load  |
 -----------------------------------+-------------------------+-------+
 clk50mhz                           | IBUFG+BUFG              | 165   |
 temp(temp45:O)                     | NONE(*)(address_audio_1)| 5     |
-clk_paddle_p/clk_buf1              | BUFG                    | 51    |
-clk50mhz                           | vga_clock_dcm:CLKFX     | 25    |
+clk_paddle_p/clk_buf1              | BUFG                    | 52    |
+clk50mhz                           | vga_clock_dcm:CLKFX     | 26    |
 -----------------------------------+-------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -895,8 +932,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 13.374ns (Maximum Frequency: 74.774MHz)
-   Minimum input arrival time before clock: 11.964ns
+   Minimum period: 13.991ns (Maximum Frequency: 71.477MHz)
+   Minimum input arrival time before clock: 12.671ns
    Maximum output required time after clock: 5.875ns
    Maximum combinational path delay: No path found
 
@@ -907,7 +944,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50mhz'
   Clock period: 7.833ns (frequency: 127.663MHz)
-  Total number of paths / destination ports: 120082 / 359
+  Total number of paths / destination ports: 136905 / 359
 -------------------------------------------------------------------------
 Delay:               7.833ns (Levels of Logic = 33)
   Source:            clk_paddle_p/counter_1 (FF)
@@ -983,23 +1020,22 @@ Delay:               2.641ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_paddle_p/clk_buf1'
-  Clock period: 13.374ns (frequency: 74.774MHz)
-  Total number of paths / destination ports: 686360 / 53
+  Clock period: 13.991ns (frequency: 71.477MHz)
+  Total number of paths / destination ports: 510154 / 53
 -------------------------------------------------------------------------
-Delay:               13.374ns (Levels of Logic = 28)
-  Source:            bola/ball_y_0 (FF)
-  Destination:       bola/ball_y_9 (FF)
+Delay:               13.991ns (Levels of Logic = 22)
+  Source:            bola/ball_y_1 (FF)
+  Destination:       bola/ball_dy_9 (FF)
   Source Clock:      clk_paddle_p/clk_buf1 rising
   Destination Clock: clk_paddle_p/clk_buf1 rising
 
-  Data Path: bola/ball_y_0 to bola/ball_y_9
+  Data Path: bola/ball_y_1 to bola/ball_dy_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             11   0.514   0.945  bola/ball_y_0 (bola/ball_y_0)
-     LUT1:I0->O            1   0.612   0.000  bola/Msub__sub0001_cy<0>_rt (bola/Msub__sub0001_cy<0>_rt)
-     MUXCY:S->O            1   0.404   0.000  bola/Msub__sub0001_cy<0> (bola/Msub__sub0001_cy<0>)
-     MUXCY:CI->O           1   0.052   0.000  bola/Msub__sub0001_cy<1> (bola/Msub__sub0001_cy<1>)
+     FDS:C->Q              9   0.514   0.849  bola/ball_y_1 (bola/ball_y_1)
+     LUT1:I0->O            1   0.612   0.000  bola/Msub__sub0001_cy<1>_rt (bola/Msub__sub0001_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  bola/Msub__sub0001_cy<1> (bola/Msub__sub0001_cy<1>)
      MUXCY:CI->O           1   0.052   0.000  bola/Msub__sub0001_cy<2> (bola/Msub__sub0001_cy<2>)
      MUXCY:CI->O           1   0.052   0.000  bola/Msub__sub0001_cy<3> (bola/Msub__sub0001_cy<3>)
      MUXCY:CI->O           1   0.052   0.000  bola/Msub__sub0001_cy<4> (bola/Msub__sub0001_cy<4>)
@@ -1008,33 +1044,28 @@ Delay:               13.374ns (Levels of Logic = 28)
      MUXCY:CI->O           1   0.052   0.000  bola/Msub__sub0001_cy<7> (bola/Msub__sub0001_cy<7>)
      MUXCY:CI->O           1   0.052   0.000  bola/Msub__sub0001_cy<8> (bola/Msub__sub0001_cy<8>)
      MUXCY:CI->O           1   0.052   0.000  bola/Msub__sub0001_cy<9> (bola/Msub__sub0001_cy<9>)
-     MUXCY:CI->O           0   0.052   0.000  bola/Msub__sub0001_cy<10> (bola/Msub__sub0001_cy<10>)
-     XORCY:CI->O          10   0.699   0.753  bola/Msub__sub0001_xor<11> (bola/_sub0001<11>)
-     LUT4:I3->O            2   0.612   0.000  bola/Mcompar_old_ball_dy_3_cmp_lt0005_lut<5>2 (bola/Mcompar_old_ball_dy_3_cmp_lt0005_lut<5>2)
-     MUXCY:S->O            1   0.752   0.509  bola/Mcompar_old_ball_dy_3_cmp_lt0005_cy<5>_1 (bola/Mcompar_old_ball_dy_3_cmp_lt0005_cy<5>2)
-     LUT4:I0->O            9   0.612   0.849  bola/old_ball_dy_3_or0002138 (bola/old_ball_dy_3_or0002138)
-     LUT4_D:I0->O          2   0.612   0.383  bola/old_ball_dy_3_or0002868_SW0_SW0 (N72)
-     LUT4_D:I3->O          9   0.612   0.727  bola/old_ball_dy_3_or0002868 (bola/old_ball_dy_3_or0002)
-     LUT3_D:I2->O          1   0.612   0.360  bola/Madd_old_ball_dy_5_not0000<2>1 (bola/Madd_old_ball_dy_5_not0000<2>)
-     LUT4:I3->O            1   0.612   0.000  bola/Maccum_ball_y_lut<2> (bola/Maccum_ball_y_lut<2>)
-     MUXCY:S->O            1   0.404   0.000  bola/Maccum_ball_y_cy<2> (bola/Maccum_ball_y_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  bola/Maccum_ball_y_cy<3> (bola/Maccum_ball_y_cy<3>)
-     MUXCY:CI->O           1   0.051   0.000  bola/Maccum_ball_y_cy<4> (bola/Maccum_ball_y_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  bola/Maccum_ball_y_cy<5> (bola/Maccum_ball_y_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  bola/Maccum_ball_y_cy<6> (bola/Maccum_ball_y_cy<6>)
-     MUXCY:CI->O           1   0.051   0.000  bola/Maccum_ball_y_cy<7> (bola/Maccum_ball_y_cy<7>)
-     MUXCY:CI->O           0   0.051   0.000  bola/Maccum_ball_y_cy<8> (bola/Maccum_ball_y_cy<8>)
-     XORCY:CI->O           1   0.699   0.000  bola/Maccum_ball_y_xor<9> (bola/Result<9>1)
-     FDR:D                     0.268          bola/ball_y_9
+     XORCY:CI->O           3   0.699   0.454  bola/Msub__sub0001_xor<10> (bola/_sub0001<10>)
+     LUT4:I3->O            1   0.612   0.000  bola/Mcompar_old_ball_dy_4_cmp_lt0001_lut<3> (bola/Mcompar_old_ball_dy_4_cmp_lt0001_lut<3>)
+     MUXCY:S->O            1   0.404   0.000  bola/Mcompar_old_ball_dy_4_cmp_lt0001_cy<3> (bola/Mcompar_old_ball_dy_4_cmp_lt0001_cy<3>)
+     MUXCY:CI->O           1   0.399   0.426  bola/Mcompar_old_ball_dy_4_cmp_lt0001_cy<4> (bola/Mcompar_old_ball_dy_4_cmp_lt0001_cy<4>)
+     LUT4:I1->O           15   0.612   0.867  bola/old_ball_dy_4_and000299 (bola/old_ball_dy_4_and000299)
+     LUT4_D:I3->O          9   0.612   0.700  bola/old_ball_dy_4_and0002181 (bola/old_ball_dy_4_and0002)
+     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_5_not0000<8>11 (bola/Madd_old_ball_dy_5_not0000<8>1)
+     MUXCY:S->O            0   0.404   0.000  bola/Madd_old_ball_dy_5_addsub0000_cy<8> (bola/Madd_old_ball_dy_5_addsub0000_cy<8>)
+     XORCY:CI->O           3   0.699   0.481  bola/Madd_old_ball_dy_5_addsub0000_xor<9> (bola/old_ball_dy_5_addsub0000<9>)
+     LUT3:I2->O            0   0.612   0.000  bola/Madd_old_ball_dy_7_not0000<9> (bola/Madd_old_ball_dy_7_not0000<9>)
+     XORCY:LI->O           2   0.458   0.383  bola/Madd_old_ball_dy_7_addsub0000_xor<9> (bola/old_ball_dy_7_addsub0000<9>)
+     LUT4:I3->O            1   0.612   0.357  bola/_old_ball_dy_7<9>40 (bola/_old_ball_dy_7<9>)
+     FDS:S                     0.795          bola/ball_dy_9
     ----------------------------------------
-    Total                     13.374ns (8.848ns logic, 4.526ns route)
-                                       (66.2% logic, 33.8% route)
+    Total                     13.991ns (9.473ns logic, 4.518ns route)
+                                       (67.7% logic, 32.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_paddle_p/clk_buf1'
   Total number of paths / destination ports: 361 / 51
 -------------------------------------------------------------------------
-Offset:              7.772ns (Levels of Logic = 6)
+Offset:              7.773ns (Levels of Logic = 6)
   Source:            reset_button (PAD)
   Destination:       pd/position_9 (FF)
   Destination Clock: clk_paddle_p/clk_buf1 rising
@@ -1043,44 +1074,44 @@ Offset:              7.772ns (Levels of Logic = 6)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            76   1.106   1.237  reset_button_IBUF (reset_button_IBUF)
+     IBUF:I->O            78   1.106   1.237  reset_button_IBUF (reset_button_IBUF)
      LUT2:I0->O            1   0.612   0.426  pd/_old_position_2<1>1 (pd/_old_position_2<1>)
      LUT4:I1->O            1   0.612   0.387  pd/position_mux0000<0>118 (pd/position_mux0000<0>118)
-     LUT4:I2->O            1   0.612   0.387  pd/position_mux0000<0>181_SW0 (N191)
+     LUT4:I2->O            1   0.612   0.387  pd/position_mux0000<0>181_SW0 (N136)
      LUT4:I2->O           10   0.612   0.902  pd/position_mux0000<0>181 (pd/N01)
      LUT4:I0->O            1   0.612   0.000  pd/position_mux0000<0>1 (pd/position_mux0000<0>)
      FD:D                      0.268          pd/position_0
     ----------------------------------------
-    Total                      7.772ns (4.434ns logic, 3.338ns route)
+    Total                      7.773ns (4.434ns logic, 3.339ns route)
                                        (57.0% logic, 43.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50mhz'
-  Total number of paths / destination ports: 1900 / 29
+  Total number of paths / destination ports: 2683 / 30
 -------------------------------------------------------------------------
-Offset:              11.964ns (Levels of Logic = 10)
+Offset:              12.671ns (Levels of Logic = 10)
   Source:            reset_button (PAD)
-  Destination:       vga/RGB_2 (FF)
+  Destination:       vga/RGB_0 (FF)
   Destination Clock: clk50mhz rising 0.5X
 
-  Data Path: reset_button to vga/RGB_2
+  Data Path: reset_button to vga/RGB_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            76   1.106   1.237  reset_button_IBUF (reset_button_IBUF)
-     LUT2:I0->O            1   0.612   0.000  vga/_old_vcount_6<0>2491 (vga/_old_vcount_6<0>249)
-     MUXF5:I1->O          10   0.278   0.753  vga/_old_vcount_6<0>249_f5 (vga/N5)
-     LUT4:I3->O           12   0.612   0.969  vga/_old_vcount_6<1>1 (vga/_old_vcount_6<1>)
-     LUT4:I0->O            1   0.612   0.509  vga/RGB_and0002130 (vga/RGB_and0002130)
-     LUT4:I0->O            2   0.612   0.532  vga/RGB_and0002144 (vga/RGB_and0002144)
-     LUT3:I0->O            3   0.612   0.603  vga/RGB_and0002172 (vga/N43)
-     LUT4:I0->O            1   0.612   0.426  vga/RGB_mux0000<0>124 (vga/RGB_mux0000<0>124)
-     LUT3:I1->O            1   0.612   0.387  vga/RGB_mux0000<0>132 (vga/RGB_mux0000<0>132)
-     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0000<0>177 (vga/RGB_mux0000<0>1)
-     FDR:D                     0.268          vga/RGB_2
+     IBUF:I->O            78   1.106   1.154  reset_button_IBUF (reset_button_IBUF)
+     LUT2:I1->O           10   0.612   0.902  vga/_old_vcount_8<0>11 (vga/N3)
+     LUT4:I0->O           11   0.612   0.945  vga/_old_vcount_8<8>1 (vga/_old_vcount_8<8>)
+     LUT3:I0->O            1   0.612   0.509  vga/RGB_and0022262 (vga/RGB_and0022262)
+     LUT4:I0->O            5   0.612   0.607  vga/RGB_and0022265 (vga/N108)
+     LUT4:I1->O            2   0.612   0.449  vga/RGB_and00221 (vga/RGB_and0022)
+     LUT4:I1->O            1   0.612   0.426  vga/RGB_mux0000<2>11137_SW0 (N138)
+     LUT4:I1->O            2   0.612   0.410  vga/RGB_mux0000<2>11137 (vga/N95)
+     LUT4:I2->O            1   0.612   0.387  vga/RGB_mux0000<2>143 (vga/RGB_mux0000<2>143)
+     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0000<2>1971 (vga/RGB_mux0000<2>197)
+     FDRS:D                    0.268          vga/RGB_0
     ----------------------------------------
-    Total                     11.964ns (6.548ns logic, 5.416ns route)
-                                       (54.7% logic, 45.3% route)
+    Total                     12.671ns (6.882ns logic, 5.789ns route)
+                                       (54.3% logic, 45.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
@@ -1125,14 +1156,14 @@ Offset:              5.875ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.70 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.98 secs
  
 --> 
 
-Total memory usage is 222212 kilobytes
+Total memory usage is 221424 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
-Number of infos    :   79 (   0 filtered)
+Number of warnings :   58 (   0 filtered)
+Number of infos    :   81 (   0 filtered)
 

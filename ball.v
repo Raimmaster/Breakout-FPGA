@@ -6,12 +6,22 @@ module ball(
     input reset,
     input clk,
     output [9:0] x_out,
-    output [9:0] y_out
+    output [9:0] y_out,
+	 output erase_enable,
+	 output [5:0] e_pos
     );
 	parameter
 		SCREEN_W = 640,
 		SCREEN_H = 480,
-		BALL_SIZE = 7;
+		BALL_SIZE = 7,
+		BLOCK_SPACING_X = 10'd40,
+		BLOCK_WIDTH = 10'd80,
+		BLOCK_HEIGHT = 10'd30,
+		FIRST_ROW_Y = 10'd40,
+		SECOND_ROW_Y = 10'd90,		
+		THIRD_ROW_Y = 10'd140,
+		FOURTH_ROW_Y = 10'd190,
+		FIFTH_ROW_Y = 10'd240;
 
 	reg [9:0] ball_x;	
 	reg [9:0] ball_y;
@@ -21,57 +31,276 @@ module ball(
 	
 	assign x_out = ball_x;
 	assign y_out = ball_y;
+	
+	reg erase_e;
+	reg [5:0] erase_pos;
+	
+	reg active [24:0];
+	integer i;
+	
+	assign e_pos = erase_pos;
+	assign erase_enable = erase_e;
 
 	always @ (posedge clk) begin
-
-		if((ball_x) <= 0 || ball_x >= SCREEN_W - BALL_SIZE //screen boundaries check
-			|| ( ( (ball_y > 10'd40 && ball_y < 10'd70) //comparing rows; first row 
-				|| (ball_y > 10'd90 && ball_y < 10'd120) // second row
-				|| (ball_y > 10'd140 && ball_y < 10'd170) //third row
-				|| (ball_y > 10'd190 && ball_y < 10'd220) //fourth row
-				|| (ball_y > 10'd240 && ball_y < 10'd270) ) //fifth row
-				&& (//left column
-					( ( (ball_x + BALL_SIZE) > 10'd38 && (ball_x - BALL_SIZE) < 10'd40 ) )//first column collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd158 && (ball_x - BALL_SIZE) < 10'd160 ) )//second column collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd278 && (ball_x - BALL_SIZE) < 10'd280 ) )//third column collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd398 && (ball_x - BALL_SIZE) < 10'd400 ) )//fourth column collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd518 && (ball_x - BALL_SIZE) < 10'd520 ) )//fifth column collision 
-					|| //right column
-					   ( ( (ball_x + BALL_SIZE) > 10'd120 && (ball_x - BALL_SIZE) < 10'd122 ) )//first column collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd240 && (ball_x - BALL_SIZE) < 10'd242 ) )//second column collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd360 && (ball_x - BALL_SIZE) < 10'd362 ) )//third column collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd480 && (ball_x - BALL_SIZE) < 10'd482 ) )//fourth column collision 
-					|| ( ( (ball_x + BALL_SIZE) > 10'd600 && (ball_x - BALL_SIZE) < 10'd602 ) )//fifth column collision 
-					) 
-				)
-			)
+		erase_e = 0;
+		
+		
+		
+		if((ball_x) <= 0 || ball_x >= SCREEN_W - BALL_SIZE) //screen boundaries check
 		begin
 			ball_dx = ball_dx * -1;
 		end
+		
+		
+		
+		if(active[0]) begin
+		
+			if(
+				( (ball_y > 10'd40 && ball_y < 10'd70) && 
+				(( (ball_x + BALL_SIZE) > 10'd38 && (ball_x - BALL_SIZE) < 10'd40 ) 
+					||
+					( (ball_x + BALL_SIZE) > 10'd120 && (ball_x - BALL_SIZE) < 10'd122 )
+					)
+			)) begin
+				erase_e = 1;
+				erase_pos = 6'd0;
+				ball_dx = ball_dx * -1;
+				active[0] = 0;
+			end
+			
+			if ( (ball_x > 10'd40 && ball_x < 10'd120) && 
+			(( (ball_y + BALL_SIZE) > 10'd38 && (ball_y - BALL_SIZE) < 10'd40 ) || 
+				( (ball_y + BALL_SIZE) > 10'd69 && (ball_y - BALL_SIZE) < 10'd71 )
+			))
+			begin
+				erase_e = 1;
+				erase_pos = 6'd0;
+				ball_dy = ball_dy * -1;
+				active[0] = 0;
+			end
+		end
+		
+		if(active[1]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[2]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[3]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[4]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[5]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[6]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[7]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[8]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[9]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[10]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[11]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[12]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[13]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[14]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[15]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[16]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[17]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[18]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[19]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[20]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[21]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[22]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[23]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
+		if(active[24]) begin
+			if ( && ( || )) begin
+			
+			end
+			if(&& ( || )) begin
+			
+			end
+		end
+		
 
-		if(ball_y <= 0 || ball_y > SCREEN_H - BALL_SIZE //screen boundaries check
-			|| ( ( (ball_x > 10'd40 && ball_x < 10'd120) //comparing columns; first column 
-				|| (ball_x > 10'd160 && ball_x < 10'd240) // second column
-				|| (ball_x > 10'd280 && ball_x < 10'd360) //third column
-				|| (ball_x > 10'd400 && ball_x < 10'd480) //fourth column
-				|| (ball_x > 10'd520 && ball_x < 10'd600) ) //fifth column
-				&& (//upper rows
-					( ( (ball_y + BALL_SIZE) > 10'd38 && (ball_y - BALL_SIZE) < 10'd40 ) )//first row collision 
-					|| ( ( (ball_y + BALL_SIZE) > 10'd88 && (ball_y - BALL_SIZE) < 10'd90 ) )//second row collision 
-					|| ( ( (ball_y + BALL_SIZE) > 10'd138 && (ball_y - BALL_SIZE) < 10'd140 ) )//third row collision 
-					|| ( ( (ball_y + BALL_SIZE) > 10'd188 && (ball_y - BALL_SIZE) < 10'd190 ) )//fourth row collision 
-					|| ( ( (ball_y + BALL_SIZE) > 10'd238 && (ball_y - BALL_SIZE) < 10'd240 ) )//fifth row collision 
-					|| //lower rows
-					   ( ( (ball_y + BALL_SIZE) > 10'd69 && (ball_y - BALL_SIZE) < 10'd71 ) )//first row collision 
-					|| ( ( (ball_y + BALL_SIZE) > 10'd119 && (ball_y - BALL_SIZE) < 10'd121 ) )//second row collision 
-					|| ( ( (ball_y + BALL_SIZE) > 10'd169 && (ball_y - BALL_SIZE) < 10'd171 ) )//third row collision 
-					|| ( ( (ball_y + BALL_SIZE) > 10'd219 && (ball_y - BALL_SIZE) < 10'd221 ) )//fourth row collision 
-					|| ( ( (ball_y + BALL_SIZE) > 10'd269 && (ball_y - BALL_SIZE) < 10'd271 ) )//fifth row collision 
-					) 
-				) 
-			)
+		if(ball_y <= 0 || ball_y > SCREEN_H - BALL_SIZE) //screen boundaries check
 		begin
 			ball_dy = ball_dy * -1;
+			//erase_e = 1;
 		end
 
 		if( (ball_x > paddle_x && ball_x < (paddle_x + 100)) && ( ( (ball_y + BALL_SIZE) >= 10'd439 && (ball_y - BALL_SIZE) < 10'd450) ) ) //paddle collision
@@ -91,6 +320,10 @@ module ball(
 			ball_y = 10'd450; //'
 			ball_dx = -10'd4;
 			ball_dy = -10'd4;
+			
+			for (i = 0; i < 25; i = i + 1) begin
+				active[i] = 1;			
+			end
 		end
 	end
 endmodule

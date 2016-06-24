@@ -10,7 +10,9 @@ module VGA(
 	 input [9:0] paddle_pos,
 	 input [9:0] ball_x,
 	 input [9:0] ball_y,
-	 input reset
+	 input reset,
+	 input erase_enable,
+	 input [5:0] erase_pos
 );
 	parameter
 		BALL_SIZE = 7,
@@ -36,6 +38,8 @@ module VGA(
 	 
     always @ ( posedge CLK_25MH)
     begin 
+			if(erase_enable)
+				active[erase_pos] = 0;
 		  if (reset) begin
 		  //initialize rows and columns of block
 			for (i = 0; i < 25; i = i + 1) begin
@@ -187,27 +191,27 @@ module VGA(
 					if(active[15] && (vcount >= data_y[15] && vcount <= (data_y[15] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[15] && hcount <= (data_x[15] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b101;
+						RGB = 3'b100;
 					end
 					if(active[16] && (vcount >= data_y[16] && vcount <= (data_y[16] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[6] && hcount <= (data_x[6] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b101;
+						RGB = 3'b100;
 					end
 					if(active[17] && (vcount >= data_y[17] && vcount <= (data_y[17] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[17] && hcount <= (data_x[17] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b101;
+						RGB = 3'b100;
 					end
 					if(active[18] && (vcount >= data_y[18] && vcount <= (data_y[18] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[18] && hcount <= (data_x[18] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b101;
+						RGB = 3'b100;
 					end
 					if(active[19] && (vcount >= data_y[19] && vcount <= (data_y[19] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[19] && hcount <= (data_x[19] + BLOCK_WIDTH))
 					begin
-						RGB = 3'b101;
+						RGB = 3'b100;
 					end
 					//fifth row of blocks
 					if(active[20] && (vcount >= data_y[20] && vcount <= (data_y[20] + BLOCK_HEIGHT)) 
