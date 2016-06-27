@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=D:\Breakout-FPGA-master\Main.ncd
-OUTFILE=D:\Breakout-FPGA-master\Main.bit
+INFILE=C:\Users\Raim\Desktop\Breakout-FPGA-master\Main.ncd
+OUTFILE=C:\Users\Raim\Desktop\Breakout-FPGA-master\Main.bit
 FAMILY=Spartan3E
 PART=xc3s500e-5ft256
-WORKINGDIR=D:\Breakout-FPGA-master
+WORKINGDIR=C:\Users\Raim\Desktop\Breakout-FPGA-master
 LICENSE=WebPack
 USER_INFO=__0_0_0

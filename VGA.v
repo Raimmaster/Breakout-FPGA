@@ -31,9 +31,9 @@ module VGA(
 	assign hor_count = hcount;
 	assign ver_count = vcount;
 	 
-	reg [9:0] data_x [24:0];
-	reg [9:0] data_y [24:0];
-	reg active [24:0];
+	reg [9:0] data_x [11:0];
+	reg [9:0] data_y [11:0];
+	reg active [11:0];
 	reg [4:0] i;
 	 
     always @ ( posedge CLK_25MH)
@@ -42,7 +42,7 @@ module VGA(
 				active[erase_pos] = 0;
 		  if (reset) begin
 		  //initialize rows and columns of block
-			for (i = 0; i < 25; i = i + 1) begin
+			for (i = 0; i < 12; i = i + 1) begin
 				if(i < 5) begin
 					data_x[i] = BLOCK_SPACING_X + (BLOCK_SPACING_X + BLOCK_WIDTH) * i;
 					data_y[i] = FIRST_ROW_Y;
@@ -53,21 +53,21 @@ module VGA(
 					data_y[i] = SECOND_ROW_Y;
 					active[i] = 1;
 				end
-				else if(i < 15) begin
-					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-10));
+				else if(i == 10) begin
+					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (11-10));
 					data_y[i] = THIRD_ROW_Y;
 					active[i] = 1;
 				end
-				else if (i < 20) begin
-					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-15));
-					data_y[i] = FOURTH_ROW_Y;
+				else if (i == 11) begin
+					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (13-10));
+					data_y[i] = THIRD_ROW_Y;
 					active[i] = 1;
-				end
+				end/*
 				else if (i < 25) begin
 					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-20));
 					data_y[i] = FIFTH_ROW_Y;
 					active[i] = 1;
-				end				
+				end	 */
 			end
 		end
        else if (hcount == 799) begin
@@ -161,6 +161,17 @@ module VGA(
 					begin
 						RGB = 3'b110;
 					end
+					if(active[10] && (vcount >= data_y[10] && vcount <= (data_y[10] + BLOCK_HEIGHT)) 
+						&& hcount >= data_x[10] && hcount <= (data_x[10] + BLOCK_WIDTH))
+					begin
+						RGB = 3'b111;
+					end
+					if(active[11] && (vcount >= data_y[11] && vcount <= (data_y[11] + BLOCK_HEIGHT)) 
+						&& hcount >= data_x[11] && hcount <= (data_x[11] + BLOCK_WIDTH))
+					begin
+						RGB = 3'b111;
+					end
+					/*
 					//third row of blocks
 					if(active[10] && (vcount >= data_y[10] && vcount <= (data_y[10] + BLOCK_HEIGHT)) 
 						&& hcount >= data_x[10] && hcount <= (data_x[10] + BLOCK_WIDTH))
@@ -238,7 +249,7 @@ module VGA(
 						&& hcount >= data_x[24] && hcount <= (data_x[24] + BLOCK_WIDTH))
 					begin
 						RGB = 3'b011;
-					end
+					end*/
 				end
         end
         else begin

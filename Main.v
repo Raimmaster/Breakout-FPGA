@@ -16,6 +16,7 @@ module Main(
 	//VGA section
 	wire vga_clk;
 	wire clk_paddle;
+	wire clk_ball;
 	wire [2:0] rgb;
 	wire hs;
 	wire vs;
@@ -39,13 +40,20 @@ module Main(
 			.clk(clk50mhz),
 			.clk_d(clk_paddle)
 	);
+	
+	clk_divider #(.limit(32'h1312D0)) clk_ball_divider (//'
+			.clk(clk50mhz),
+			.clk_d(clk_ball)
+	);
 	//Paddle init
 	Paddle pd(left_button, right_button, reset_button, clk_paddle, paddle_pos);
 	
 	wire [2:0] data;
+	wire play_sound1;
+	wire play_sound2;
 	//paddle end
 	//ball init
-	ball bola(paddle_pos, reset_button, clk_paddle, ball_x, ball_y, erase_enable, erase_pos);
+	ball bola(paddle_pos, reset_button, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, play_sound2);
 	
 	
 	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button, erase_enable, erase_pos);
@@ -53,7 +61,7 @@ module Main(
 	reg [13:0] address_vga;
 	
 	//debian_rom d_rom(address_vga, data);
-	
+	/*
 	always @(posedge vga_clk)
 		begin
 			if(vcount < 100)begin
@@ -65,7 +73,7 @@ module Main(
 				address_vga = 0;
 			end
 		end
-	
+	*/
 	assign RGB = rgb;
 	assign hsync = hs;
 	assign vsync = vs;
@@ -120,29 +128,47 @@ module Main(
 		address_audio = address_audio + 1;
 	end	
 	
-	always @(right_button or reset_button or mi_nota or left_button)
-	begin
-		case(1)
-			right_button:
-			begin
+	always @ (posedge clk50mhz) begin
+			temp = 0;
+			if(play_sound1) begin
 				temp = clk_out_do;
 			end
-			reset_button:
-			begin
+			
+			if(play_sound2) begin
 				temp = clk_out_re;
 			end
-			mi_nota:
+		
+	end
+	/*
+	always @()
+	begin
+		if(reset_button)
+			counter_audio = 0;
+		case(counter_audio)
+			0:
+			begin
+				temp = clk_out_do;
+				counter_audio = counter_audio + 1;
+			end
+			1:
+			begin
+				temp = clk_out_re;
+				counter_audio = counter_audio + 1;
+			end
+			2:
 			begin			
 				temp = clk_out_mi;
+				counter_audio = counter_audio + 1;
 			end
-			left_button:
+			3:
 			begin
 				temp = clk_out_sol;
+				counter_audio = 0;
 			end
 			default:
 				begin
 					temp = 0;
 				end
 		endcase
-	end
+	end*/
 endmodule
