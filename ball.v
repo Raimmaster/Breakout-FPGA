@@ -53,17 +53,17 @@ module ball(
 			ball_dx = ball_dx * -1;
 		end
 		
-		if(ball_y <= 0) //screen boundaries check
+		if(ball_y <= 1) //screen boundaries check
 		begin
 			p_sound = 1;
-			ball_dy = 0;
+			ball_dy = ball_dy * -1;
 			//erase_e = 1;
 		end
 		
 		if(ball_y > SCREEN_H - BALL_SIZE) //screen boundaries check
 		begin
 			play_sound2 = 1;
-			ball_dy = ball_dy * -1;
+			ball_dy = 0;
 			//erase_e = 1;
 		end
 		
@@ -426,8 +426,8 @@ module ball(
 		if(reset)begin
 			ball_x = 10'd270; //'
 			ball_y = 10'd450; //'
-			ball_dx = -10'd4;
-			ball_dy = -10'd4;
+			ball_dx = -10'd1;
+			ball_dy = -10'd1;
 			
 			for (i = 0; i < 12; i = i + 1) begin
 				active[i] = 1;			

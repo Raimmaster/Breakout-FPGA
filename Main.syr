@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -129,7 +129,7 @@ Analyzing hierarchy for module <clk_divider> in library <work> with parameters.
 	limit = "00000000001001100010010110100000"
 
 Analyzing hierarchy for module <clk_divider> in library <work> with parameters.
-	limit = "00000000000100110001001011010000"
+	limit = "00000000000001001100010010110100"
 
 Analyzing hierarchy for module <Paddle> in library <work>.
 
@@ -198,7 +198,7 @@ Analyzing module <clk_divider.1> in library <work>.
 Module <clk_divider.1> is correct for synthesis.
  
 Analyzing module <clk_divider.2> in library <work>.
-	limit = 32'b00000000000100110001001011010000
+	limit = 32'b00000000000001001100010010110100
 Module <clk_divider.2> is correct for synthesis.
  
 Analyzing module <Paddle> in library <work>.
@@ -378,91 +378,91 @@ WARNING:Xst:646 - Signal <win> is assigned but never used. This unconnected sign
     Found 10-bit comparator lessequal for signal <erase_pos$cmp_le0021> created at line 351.
     Found 11-bit comparator lessequal for signal <erase_pos$cmp_le0022> created at line 363.
     Found 11-bit comparator lessequal for signal <erase_pos$cmp_le0023> created at line 363.
-    Found 10-bit adder for signal <old_ball_dx_11$addsub0000>.
-    Found 11-bit comparator greater for signal <old_ball_dx_11$cmp_gt0000> created at line 129.
-    Found 11-bit comparator greater for signal <old_ball_dx_11$cmp_gt0001> created at line 129.
-    Found 12-bit comparator less for signal <old_ball_dx_11$cmp_lt0000> created at line 129.
-    Found 12-bit comparator less for signal <old_ball_dx_11$cmp_lt0001> created at line 129.
-    Found 10-bit adder for signal <old_ball_dx_13$addsub0000>.
-    Found 11-bit comparator greater for signal <old_ball_dx_13$cmp_gt0000> created at line 157.
-    Found 11-bit comparator greater for signal <old_ball_dx_13$cmp_gt0001> created at line 157.
-    Found 12-bit comparator less for signal <old_ball_dx_13$cmp_lt0000> created at line 157.
-    Found 12-bit comparator less for signal <old_ball_dx_13$cmp_lt0001> created at line 157.
-    Found 10-bit adder for signal <old_ball_dx_15$addsub0000>.
-    Found 11-bit comparator greater for signal <old_ball_dx_15$cmp_gt0000> created at line 185.
-    Found 11-bit comparator greater for signal <old_ball_dx_15$cmp_gt0001> created at line 185.
-    Found 12-bit comparator less for signal <old_ball_dx_15$cmp_lt0000> created at line 185.
-    Found 12-bit comparator less for signal <old_ball_dx_15$cmp_lt0001> created at line 185.
-    Found 10-bit adder for signal <old_ball_dx_17$addsub0000>.
-    Found 10-bit comparator greater for signal <old_ball_dx_17$cmp_gt0000> created at line 212.
-    Found 10-bit comparator less for signal <old_ball_dx_17$cmp_lt0000> created at line 212.
-    Found 10-bit adder for signal <old_ball_dx_19$addsub0000>.
-    Found 10-bit adder for signal <old_ball_dx_21$addsub0000>.
-    Found 10-bit adder for signal <old_ball_dx_23$addsub0000>.
-    Found 10-bit adder for signal <old_ball_dx_25$addsub0000>.
-    Found 10-bit adder for signal <old_ball_dx_32$addsub0000>.
-    Found 10-bit adder for signal <old_ball_dx_5$addsub0000>.
-    Found 10-bit comparator greatequal for signal <old_ball_dx_5$cmp_ge0000> created at line 51.
-    Found 10-bit comparator lessequal for signal <old_ball_dx_5$cmp_le0000> created at line 51.
-    Found 10-bit adder for signal <old_ball_dx_7$addsub0000>.
-    Found 10-bit adder carry out for signal <old_ball_dx_7$addsub0001> created at line 73.
-    Found 10-bit comparator greater for signal <old_ball_dx_7$cmp_gt0000> created at line 73.
-    Found 11-bit comparator greater for signal <old_ball_dx_7$cmp_gt0001> created at line 73.
-    Found 11-bit comparator greater for signal <old_ball_dx_7$cmp_gt0002> created at line 73.
-    Found 10-bit comparator less for signal <old_ball_dx_7$cmp_lt0000> created at line 73.
-    Found 12-bit comparator less for signal <old_ball_dx_7$cmp_lt0001> created at line 73.
-    Found 12-bit comparator less for signal <old_ball_dx_7$cmp_lt0002> created at line 73.
-    Found 10-bit adder for signal <old_ball_dx_9$addsub0000>.
-    Found 11-bit comparator greater for signal <old_ball_dx_9$cmp_gt0000> created at line 101.
-    Found 11-bit comparator greater for signal <old_ball_dx_9$cmp_gt0001> created at line 101.
-    Found 12-bit comparator less for signal <old_ball_dx_9$cmp_lt0000> created at line 101.
-    Found 12-bit comparator less for signal <old_ball_dx_9$cmp_lt0001> created at line 101.
-    Found 10-bit adder for signal <old_ball_dy_10$addsub0000>.
-    Found 10-bit comparator greater for signal <old_ball_dy_10$cmp_gt0000> created at line 113.
-    Found 10-bit comparator less for signal <old_ball_dy_10$cmp_lt0000> created at line 113.
-    Found 10-bit adder for signal <old_ball_dy_12$addsub0000>.
-    Found 10-bit comparator greater for signal <old_ball_dy_12$cmp_gt0000> created at line 141.
-    Found 10-bit comparator less for signal <old_ball_dy_12$cmp_lt0000> created at line 141.
-    Found 10-bit adder for signal <old_ball_dy_14$addsub0000>.
-    Found 10-bit comparator greater for signal <old_ball_dy_14$cmp_gt0000> created at line 169.
-    Found 10-bit comparator less for signal <old_ball_dy_14$cmp_lt0000> created at line 169.
-    Found 10-bit adder for signal <old_ball_dy_16$addsub0000>.
-    Found 10-bit comparator greater for signal <old_ball_dy_16$cmp_gt0000> created at line 197.
-    Found 10-bit comparator less for signal <old_ball_dy_16$cmp_lt0000> created at line 197.
-    Found 10-bit adder for signal <old_ball_dy_18$addsub0000>.
-    Found 11-bit comparator greater for signal <old_ball_dy_18$cmp_gt0000> created at line 223.
-    Found 11-bit comparator greater for signal <old_ball_dy_18$cmp_gt0001> created at line 223.
-    Found 12-bit comparator less for signal <old_ball_dy_18$cmp_lt0000> created at line 223.
-    Found 12-bit comparator less for signal <old_ball_dy_18$cmp_lt0001> created at line 223.
-    Found 10-bit adder for signal <old_ball_dy_20$addsub0000>.
-    Found 10-bit adder for signal <old_ball_dy_22$addsub0000>.
-    Found 10-bit adder for signal <old_ball_dy_24$addsub0000>.
+    Found 10-bit adder for signal <old_ball_dx_10$addsub0000>.
+    Found 11-bit comparator greater for signal <old_ball_dx_10$cmp_gt0000> created at line 129.
+    Found 11-bit comparator greater for signal <old_ball_dx_10$cmp_gt0001> created at line 129.
+    Found 12-bit comparator less for signal <old_ball_dx_10$cmp_lt0000> created at line 129.
+    Found 12-bit comparator less for signal <old_ball_dx_10$cmp_lt0001> created at line 129.
+    Found 10-bit adder for signal <old_ball_dx_12$addsub0000>.
+    Found 11-bit comparator greater for signal <old_ball_dx_12$cmp_gt0000> created at line 157.
+    Found 11-bit comparator greater for signal <old_ball_dx_12$cmp_gt0001> created at line 157.
+    Found 12-bit comparator less for signal <old_ball_dx_12$cmp_lt0000> created at line 157.
+    Found 12-bit comparator less for signal <old_ball_dx_12$cmp_lt0001> created at line 157.
+    Found 10-bit adder for signal <old_ball_dx_14$addsub0000>.
+    Found 11-bit comparator greater for signal <old_ball_dx_14$cmp_gt0000> created at line 185.
+    Found 11-bit comparator greater for signal <old_ball_dx_14$cmp_gt0001> created at line 185.
+    Found 12-bit comparator less for signal <old_ball_dx_14$cmp_lt0000> created at line 185.
+    Found 12-bit comparator less for signal <old_ball_dx_14$cmp_lt0001> created at line 185.
+    Found 10-bit adder for signal <old_ball_dx_16$addsub0000>.
+    Found 10-bit comparator greater for signal <old_ball_dx_16$cmp_gt0000> created at line 212.
+    Found 10-bit comparator less for signal <old_ball_dx_16$cmp_lt0000> created at line 212.
+    Found 10-bit adder for signal <old_ball_dx_18$addsub0000>.
+    Found 10-bit adder for signal <old_ball_dx_20$addsub0000>.
+    Found 10-bit adder for signal <old_ball_dx_22$addsub0000>.
+    Found 10-bit adder for signal <old_ball_dx_24$addsub0000>.
+    Found 10-bit adder for signal <old_ball_dx_31$addsub0000>.
+    Found 10-bit adder for signal <old_ball_dx_4$addsub0000>.
+    Found 10-bit comparator greatequal for signal <old_ball_dx_4$cmp_ge0000> created at line 51.
+    Found 10-bit comparator lessequal for signal <old_ball_dx_4$cmp_le0000> created at line 51.
+    Found 10-bit adder for signal <old_ball_dx_6$addsub0000>.
+    Found 10-bit adder carry out for signal <old_ball_dx_6$addsub0001> created at line 73.
+    Found 10-bit comparator greater for signal <old_ball_dx_6$cmp_gt0000> created at line 73.
+    Found 11-bit comparator greater for signal <old_ball_dx_6$cmp_gt0001> created at line 73.
+    Found 11-bit comparator greater for signal <old_ball_dx_6$cmp_gt0002> created at line 73.
+    Found 10-bit comparator less for signal <old_ball_dx_6$cmp_lt0000> created at line 73.
+    Found 12-bit comparator less for signal <old_ball_dx_6$cmp_lt0001> created at line 73.
+    Found 12-bit comparator less for signal <old_ball_dx_6$cmp_lt0002> created at line 73.
+    Found 10-bit adder for signal <old_ball_dx_8$addsub0000>.
+    Found 11-bit comparator greater for signal <old_ball_dx_8$cmp_gt0000> created at line 101.
+    Found 11-bit comparator greater for signal <old_ball_dx_8$cmp_gt0001> created at line 101.
+    Found 12-bit comparator less for signal <old_ball_dx_8$cmp_lt0000> created at line 101.
+    Found 12-bit comparator less for signal <old_ball_dx_8$cmp_lt0001> created at line 101.
+    Found 10-bit adder for signal <old_ball_dy_11$addsub0000>.
+    Found 10-bit comparator greater for signal <old_ball_dy_11$cmp_gt0000> created at line 141.
+    Found 10-bit comparator less for signal <old_ball_dy_11$cmp_lt0000> created at line 141.
+    Found 10-bit adder for signal <old_ball_dy_13$addsub0000>.
+    Found 10-bit comparator greater for signal <old_ball_dy_13$cmp_gt0000> created at line 169.
+    Found 10-bit comparator less for signal <old_ball_dy_13$cmp_lt0000> created at line 169.
+    Found 10-bit adder for signal <old_ball_dy_15$addsub0000>.
+    Found 10-bit comparator greater for signal <old_ball_dy_15$cmp_gt0000> created at line 197.
+    Found 10-bit comparator less for signal <old_ball_dy_15$cmp_lt0000> created at line 197.
+    Found 10-bit adder for signal <old_ball_dy_17$addsub0000>.
+    Found 11-bit comparator greater for signal <old_ball_dy_17$cmp_gt0000> created at line 223.
+    Found 11-bit comparator greater for signal <old_ball_dy_17$cmp_gt0001> created at line 223.
+    Found 12-bit comparator less for signal <old_ball_dy_17$cmp_lt0000> created at line 223.
+    Found 12-bit comparator less for signal <old_ball_dy_17$cmp_lt0001> created at line 223.
+    Found 10-bit adder for signal <old_ball_dy_19$addsub0000>.
+    Found 10-bit adder for signal <old_ball_dy_21$addsub0000>.
+    Found 10-bit adder for signal <old_ball_dy_23$addsub0000>.
+    Found 10-bit adder for signal <old_ball_dy_25$addsub0000>.
     Found 10-bit adder for signal <old_ball_dy_26$addsub0000>.
+    Found 11-bit comparator greater for signal <old_ball_dy_26$cmp_gt0000> created at line 363.
+    Found 11-bit comparator greater for signal <old_ball_dy_26$cmp_gt0001> created at line 363.
+    Found 12-bit comparator less for signal <old_ball_dy_26$cmp_lt0000> created at line 363.
+    Found 12-bit comparator less for signal <old_ball_dy_26$cmp_lt0001> created at line 363.
     Found 10-bit adder for signal <old_ball_dy_27$addsub0000>.
-    Found 11-bit comparator greater for signal <old_ball_dy_27$cmp_gt0000> created at line 363.
-    Found 11-bit comparator greater for signal <old_ball_dy_27$cmp_gt0001> created at line 363.
-    Found 12-bit comparator less for signal <old_ball_dy_27$cmp_lt0000> created at line 363.
-    Found 12-bit comparator less for signal <old_ball_dy_27$cmp_lt0001> created at line 363.
-    Found 10-bit adder for signal <old_ball_dy_28$addsub0000>.
-    Found 10-bit comparator greater for signal <old_ball_dy_28$cmp_gt0000> created at line 379.
-    Found 10-bit comparator less for signal <old_ball_dy_28$cmp_lt0000> created at line 379.
-    Found 10-bit adder for signal <old_ball_dy_30$addsub0000>.
-    Found 10-bit adder for signal <old_ball_dy_33$addsub0000>.
-    Found 11-bit comparator greatequal for signal <old_ball_dy_33$cmp_ge0000> created at line 412.
-    Found 10-bit comparator greater for signal <old_ball_dy_33$cmp_gt0000> created at line 412.
-    Found 11-bit comparator less for signal <old_ball_dy_33$cmp_lt0000> created at line 412.
-    Found 12-bit comparator less for signal <old_ball_dy_33$cmp_lt0001> created at line 412.
-    Found 10-bit comparator lessequal for signal <old_ball_dy_4$cmp_le0000> created at line 56.
-    Found 10-bit adder for signal <old_ball_dy_6$addsub0000>.
-    Found 10-bit comparator greater for signal <old_ball_dy_6$cmp_gt0000> created at line 63.
-    Found 10-bit adder for signal <old_ball_dy_8$addsub0000>.
-    Found 10-bit adder carry out for signal <old_ball_dy_8$addsub0001> created at line 86.
-    Found 10-bit comparator greater for signal <old_ball_dy_8$cmp_gt0000> created at line 86.
-    Found 11-bit comparator greater for signal <old_ball_dy_8$cmp_gt0001> created at line 86.
-    Found 11-bit comparator greater for signal <old_ball_dy_8$cmp_gt0002> created at line 86.
-    Found 10-bit comparator less for signal <old_ball_dy_8$cmp_lt0000> created at line 86.
-    Found 12-bit comparator less for signal <old_ball_dy_8$cmp_lt0001> created at line 86.
-    Found 12-bit comparator less for signal <old_ball_dy_8$cmp_lt0002> created at line 86.
+    Found 10-bit comparator greater for signal <old_ball_dy_27$cmp_gt0000> created at line 379.
+    Found 10-bit comparator less for signal <old_ball_dy_27$cmp_lt0000> created at line 379.
+    Found 10-bit adder for signal <old_ball_dy_29$addsub0000>.
+    Found 10-bit adder for signal <old_ball_dy_32$addsub0000>.
+    Found 11-bit comparator greatequal for signal <old_ball_dy_32$cmp_ge0000> created at line 412.
+    Found 10-bit comparator greater for signal <old_ball_dy_32$cmp_gt0000> created at line 412.
+    Found 11-bit comparator less for signal <old_ball_dy_32$cmp_lt0000> created at line 412.
+    Found 12-bit comparator less for signal <old_ball_dy_32$cmp_lt0001> created at line 412.
+    Found 10-bit adder for signal <old_ball_dy_5$addsub0000>.
+    Found 10-bit comparator greater for signal <old_ball_dy_5$cmp_gt0000> created at line 63.
+    Found 10-bit comparator lessequal for signal <old_ball_dy_5$cmp_le0000> created at line 56.
+    Found 10-bit adder for signal <old_ball_dy_7$addsub0000>.
+    Found 10-bit adder carry out for signal <old_ball_dy_7$addsub0001> created at line 86.
+    Found 10-bit comparator greater for signal <old_ball_dy_7$cmp_gt0000> created at line 86.
+    Found 11-bit comparator greater for signal <old_ball_dy_7$cmp_gt0001> created at line 86.
+    Found 11-bit comparator greater for signal <old_ball_dy_7$cmp_gt0002> created at line 86.
+    Found 10-bit comparator less for signal <old_ball_dy_7$cmp_lt0000> created at line 86.
+    Found 12-bit comparator less for signal <old_ball_dy_7$cmp_lt0001> created at line 86.
+    Found 12-bit comparator less for signal <old_ball_dy_7$cmp_lt0002> created at line 86.
+    Found 10-bit adder for signal <old_ball_dy_9$addsub0000>.
+    Found 10-bit comparator greater for signal <old_ball_dy_9$cmp_gt0000> created at line 113.
+    Found 10-bit comparator less for signal <old_ball_dy_9$cmp_lt0000> created at line 113.
     Found 11-bit comparator less for signal <play_sound2$cmp_lt0000> created at line 412.
     Summary:
 	inferred   2 Accumulator(s).
@@ -486,8 +486,8 @@ WARNING:Xst:647 - Input <rgb_in> is never used. This port will be preserved and 
     Found 10-bit register for signal <hcount>.
     Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 93.
     Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 93.
-    Found 10-bit adder for signal <old_hcount_35$addsub0000> created at line 83.
-    Found 10-bit adder for signal <old_vcount_34$addsub0000> created at line 79.
+    Found 10-bit adder for signal <old_hcount_34$addsub0000> created at line 83.
+    Found 10-bit adder for signal <old_vcount_33$addsub0000> created at line 79.
     Found 10-bit adder for signal <RGB$addsub0000> created at line 169.
     Found 10-bit adder for signal <RGB$addsub0001> created at line 169.
     Found 10-bit adder for signal <RGB$addsub0002> created at line 164.
@@ -584,7 +584,7 @@ Synthesizing Unit <clk_divider_3>.
     Related source file is "clk_divider.v".
     Found 1-bit register for signal <clk_buf>.
     Found 32-bit up counter for signal <counter>.
-    Found 32-bit adder for signal <old_counter_36$add0000> created at line 14.
+    Found 32-bit adder for signal <old_counter_35$add0000> created at line 14.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -596,7 +596,7 @@ Synthesizing Unit <clk_divider_4>.
     Related source file is "clk_divider.v".
     Found 1-bit register for signal <clk_buf>.
     Found 32-bit up counter for signal <counter>.
-    Found 32-bit adder for signal <old_counter_37$add0000> created at line 14.
+    Found 32-bit adder for signal <old_counter_36$add0000> created at line 14.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -608,7 +608,7 @@ Synthesizing Unit <clk_divider_5>.
     Related source file is "clk_divider.v".
     Found 1-bit register for signal <clk_buf>.
     Found 32-bit up counter for signal <counter>.
-    Found 32-bit adder for signal <old_counter_38$add0000> created at line 14.
+    Found 32-bit adder for signal <old_counter_37$add0000> created at line 14.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -620,7 +620,7 @@ Synthesizing Unit <clk_divider_6>.
     Related source file is "clk_divider.v".
     Found 1-bit register for signal <clk_buf>.
     Found 32-bit up counter for signal <counter>.
-    Found 32-bit adder for signal <old_counter_39$add0000> created at line 14.
+    Found 32-bit adder for signal <old_counter_38$add0000> created at line 14.
     Summary:
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
@@ -791,30 +791,30 @@ Design Statistics
 # IOs                              : 15
 
 Cell Usage :
-# BELS                             : 3184
+# BELS                             : 3182
 #      GND                         : 1
-#      INV                         : 94
-#      LUT1                        : 332
-#      LUT2                        : 136
-#      LUT2_D                      : 18
-#      LUT2_L                      : 1
-#      LUT3                        : 313
-#      LUT3_D                      : 25
-#      LUT3_L                      : 16
-#      LUT4                        : 642
-#      LUT4_D                      : 69
-#      LUT4_L                      : 7
+#      INV                         : 103
+#      LUT1                        : 333
+#      LUT2                        : 131
+#      LUT2_D                      : 4
+#      LUT2_L                      : 2
+#      LUT3                        : 307
+#      LUT3_D                      : 28
+#      LUT3_L                      : 15
+#      LUT4                        : 635
+#      LUT4_D                      : 81
+#      LUT4_L                      : 9
 #      MULT_AND                    : 5
 #      MUXCY                       : 845
-#      MUXF5                       : 40
+#      MUXF5                       : 43
 #      VCC                         : 1
 #      XORCY                       : 639
 # FlipFlops/Latches                : 243
 #      FD                          : 35
 #      FDE                         : 8
-#      FDR                         : 150
+#      FDR                         : 146
 #      FDRS                        : 1
-#      FDS                         : 34
+#      FDS                         : 38
 #      FDSE                        : 15
 # Clock Buffers                    : 3
 #      BUFG                        : 3
@@ -831,9 +831,9 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                      860  out of   4656    18%  
+ Number of Slices:                      856  out of   4656    18%  
  Number of Slice Flip Flops:            243  out of   9312     2%  
- Number of 4 input LUTs:               1653  out of   9312    17%  
+ Number of 4 input LUTs:               1648  out of   9312    17%  
  Number of IOs:                          15
  Number of bonded IOBs:                  13  out of    190     6%  
  Number of GCLKs:                         3  out of     24    12%  
@@ -876,7 +876,7 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 34.885ns (Maximum Frequency: 28.665MHz)
+   Minimum period: 34.914ns (Maximum Frequency: 28.642MHz)
    Minimum input arrival time before clock: 12.837ns
    Maximum output required time after clock: 5.875ns
    Maximum combinational path delay: No path found
@@ -1000,10 +1000,10 @@ Delay:               7.641ns (Levels of Logic = 15)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_ball_divider/clk_buf1'
-  Clock period: 34.885ns (frequency: 28.665MHz)
-  Total number of paths / destination ports: 799046784182 / 63
+  Clock period: 34.914ns (frequency: 28.642MHz)
+  Total number of paths / destination ports: 699000373819 / 63
 -------------------------------------------------------------------------
-Delay:               34.885ns (Levels of Logic = 45)
+Delay:               34.914ns (Levels of Logic = 45)
   Source:            bola/ball_y_1 (FF)
   Destination:       bola/ball_y_9 (FF)
   Source Clock:      clk_ball_divider/clk_buf1 rising
@@ -1013,56 +1013,56 @@ Delay:               34.885ns (Levels of Logic = 45)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q             10   0.514   0.902  bola/ball_y_1 (bola/ball_y_1)
+     FDS:C->Q             11   0.514   0.945  bola/ball_y_1 (bola/ball_y_1)
      LUT1:I0->O            1   0.612   0.000  bola/Msub__sub0001_cy<1>_rt (bola/Msub__sub0001_cy<1>_rt)
      MUXCY:S->O            1   0.404   0.000  bola/Msub__sub0001_cy<1> (bola/Msub__sub0001_cy<1>)
      MUXCY:CI->O           1   0.051   0.000  bola/Msub__sub0001_cy<2> (bola/Msub__sub0001_cy<2>)
      XORCY:CI->O           7   0.699   0.754  bola/Msub__sub0001_xor<3> (bola/_sub0001<3>)
-     LUT3:I0->O            1   0.612   0.509  bola/old_ball_dy_8_cmp_lt000118 (bola/old_ball_dy_8_cmp_lt000118)
+     LUT3:I0->O            1   0.612   0.509  bola/old_ball_dy_7_cmp_lt000118 (bola/old_ball_dy_7_cmp_lt000118)
      LUT4:I0->O            5   0.612   0.541  bola/erase_pos_and0001_SW0 (N32)
-     LUT4_D:I3->O          8   0.612   0.646  bola/old_ball_dy_8_or0000_1 (bola/old_ball_dy_8_or00001)
-     LUT4:I3->O            1   0.612   0.000  bola/_old_ball_dy_8<0>1 (bola/_old_ball_dy_8<0>1)
-     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_10_addsub0000_cy<0> (bola/Madd_old_ball_dy_10_addsub0000_cy<0>)
-     XORCY:CI->O           3   0.699   0.481  bola/Madd_old_ball_dy_10_addsub0000_xor<1> (bola/old_ball_dy_10_addsub0000<1>)
-     LUT3:I2->O            1   0.612   0.000  bola/Madd_old_ball_dy_12_not0000<1>1 (bola/Madd_old_ball_dy_12_not0000<1>)
-     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_12_addsub0000_cy<1> (bola/Madd_old_ball_dy_12_addsub0000_cy<1>)
-     XORCY:CI->O           2   0.699   0.410  bola/Madd_old_ball_dy_12_addsub0000_xor<2> (bola/old_ball_dy_12_addsub0000<2>)
-     LUT3:I2->O            1   0.612   0.000  bola/Madd_old_ball_dy_14_not0000<2> (bola/Madd_old_ball_dy_14_not0000<2>)
-     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_14_addsub0000_cy<2> (bola/Madd_old_ball_dy_14_addsub0000_cy<2>)
-     XORCY:CI->O           2   0.699   0.383  bola/Madd_old_ball_dy_14_addsub0000_xor<3> (bola/old_ball_dy_14_addsub0000<3>)
-     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_16_not0000<3>1 (bola/Madd_old_ball_dy_16_not0000<3>)
-     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_16_addsub0000_cy<3> (bola/Madd_old_ball_dy_16_addsub0000_cy<3>)
-     XORCY:CI->O           3   0.699   0.454  bola/Madd_old_ball_dy_16_addsub0000_xor<4> (bola/old_ball_dy_16_addsub0000<4>)
-     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_18_not0000<4>1 (bola/Madd_old_ball_dy_18_not0000<4>)
-     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_18_addsub0000_cy<4> (bola/Madd_old_ball_dy_18_addsub0000_cy<4>)
-     XORCY:CI->O           2   0.699   0.383  bola/Madd_old_ball_dy_18_addsub0000_xor<5> (bola/old_ball_dy_18_addsub0000<5>)
-     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_20_not0000<5> (bola/Madd_old_ball_dy_20_not0000<5>)
-     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_20_addsub0000_cy<5> (bola/Madd_old_ball_dy_20_addsub0000_cy<5>)
-     XORCY:CI->O           2   0.699   0.383  bola/Madd_old_ball_dy_20_addsub0000_xor<6> (bola/old_ball_dy_20_addsub0000<6>)
-     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_22_not0000<6>1 (bola/Madd_old_ball_dy_22_not0000<6>)
-     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_22_addsub0000_cy<6> (bola/Madd_old_ball_dy_22_addsub0000_cy<6>)
-     XORCY:CI->O           3   0.699   0.481  bola/Madd_old_ball_dy_22_addsub0000_xor<7> (bola/old_ball_dy_22_addsub0000<7>)
-     LUT3:I2->O            1   0.612   0.000  bola/Madd_old_ball_dy_24_not0000<7>1 (bola/Madd_old_ball_dy_24_not0000<7>)
-     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_24_addsub0000_cy<7> (bola/Madd_old_ball_dy_24_addsub0000_cy<7>)
-     XORCY:CI->O           2   0.699   0.383  bola/Madd_old_ball_dy_24_addsub0000_xor<8> (bola/old_ball_dy_24_addsub0000<8>)
-     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_26_not0000<8> (bola/Madd_old_ball_dy_26_not0000<8>)
-     MUXCY:S->O            0   0.404   0.000  bola/Madd_old_ball_dy_26_addsub0000_cy<8> (bola/Madd_old_ball_dy_26_addsub0000_cy<8>)
-     XORCY:CI->O           2   0.699   0.383  bola/Madd_old_ball_dy_26_addsub0000_xor<9> (bola/old_ball_dy_26_addsub0000<9>)
+     LUT4_D:I3->O          7   0.612   0.605  bola/old_ball_dy_7_or0000_1 (bola/old_ball_dy_7_or00001)
+     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_9_addsub0000_lut<0> (bola/Madd_old_ball_dy_9_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_9_addsub0000_cy<0> (bola/Madd_old_ball_dy_9_addsub0000_cy<0>)
+     XORCY:CI->O           2   0.699   0.410  bola/Madd_old_ball_dy_9_addsub0000_xor<1> (bola/old_ball_dy_9_addsub0000<1>)
+     LUT3:I2->O            1   0.612   0.000  bola/Madd_old_ball_dy_11_not0000<1>1 (bola/Madd_old_ball_dy_11_not0000<1>)
+     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_11_addsub0000_cy<1> (bola/Madd_old_ball_dy_11_addsub0000_cy<1>)
+     XORCY:CI->O           3   0.699   0.481  bola/Madd_old_ball_dy_11_addsub0000_xor<2> (bola/old_ball_dy_11_addsub0000<2>)
+     LUT3:I2->O            1   0.612   0.000  bola/Madd_old_ball_dy_13_not0000<2>1 (bola/Madd_old_ball_dy_13_not0000<2>)
+     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_13_addsub0000_cy<2> (bola/Madd_old_ball_dy_13_addsub0000_cy<2>)
+     XORCY:CI->O           2   0.699   0.410  bola/Madd_old_ball_dy_13_addsub0000_xor<3> (bola/old_ball_dy_13_addsub0000<3>)
+     LUT3:I2->O            1   0.612   0.000  bola/Madd_old_ball_dy_15_not0000<3> (bola/Madd_old_ball_dy_15_not0000<3>)
+     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_15_addsub0000_cy<3> (bola/Madd_old_ball_dy_15_addsub0000_cy<3>)
+     XORCY:CI->O           2   0.699   0.383  bola/Madd_old_ball_dy_15_addsub0000_xor<4> (bola/old_ball_dy_15_addsub0000<4>)
+     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_17_not0000<4>1 (bola/Madd_old_ball_dy_17_not0000<4>)
+     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_17_addsub0000_cy<4> (bola/Madd_old_ball_dy_17_addsub0000_cy<4>)
+     XORCY:CI->O           3   0.699   0.454  bola/Madd_old_ball_dy_17_addsub0000_xor<5> (bola/old_ball_dy_17_addsub0000<5>)
+     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_19_not0000<5>1 (bola/Madd_old_ball_dy_19_not0000<5>)
+     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_19_addsub0000_cy<5> (bola/Madd_old_ball_dy_19_addsub0000_cy<5>)
+     XORCY:CI->O           2   0.699   0.410  bola/Madd_old_ball_dy_19_addsub0000_xor<6> (bola/old_ball_dy_19_addsub0000<6>)
+     LUT3:I2->O            1   0.612   0.000  bola/Madd_old_ball_dy_21_not0000<6> (bola/Madd_old_ball_dy_21_not0000<6>)
+     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_21_addsub0000_cy<6> (bola/Madd_old_ball_dy_21_addsub0000_cy<6>)
+     XORCY:CI->O           2   0.699   0.383  bola/Madd_old_ball_dy_21_addsub0000_xor<7> (bola/old_ball_dy_21_addsub0000<7>)
+     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_23_not0000<7>1 (bola/Madd_old_ball_dy_23_not0000<7>)
+     MUXCY:S->O            1   0.404   0.000  bola/Madd_old_ball_dy_23_addsub0000_cy<7> (bola/Madd_old_ball_dy_23_addsub0000_cy<7>)
+     XORCY:CI->O           3   0.699   0.454  bola/Madd_old_ball_dy_23_addsub0000_xor<8> (bola/old_ball_dy_23_addsub0000<8>)
+     LUT4:I3->O            1   0.612   0.000  bola/Madd_old_ball_dy_25_not0000<8>1 (bola/Madd_old_ball_dy_25_not0000<8>)
+     MUXCY:S->O            0   0.404   0.000  bola/Madd_old_ball_dy_25_addsub0000_cy<8> (bola/Madd_old_ball_dy_25_addsub0000_cy<8>)
+     XORCY:CI->O           2   0.699   0.410  bola/Madd_old_ball_dy_25_addsub0000_xor<9> (bola/old_ball_dy_25_addsub0000<9>)
+     LUT3:I2->O            0   0.612   0.000  bola/Madd_old_ball_dy_26_not0000<9> (bola/Madd_old_ball_dy_26_not0000<9>)
+     XORCY:LI->O           2   0.458   0.383  bola/Madd_old_ball_dy_26_addsub0000_xor<9> (bola/old_ball_dy_26_addsub0000<9>)
      LUT4:I3->O            0   0.612   0.000  bola/Madd_old_ball_dy_27_not0000<9>1 (bola/Madd_old_ball_dy_27_not0000<9>)
-     XORCY:LI->O           2   0.458   0.410  bola/Madd_old_ball_dy_27_addsub0000_xor<9> (bola/old_ball_dy_27_addsub0000<9>)
-     LUT3:I2->O            0   0.612   0.000  bola/Madd_old_ball_dy_28_not0000<9>1 (bola/Madd_old_ball_dy_28_not0000<9>)
-     XORCY:LI->O           4   0.458   0.502  bola/Madd_old_ball_dy_28_addsub0000_xor<9> (bola/old_ball_dy_28_addsub0000<9>)
-     LUT4:I3->O            0   0.612   0.000  bola/Madd_old_ball_dy_30_not0000<9>1 (bola/Madd_old_ball_dy_30_not0000<9>)
-     XORCY:LI->O           2   0.458   0.410  bola/Madd_old_ball_dy_30_addsub0000_xor<9> (bola/old_ball_dy_30_addsub0000<9>)
-     LUT3:I2->O            1   0.612   0.000  bola/_old_ball_dy_30<9>_f5_G (N317)
-     MUXF5:I1->O           3   0.278   0.481  bola/_old_ball_dy_30<9>_f5 (bola/_old_ball_dy_30<9>)
-     LUT3:I2->O            1   0.612   0.387  bola/_old_ball_dy_33<9>1_SW1 (N251)
+     XORCY:LI->O           4   0.458   0.502  bola/Madd_old_ball_dy_27_addsub0000_xor<9> (bola/old_ball_dy_27_addsub0000<9>)
+     LUT4:I3->O            0   0.612   0.000  bola/Madd_old_ball_dy_29_not0000<9>1 (bola/Madd_old_ball_dy_29_not0000<9>)
+     XORCY:LI->O           2   0.458   0.410  bola/Madd_old_ball_dy_29_addsub0000_xor<9> (bola/old_ball_dy_29_addsub0000<9>)
+     LUT3:I2->O            1   0.612   0.000  bola/_old_ball_dy_29<9>_f5_G (N314)
+     MUXF5:I1->O           3   0.278   0.481  bola/_old_ball_dy_29<9>_f5 (bola/_old_ball_dy_29<9>)
+     LUT3:I2->O            1   0.612   0.387  bola/_old_ball_dy_32<9>1_SW1 (N249)
      LUT4:I2->O            0   0.612   0.000  bola/Maccum_ball_y_lut<9> (bola/Maccum_ball_y_lut<9>)
      XORCY:LI->O           1   0.458   0.000  bola/Maccum_ball_y_xor<9> (bola/Result<9>1)
      FDR:D                     0.268          bola/ball_y_9
     ----------------------------------------
-    Total                     34.885ns (25.601ns logic, 9.284ns route)
-                                       (73.4% logic, 26.6% route)
+    Total                     34.914ns (25.601ns logic, 9.313ns route)
+                                       (73.3% logic, 26.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_paddle_p/clk_buf'
@@ -1102,7 +1102,7 @@ Offset:              2.996ns (Levels of Logic = 1)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O           114   1.106   1.095  reset_button_IBUF (reset_button_IBUF)
-     FDS:S                     0.795          bola/active_0
+     FDS:S                     0.795          bola/ball_dy_0
     ----------------------------------------
     Total                      2.996ns (1.901ns logic, 1.095ns route)
                                        (63.5% logic, 36.5% route)
@@ -1121,9 +1121,9 @@ Offset:              12.837ns (Levels of Logic = 13)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O           114   1.106   1.164  reset_button_IBUF (reset_button_IBUF)
-     LUT2:I1->O            1   0.612   0.000  vga/_old_vcount_34<0>2491 (vga/_old_vcount_34<0>249)
-     MUXF5:I1->O          10   0.278   0.753  vga/_old_vcount_34<0>249_f5 (vga/N16)
-     LUT4:I3->O           12   0.612   0.969  vga/_old_vcount_34<3>1 (vga/_old_vcount_34<3>)
+     LUT2:I1->O            1   0.612   0.000  vga/_old_vcount_33<0>2491 (vga/_old_vcount_33<0>249)
+     MUXF5:I1->O          10   0.278   0.753  vga/_old_vcount_33<0>249_f5 (vga/N16)
+     LUT4:I3->O           12   0.612   0.969  vga/_old_vcount_33<3>1 (vga/_old_vcount_33<3>)
      LUT4:I0->O            1   0.612   0.000  vga/RGB_and00042171 (vga/RGB_and00042171)
      MUXF5:I1->O           1   0.278   0.387  vga/RGB_and0004217_f5 (vga/RGB_and0004217)
      LUT4:I2->O            6   0.612   0.638  vga/RGB_and0004267 (vga/N63)
@@ -1181,8 +1181,8 @@ Offset:              5.875ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 218.00 secs
-Total CPU time to Xst completion: 218.54 secs
+Total REAL time to Xst completion: 215.00 secs
+Total CPU time to Xst completion: 214.95 secs
  
 --> 
 

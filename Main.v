@@ -41,7 +41,7 @@ module Main(
 			.clk_d(clk_paddle)
 	);
 	
-	clk_divider #(.limit(32'h1312D0)) clk_ball_divider (//'
+	clk_divider #(.limit(32'h4C4B4)) clk_ball_divider (//'
 			.clk(clk50mhz),
 			.clk_d(clk_ball)
 	);
