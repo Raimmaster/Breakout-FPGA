@@ -104,7 +104,9 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling verilog file "Compare10.v" in library work
 Compiling verilog file "VGA.v" in library work
+Module <Compare10> compiled
 Compiling verilog file "sine_wave_rom_do.v" in library work
 Module <VGA> compiled
 Compiling verilog file "Paddle.v" in library work
@@ -167,6 +169,8 @@ Analyzing hierarchy for module <clk_divider> in library <work> with parameters.
 
 Analyzing hierarchy for module <sinewave_rom_do> in library <work>.
 
+Analyzing hierarchy for module <Compare10> in library <work>.
+
 WARNING:Xst:2591 - "Main.v" line 37: attribute on instance <CLKFX_DIVIDE> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 WARNING:Xst:2591 - "Main.v" line 37: attribute on instance <CLKFX_MULTIPLY> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 
@@ -225,6 +229,9 @@ Analyzing module <VGA> in library <work>.
 	SECOND_ROW_Y = 10'b0001011010
 	THIRD_ROW_Y = 10'b0010001100
 Module <VGA> is correct for synthesis.
+ 
+Analyzing module <Compare10> in library <work>.
+Module <Compare10> is correct for synthesis.
  
 Analyzing module <clk_divider.3> in library <work>.
 	limit = 32'b00000000000000000000101110101010
@@ -472,114 +479,6 @@ WARNING:Xst:646 - Signal <win> is assigned but never used. This unconnected sign
 Unit <ball> synthesized.
 
 
-Synthesizing Unit <VGA>.
-    Related source file is "VGA.v".
-WARNING:Xst:647 - Input <erase_pos<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <rgb_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 1-bit register for signal <vsync>.
-    Found 3-bit register for signal <RGB>.
-    Found 1-bit register for signal <hsync>.
-    Found 12-bit register for signal <active>.
-    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 107.
-    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 103.
-    Found 10-bit adder carry out for signal <add0002$addsub0000> created at line 103.
-    Found 10-bit register for signal <hcount>.
-    Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 93.
-    Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 93.
-    Found 10-bit adder for signal <old_hcount_34$addsub0000> created at line 83.
-    Found 10-bit adder for signal <old_vcount_33$addsub0000> created at line 79.
-    Found 10-bit adder for signal <RGB$addsub0000> created at line 169.
-    Found 10-bit adder for signal <RGB$addsub0001> created at line 169.
-    Found 10-bit adder for signal <RGB$addsub0002> created at line 164.
-    Found 10-bit adder for signal <RGB$addsub0003> created at line 164.
-    Found 10-bit adder for signal <RGB$addsub0004> created at line 159.
-    Found 10-bit adder for signal <RGB$addsub0005> created at line 159.
-    Found 10-bit adder for signal <RGB$addsub0006> created at line 154.
-    Found 10-bit adder for signal <RGB$addsub0007> created at line 154.
-    Found 10-bit adder for signal <RGB$addsub0008> created at line 149.
-    Found 10-bit adder for signal <RGB$addsub0009> created at line 149.
-    Found 10-bit adder for signal <RGB$addsub0010> created at line 144.
-    Found 10-bit adder for signal <RGB$addsub0011> created at line 144.
-    Found 10-bit adder for signal <RGB$addsub0012> created at line 139.
-    Found 10-bit adder for signal <RGB$addsub0013> created at line 139.
-    Found 10-bit adder for signal <RGB$addsub0014> created at line 133.
-    Found 10-bit adder for signal <RGB$addsub0015> created at line 133.
-    Found 10-bit adder for signal <RGB$addsub0016> created at line 128.
-    Found 10-bit adder for signal <RGB$addsub0017> created at line 128.
-    Found 10-bit adder for signal <RGB$addsub0018> created at line 123.
-    Found 10-bit adder for signal <RGB$addsub0019> created at line 123.
-    Found 10-bit adder for signal <RGB$addsub0020> created at line 118.
-    Found 10-bit adder for signal <RGB$addsub0021> created at line 118.
-    Found 10-bit adder for signal <RGB$addsub0022> created at line 113.
-    Found 10-bit adder for signal <RGB$addsub0023> created at line 113.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0000> created at line 169.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0001> created at line 169.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0002> created at line 164.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0003> created at line 164.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0004> created at line 159.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0005> created at line 159.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0006> created at line 154.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0007> created at line 154.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0008> created at line 149.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0009> created at line 149.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0010> created at line 144.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0011> created at line 144.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0012> created at line 139.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0013> created at line 139.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0014> created at line 133.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0015> created at line 133.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0016> created at line 128.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0017> created at line 128.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0018> created at line 123.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0019> created at line 123.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0020> created at line 118.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0021> created at line 118.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0022> created at line 113.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0023> created at line 113.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0024> created at line 103.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0025> created at line 103.
-    Found 10-bit comparator greater for signal <RGB$cmp_gt0000> created at line 107.
-    Found 10-bit comparator greater for signal <RGB$cmp_gt0001> created at line 107.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0000> created at line 169.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0001> created at line 169.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0002> created at line 164.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0003> created at line 164.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0004> created at line 159.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0005> created at line 159.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0006> created at line 154.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0007> created at line 154.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0008> created at line 149.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0009> created at line 149.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0010> created at line 144.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0011> created at line 144.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0012> created at line 139.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0013> created at line 139.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0014> created at line 133.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0015> created at line 133.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0016> created at line 128.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0017> created at line 128.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0018> created at line 123.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0019> created at line 123.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0020> created at line 118.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0021> created at line 118.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0022> created at line 113.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0023> created at line 113.
-    Found 11-bit comparator lessequal for signal <RGB$cmp_le0024> created at line 103.
-    Found 11-bit comparator lessequal for signal <RGB$cmp_le0025> created at line 103.
-    Found 10-bit comparator less for signal <RGB$cmp_lt0000> created at line 100.
-    Found 10-bit comparator less for signal <RGB$cmp_lt0001> created at line 100.
-    Found 10-bit comparator less for signal <RGB$cmp_lt0002> created at line 107.
-    Found 11-bit comparator less for signal <RGB$cmp_lt0003> created at line 107.
-    Found 10-bit register for signal <vcount>.
-    Found 10-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 86.
-    Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 86.
-    Summary:
-	inferred  37 D-type flip-flop(s).
-	inferred  29 Adder/Subtractor(s).
-	inferred  62 Comparator(s).
-Unit <VGA> synthesized.
-
-
 Synthesizing Unit <clk_divider_3>.
     Related source file is "clk_divider.v".
     Found 1-bit register for signal <clk_buf>.
@@ -636,6 +535,129 @@ Synthesizing Unit <sinewave_rom_do>.
 Unit <sinewave_rom_do> synthesized.
 
 
+Synthesizing Unit <Compare10>.
+    Related source file is "Compare10.v".
+    Found 10-bit comparator greater for signal <greater>.
+    Found 10-bit comparator less for signal <less>.
+    Found 10-bit comparator equal for signal <equal>.
+    Summary:
+	inferred   3 Comparator(s).
+Unit <Compare10> synthesized.
+
+
+Synthesizing Unit <VGA>.
+    Related source file is "VGA.v".
+WARNING:Xst:647 - Input <erase_pos<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <rgb_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <w_l> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <w_g> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <w_e> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <c_b> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <c_a> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Found 1-bit register for signal <vsync>.
+    Found 3-bit register for signal <RGB>.
+    Found 1-bit register for signal <hsync>.
+    Found 12-bit register for signal <active>.
+    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 119.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 115.
+    Found 10-bit adder carry out for signal <add0002$addsub0000> created at line 115.
+    Found 10-bit register for signal <hcount>.
+    Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 105.
+    Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 105.
+    Found 10-bit adder for signal <old_hcount_34$addsub0000> created at line 95.
+    Found 10-bit adder for signal <old_vcount_33$addsub0000> created at line 91.
+    Found 10-bit adder for signal <RGB$addsub0000> created at line 181.
+    Found 10-bit adder for signal <RGB$addsub0001> created at line 181.
+    Found 10-bit adder for signal <RGB$addsub0002> created at line 176.
+    Found 10-bit adder for signal <RGB$addsub0003> created at line 176.
+    Found 10-bit adder for signal <RGB$addsub0004> created at line 171.
+    Found 10-bit adder for signal <RGB$addsub0005> created at line 171.
+    Found 10-bit adder for signal <RGB$addsub0006> created at line 166.
+    Found 10-bit adder for signal <RGB$addsub0007> created at line 166.
+    Found 10-bit adder for signal <RGB$addsub0008> created at line 161.
+    Found 10-bit adder for signal <RGB$addsub0009> created at line 161.
+    Found 10-bit adder for signal <RGB$addsub0010> created at line 156.
+    Found 10-bit adder for signal <RGB$addsub0011> created at line 156.
+    Found 10-bit adder for signal <RGB$addsub0012> created at line 151.
+    Found 10-bit adder for signal <RGB$addsub0013> created at line 151.
+    Found 10-bit adder for signal <RGB$addsub0014> created at line 145.
+    Found 10-bit adder for signal <RGB$addsub0015> created at line 145.
+    Found 10-bit adder for signal <RGB$addsub0016> created at line 140.
+    Found 10-bit adder for signal <RGB$addsub0017> created at line 140.
+    Found 10-bit adder for signal <RGB$addsub0018> created at line 135.
+    Found 10-bit adder for signal <RGB$addsub0019> created at line 135.
+    Found 10-bit adder for signal <RGB$addsub0020> created at line 130.
+    Found 10-bit adder for signal <RGB$addsub0021> created at line 130.
+    Found 10-bit adder for signal <RGB$addsub0022> created at line 125.
+    Found 10-bit adder for signal <RGB$addsub0023> created at line 125.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0000> created at line 181.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0001> created at line 181.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0002> created at line 176.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0003> created at line 176.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0004> created at line 171.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0005> created at line 171.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0006> created at line 166.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0007> created at line 166.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0008> created at line 161.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0009> created at line 161.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0010> created at line 156.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0011> created at line 156.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0012> created at line 151.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0013> created at line 151.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0014> created at line 145.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0015> created at line 145.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0016> created at line 140.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0017> created at line 140.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0018> created at line 135.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0019> created at line 135.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0020> created at line 130.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0021> created at line 130.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0022> created at line 125.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0023> created at line 125.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0024> created at line 115.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0025> created at line 115.
+    Found 10-bit comparator greater for signal <RGB$cmp_gt0000> created at line 119.
+    Found 10-bit comparator greater for signal <RGB$cmp_gt0001> created at line 119.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0000> created at line 181.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0001> created at line 181.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0002> created at line 176.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0003> created at line 176.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0004> created at line 171.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0005> created at line 171.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0006> created at line 166.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0007> created at line 166.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0008> created at line 161.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0009> created at line 161.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0010> created at line 156.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0011> created at line 156.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0012> created at line 151.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0013> created at line 151.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0014> created at line 145.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0015> created at line 145.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0016> created at line 140.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0017> created at line 140.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0018> created at line 135.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0019> created at line 135.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0020> created at line 130.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0021> created at line 130.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0022> created at line 125.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0023> created at line 125.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0024> created at line 115.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0025> created at line 115.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0000> created at line 112.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0001> created at line 112.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0002> created at line 119.
+    Found 11-bit comparator less for signal <RGB$cmp_lt0003> created at line 119.
+    Found 10-bit register for signal <vcount>.
+    Found 10-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 98.
+    Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 98.
+    Summary:
+	inferred  37 D-type flip-flop(s).
+	inferred  29 Adder/Subtractor(s).
+	inferred  62 Comparator(s).
+Unit <VGA> synthesized.
+
+
 Synthesizing Unit <Main>.
     Related source file is "Main.v".
 WARNING:Xst:647 - Input <clk_audio> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -654,6 +676,8 @@ WARNING:Xst:1780 - Signal <address_vga> is never used or assigned. This unconnec
 Unit <Main> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+WARNING:Xst:524 - All outputs of the instance <cmp1> of the block <Compare10> are unconnected in block <VGA>.
+   This instance will be removed from the design along with all underlying logic
 
 =========================================================================
 HDL Synthesis Report
@@ -1181,14 +1205,14 @@ Offset:              5.875ns (Levels of Logic = 3)
 =========================================================================
 
 
-Total REAL time to Xst completion: 215.00 secs
-Total CPU time to Xst completion: 214.95 secs
+Total REAL time to Xst completion: 283.00 secs
+Total CPU time to Xst completion: 283.08 secs
  
 --> 
 
-Total memory usage is 852144 kilobytes
+Total memory usage is 851120 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   20 (   0 filtered)
+Number of warnings :   28 (   0 filtered)
 Number of infos    :   30 (   0 filtered)
 

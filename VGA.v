@@ -24,6 +24,18 @@ module VGA(
 		THIRD_ROW_Y = 10'd140,
 		FOURTH_ROW_Y = 10'd190,
 		FIFTH_ROW_Y = 10'd240;
+		
+	reg c_a;
+	reg c_b;
+	
+	wire w_a;
+	wire w_b;
+	wire w_e;
+	wire w_g;
+	wire w_l;
+	assign w_a = c_a;
+	assign w_b = c_b;
+	Compare10 cmp1(w_a, w_b, w_e, w_g, w_l);
 
    reg [9:0] hcount;
    reg [9:0] vcount;
