@@ -33,7 +33,6 @@ DCM vga_clk_dcm (.CLKIN (clk50mhz),
       else
         vsync = 1;
       
-
       if (hcount >= 656 && hcount < 752)
         hsync = 0;
       else

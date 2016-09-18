@@ -68,338 +68,46 @@ module ball(
 		end
 		
 		///*
-		i = 0;
-		if(active[i]) begin
-			if(
-				(ball_y > 10'd40 && ball_y < 10'd70)  && 
-				(( (ball_x + BALL_SIZE) > 10'd38 && (ball_x - BALL_SIZE) < 10'd40 ) 
-					||
-					( (ball_x + BALL_SIZE) > 10'd120 && (ball_x - BALL_SIZE) < 10'd122 )
-					)
-			) begin
-				erase_e = 1;
-				erase_pos = 6'd0;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			
-			if ( (ball_x > 10'd40 && ball_x < 10'd120) && 
-			(( (ball_y + BALL_SIZE) > 10'd38 && (ball_y - BALL_SIZE) < 10'd40 ) || 
-				( (ball_y + BALL_SIZE) > 10'd69 && (ball_y - BALL_SIZE) < 10'd71 )
-			))
-			begin
-				erase_e = 1;
-				erase_pos = 6'd0;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
+		for (i = 0; i < n; i = i + 1)
+		begin						
+			if(active[i]) begin
+				if(i < 5) begin
+					if (ball_x > BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i)) begin
+						if (ball_y > ) begin
+							
+						end
+					end
+				end
+				else if (i < 10) begin
+					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-5));
+					data_y[i] = SECOND_ROW_Y;
+					active[i] = 1;
+				end
+				if(
+					(ball_y > 10'd40 && ball_y < 10'd70)  && 
+					(( (ball_x + BALL_SIZE) > 10'd38 && (ball_x - BALL_SIZE) < 10'd40 ) 
+						||
+						( (ball_x + BALL_SIZE) > 10'd120 && (ball_x - BALL_SIZE) < 10'd122 )
+						)
+				) begin
+					erase_e = 1;
+					erase_pos = 6'd0;
+					ball_dx = ball_dx * -1;
+					active[i] = 0;
+				end
+				
+				if ( (ball_x > 10'd40 && ball_x < 10'd120) && 
+				(( (ball_y + BALL_SIZE) > 10'd38 && (ball_y - BALL_SIZE) < 10'd40 ) || 
+					( (ball_y + BALL_SIZE) > 10'd69 && (ball_y - BALL_SIZE) < 10'd71 )
+				))
+				begin
+					erase_e = 1;
+					erase_pos = 6'd0;
+					ball_dy = ball_dy * -1;
+					active[i] = 0;
+				end
+			end		
 		end
-		//c
-			
-		i = 1;
-		if(active[1]) begin
-			if ( (ball_y > 10'd40 && ball_y < 10'd70)  && 
-				( 
-					( ( (ball_x + BALL_SIZE) > 10'd158 && (ball_x - BALL_SIZE) < 10'd160 ) )
-				|| 
-					( ( (ball_x + BALL_SIZE) > 10'd240 && (ball_x - BALL_SIZE) < 10'd242 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd1;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			if((ball_x > 10'd160 && ball_x < 10'd240)  && 
-				( 
-					( (ball_y + BALL_SIZE) > 10'd38 && (ball_y - BALL_SIZE) < 10'd40 )
-				|| 
-					( ( (ball_y + BALL_SIZE) > 10'd69 && (ball_y - BALL_SIZE) < 10'd71 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd1;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end
-			
-		i = 2;
-		if(active[i]) begin
-			if ( (ball_y > 10'd40 && ball_y < 10'd70) && 
-				( 
-					( ( (ball_x + BALL_SIZE) > 10'd278 && (ball_x - BALL_SIZE) < 10'd280 ) )
-				|| 
-					( ( (ball_x + BALL_SIZE) > 10'd360 && (ball_x - BALL_SIZE) < 10'd362 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd2;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			if((ball_x > 10'd280 && ball_x < 10'd360) && 
-				( 
-					( (ball_y + BALL_SIZE) > 10'd38 && (ball_y - BALL_SIZE) < 10'd40 )
-				|| 
-					( ( (ball_y + BALL_SIZE) > 10'd69 && (ball_y - BALL_SIZE) < 10'd71 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd2;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end
-		
-		i = 3;
-		if(active[i]) begin
-			if ( (ball_y > 10'd40 && ball_y < 10'd70) && 
-				( 
-					( ( (ball_x + BALL_SIZE) > 10'd398 && (ball_x - BALL_SIZE) < 10'd400 ) )
-				|| 
-					( ( (ball_x + BALL_SIZE) > 10'd480 && (ball_x - BALL_SIZE) < 10'd482 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd3;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			if( (ball_x > 10'd400 && ball_x < 10'd480) && 
-				( 
-					( (ball_y + BALL_SIZE) > 10'd38 && (ball_y - BALL_SIZE) < 10'd40 )
-				|| 
-					( ( (ball_y + BALL_SIZE) > 10'd69 && (ball_y - BALL_SIZE) < 10'd71 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd3;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end
-		
-		i = 4;
-		if(active[i]) begin
-			if ( (ball_y > 10'd40 && ball_y < 10'd70) && 
-				( 
-					( ( (ball_x + BALL_SIZE) > 10'd518 && (ball_x - BALL_SIZE) < 10'd520 ) )
-				|| 
-					( ( (ball_x + BALL_SIZE) > 10'd600 && (ball_x - BALL_SIZE) < 10'd602 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd4;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			if( (ball_x > 10'd520 && ball_x < 10'd600)  && 
-				( 
-					( (ball_y + BALL_SIZE) > 10'd38 && (ball_y - BALL_SIZE) < 10'd40 )
-				|| 
-					( ( (ball_y + BALL_SIZE) > 10'd69 && (ball_y - BALL_SIZE) < 10'd71 ) )
-				)) begin
-				erase_e = 1;
-				erase_pos = 6'd4;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end
-		
-		i = 5;
-		if(active[i]) begin
-			if ( (ball_y > 10'd90 && ball_y < 10'd120) && 
-				( 
-					( (ball_x + BALL_SIZE) > 10'd38 && (ball_x - BALL_SIZE) < 10'd40 ) 
-				|| 
-					( ( (ball_x + BALL_SIZE) > 10'd120 && (ball_x - BALL_SIZE) < 10'd122 ) )
-				)) begin
-				erase_e = 1;
-				erase_pos = 6'd5;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			if( (ball_x > 10'd40 && ball_x < 10'd120) && 
-				( 
-					( (ball_y + BALL_SIZE) > 10'd88 && (ball_y - BALL_SIZE) < 10'd90 ) 
-				|| 
-					( ( (ball_y + BALL_SIZE) > 10'd119 && (ball_y - BALL_SIZE) < 10'd121 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd5;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end
-		
-		i = 6;
-		if(active[i]) begin
-			if ( (ball_y > 10'd90 && ball_y < 10'd120) && 
-				( 
-					( ( (ball_x + BALL_SIZE) > 10'd158 && (ball_x - BALL_SIZE) < 10'd160 ) )
-				|| 
-					( ( (ball_x + BALL_SIZE) > 10'd240 && (ball_x - BALL_SIZE) < 10'd242 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd6;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			if((ball_x > 10'd160 && ball_x < 10'd240) && 
-				( 
-					( ( (ball_y + BALL_SIZE) > 10'd88 && (ball_y - BALL_SIZE) < 10'd90 ) )
-				|| 
-					( ( (ball_y + BALL_SIZE) > 10'd119 && (ball_y - BALL_SIZE) < 10'd121 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd6;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end
-		
-		i = 7;
-		if(active[i]) begin
-			if ( (ball_y > 10'd90 && ball_y < 10'd120) && 
-				( 
-					( ( (ball_x + BALL_SIZE) > 10'd278 && (ball_x - BALL_SIZE) < 10'd280 ) )
-				|| 
-					( ( (ball_x + BALL_SIZE) > 10'd360 && (ball_x - BALL_SIZE) < 10'd362 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd7;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			if((ball_x > 10'd280 && ball_x < 10'd360) && 
-				( 
-					( ( (ball_y + BALL_SIZE) > 10'd88 && (ball_y - BALL_SIZE) < 10'd90 ) )
-				|| 
-					( ( (ball_y + BALL_SIZE) > 10'd119 && (ball_y - BALL_SIZE) < 10'd121 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd7;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end
-		
-		i = 8;
-		if(active[i]) begin
-			if ( (ball_y > 10'd90 && ball_y < 10'd120) && 
-				( 
-					( ( (ball_x + BALL_SIZE) > 10'd398 && (ball_x - BALL_SIZE) < 10'd400 ) )
-				|| 
-					( ( (ball_x + BALL_SIZE) > 10'd480 && (ball_x - BALL_SIZE) < 10'd482 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd8;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			if( (ball_x > 10'd400 && ball_x < 10'd480) && 
-				( 
-					( ( (ball_y + BALL_SIZE) > 10'd88 && (ball_y - BALL_SIZE) < 10'd90 ) )
-				|| 
-					( ( (ball_y + BALL_SIZE) > 10'd119 && (ball_y - BALL_SIZE) < 10'd121 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd8;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end
-		
-		i = 9;
-		if(active[i]) begin
-			if ( (ball_y > 10'd90 && ball_y < 10'd120)  && 
-				( 
-					( ( (ball_x + BALL_SIZE) > 10'd518 && (ball_x - BALL_SIZE) < 10'd520 ) )
-				|| 
-					( ( (ball_x + BALL_SIZE) > 10'd600 && (ball_x - BALL_SIZE) < 10'd602 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd9;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			if( (ball_x > 10'd520 && ball_x < 10'd600)  && 
-				( 
-					( ( (ball_y + BALL_SIZE) > 10'd88 && (ball_y - BALL_SIZE) < 10'd90 ) )
-				|| 
-					( ( (ball_y + BALL_SIZE) > 10'd119 && (ball_y - BALL_SIZE) < 10'd121 ) )
-				)) begin
-				erase_e = 1;
-				erase_pos = 6'd9;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end
-		
-		i = 10;
-
-		if(active[i]) begin
-			if ( (ball_y > 10'd140 && ball_y < 10'd170)  && 
-				( 
-					( ( (ball_x + BALL_SIZE) > 10'd158 && (ball_x - BALL_SIZE) < 10'd160 ) )
-				|| 
-					( ( (ball_x + BALL_SIZE) > 10'd240 && (ball_x - BALL_SIZE) < 10'd242 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd10;
-				ball_dx = ball_dx * -1;
-				active[i] = 0;
-			end
-			if( (ball_x > 10'd160 && ball_x < 10'd240) && 
-				( 
-					( ( (ball_y + BALL_SIZE) > 10'd138 && (ball_y - BALL_SIZE) < 10'd140 ) )
-				|| 
-					( ( (ball_y + BALL_SIZE) > 10'd169 && (ball_y - BALL_SIZE) < 10'd171 ) )
-				)
-				) begin
-				erase_e = 1;
-				erase_pos = 6'd10;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end
-		
-		i = 11;
-		if(active[i]) begin
-			if( (ball_y > 10'd140 && ball_y < 10'd170) 
-				&& 
-				( ( (ball_x + BALL_SIZE) > 10'd398 && (ball_x - BALL_SIZE) < 10'd400 ) 
-					|| 
-					( (ball_x + BALL_SIZE) > 10'd480 && (ball_x - BALL_SIZE) < 10'd482 ) )) begin
-				erase_e = 1;
-				erase_pos = 6'd11;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-
-			if((ball_x > 10'd400 && ball_x < 10'd480) 
-				&& 
-				( ( (ball_y + BALL_SIZE) > 10'd138 && (ball_y - BALL_SIZE) < 10'd140 )
-					|| 
-					( (ball_y + BALL_SIZE) > 10'd169 && (ball_y - BALL_SIZE) < 10'd171 ) )) begin
-				erase_e = 1;
-				erase_pos = 6'd11;
-				ball_dy = ball_dy * -1;
-				active[i] = 0;
-			end
-		end	
-
-		
 		
 		win = 1;
 		for (i = 0; i < 12; i = i + 1) begin

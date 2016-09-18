@@ -10,7 +10,6 @@ module Main(
 		input reset_button,
 		input mi_nota,
 		input left_button,
-		
 		output [3:0] tono
     );
 	//VGA section
@@ -29,8 +28,7 @@ module Main(
 	wire [9:0] ball_x;
 	wire [9:0] ball_y;
 	wire erase_enable;
-	wire [5:0] erase_pos;
-	
+	wire [5:0] erase_pos;	
 	
 	// synthesis attribute CLKFX_DIVIDE of vga_clock_dcm is 4
 	// synthesis attribute CLKFX_MULTIPLY of vga_clock_dcm is 2
@@ -54,11 +52,14 @@ module Main(
 	//paddle end
 	//ball init
 	ball bola(paddle_pos, reset_button, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, play_sound2);
-	
-	
+		
 	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button, erase_enable, erase_pos);
 	
 	reg [13:0] address_vga;
+	
+	assign RGB = rgb;
+	assign hsync = hs;
+	assign vsync = vs;
 	
 	//debian_rom d_rom(address_vga, data);
 	/*
@@ -74,10 +75,6 @@ module Main(
 			end
 		end
 	*/
-	assign RGB = rgb;
-	assign hsync = hs;
-	assign vsync = vs;
-	
 	////Audio section
 	/*
 	C	2986 BAA
@@ -86,7 +83,7 @@ module Main(
 	G	1993 7C9	
 	Dividir entre 2 para cambiar de posedge y negedge
 	*/
-	wire clk_out_do;
+	/*wire clk_out_do;
 	wire clk_out_re;
 	wire clk_out_mi;
 	wire clk_out_sol;
@@ -138,7 +135,7 @@ module Main(
 				temp = clk_out_re;
 			end
 		
-	end
+	end*/
 	/*
 	always @()
 	begin
