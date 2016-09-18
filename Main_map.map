@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : ft256
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sat Sep 17 17:52:11 2016
+Mapped Date    : Sat Sep 17 23:47:37 2016
 
 Mapping design into LUTs...
 Running directed packing...
@@ -18,44 +18,36 @@ Running related packing...
 Updating timing models...
 WARNING:PhysDesignRules:367 - The signal <mi_nota_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:368 - The signal <tono<0>_OBUF> is incomplete. The
-   signal is not driven by any source pin in the design.
-WARNING:PhysDesignRules:368 - The signal <tono<1>_OBUF> is incomplete. The
-   signal is not driven by any source pin in the design.
-WARNING:PhysDesignRules:368 - The signal <tono<2>_OBUF> is incomplete. The
-   signal is not driven by any source pin in the design.
-WARNING:PhysDesignRules:368 - The signal <tono<3>_OBUF> is incomplete. The
-   signal is not driven by any source pin in the design.
 
 Design Summary
 --------------
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    5
+Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           168 out of   9,312    1%
-  Number of 4 input LUTs:             1,283 out of   9,312   13%
+  Number of Slice Flip Flops:           166 out of   9,312    1%
+  Number of 4 input LUTs:             1,130 out of   9,312   12%
 Logic Distribution:
-  Number of occupied Slices:            783 out of   4,656   16%
-    Number of Slices containing only related logic:     783 out of     783 100%
-    Number of Slices containing unrelated logic:          0 out of     783   0%
+  Number of occupied Slices:            704 out of   4,656   15%
+    Number of Slices containing only related logic:     704 out of     704 100%
+    Number of Slices containing unrelated logic:          0 out of     704   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,492 out of   9,312   16%
-    Number used as logic:             1,283
-    Number used as a route-thru:        209
+  Total Number of 4 input LUTs:       1,333 out of   9,312   14%
+    Number used as logic:             1,130
+    Number used as a route-thru:        203
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 14 out of     190    7%
+  Number of bonded IOBs:                 10 out of     190    5%
   Number of BUFGMUXs:                     3 out of      24   12%
   Number of DCMs:                         1 out of       4   25%
 
-Average Fanout of Non-Clock Nets:                3.03
+Average Fanout of Non-Clock Nets:                2.94
 
-Peak Memory Usage:  215 MB
-Total REAL time to MAP completion:  2 secs 
+Peak Memory Usage:  214 MB
+Total REAL time to MAP completion:  4 secs 
 Total CPU time to MAP completion:   2 secs 
 
 NOTES:

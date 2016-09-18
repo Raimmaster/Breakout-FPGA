@@ -7,10 +7,10 @@ module ball(
     input clk,
     output [9:0] x_out,
     output [9:0] y_out,
-	 output erase_enable,
-	 output [5:0] e_pos,
-	 output play_sound1,
-	 output reg play_sound2
+	output erase_enable,
+	output [5:0] e_pos,
+	output play_sound1,
+	output reg play_sound2
     );
 	parameter
 		SCREEN_W = 640,
@@ -18,6 +18,11 @@ module ball(
 		BALL_SIZE = 7,
 		BLOCK_SPACING_X = 10'd40,
 		BLOCK_SPACING_Y = 10'd20,
+		FIRST_ROW_Y = 10'd40,
+		SECOND_ROW_Y = 10'd90,		
+		THIRD_ROW_Y = 10'd140,
+		FOURTH_ROW_Y = 10'd190,
+		FIFTH_ROW_Y = 10'd240,
 		BLOCK_WIDTH = 10'd80,
 		BLOCK_HEIGHT = 10'd30;
 
@@ -39,7 +44,82 @@ module ball(
 	assign play_sound1 = p_sound;
 	
 	reg active [11:0];
-	integer i;
+	reg [9:0] temp1;
+	reg [9:0] temp2;
+	reg [5:0] i;
+	reg [5:0] j;
+
+	reg c_a1;
+	reg c_b1;
+	
+	wire w_a1;
+	wire w_b1;
+	wire w_e1;
+	wire w_g1;
+	wire w_l1;
+	assign w_a1 = c_a1;
+	assign w_b1 = c_b1;
+	Compare10 cmp1(w_a1, w_b1, w_e1, w_g1, w_l1);
+
+	reg c_a2;
+	reg c_b2;
+	
+	wire w_a2;
+	wire w_b2;
+	wire w_e2;
+	wire w_g2;
+	wire w_l2;
+	assign w_a2 = c_a2;
+	assign w_b2 = c_b2;
+	Compare10 cmp1(w_a2, w_b2, w_e2, w_g2, w_l2);
+
+	reg c_a3;
+	reg c_b3;
+	
+	wire w_a3;
+	wire w_b3;
+	wire w_e3;
+	wire w_g3;
+	wire w_l3;
+	assign w_a3 = c_a3;
+	assign w_b3 = c_b3;
+	Compare10 cmp3(w_a3, w_b3, w_e3, w_g3, w_l3);
+
+	reg c_a4;
+	reg c_b4;
+	
+	wire w_a4;
+	wire w_b4;
+	wire w_e4;
+	wire w_g4;
+	wire w_l4;
+	assign w_a4 = c_a4;
+	assign w_b4 = c_b4;
+	Compare10 cmp4(w_a4, w_b4, w_e4, w_g4, w_l4);
+
+	reg c_a5;
+	reg c_b5;
+	
+	wire w_a5;
+	wire w_b5;
+	wire w_e5;
+	wire w_g5;
+	wire w_l5;
+	assign w_a5 = c_a5;
+	assign w_b5 = c_b5;
+	Compare10 cmp5(w_a5, w_b5, w_e5, w_g5, w_l5);
+
+	reg c_a6;
+	reg c_b6;
+	
+	wire w_a6;
+	wire w_b6;
+	wire w_e6;
+	wire w_g6;
+	wire w_l6;
+	assign w_a6 = c_a6;
+	assign w_b6 = c_b6;
+	Compare10 cmp6(w_a6, w_b6, w_e6, w_g6, w_l6);
 	
 	assign e_pos = erase_pos;
 	assign erase_enable = erase_e;
@@ -68,45 +148,43 @@ module ball(
 		end
 		
 		///*
-		for (i = 0; i < n; i = i + 1)
-		begin						
+		for (i = 0; i < 10; i = i + 1)
+		begin
+					
+			if (i<5) begin
+				temp1 = FIRST_ROW_Y;	
+				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *i;			
+			end
+			else begin
+				temp1 = SECOND_ROW_Y;
+				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(i-5);
+			end
+
 			if(active[i]) begin
-				if(i < 5) begin
-					if (ball_x > BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i)) begin
-						if (ball_y > ) begin
-							
-						end
-					end
-				end
-				else if (i < 10) begin
-					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-5));
-					data_y[i] = SECOND_ROW_Y;
-					active[i] = 1;
-				end
 				if(
-					(ball_y > 10'd40 && ball_y < 10'd70)  && 
-					(( (ball_x + BALL_SIZE) > 10'd38 && (ball_x - BALL_SIZE) < 10'd40 ) 
-						||
-						( (ball_x + BALL_SIZE) > 10'd120 && (ball_x - BALL_SIZE) < 10'd122 )
+					(ball_y > temp1  && ball_y < (temp1 + BLOCK_HEIGHT) )  && 
+					(( (ball_x + BALL_SIZE) > (temp2 - 2) && (ball_x - BALL_SIZE) < temp2 ) 
+						||	
+						( (ball_x + BALL_SIZE) > (temp2 + BLOCK_WIDTH) && (ball_x - BALL_SIZE) < (temp2 + BLOCK_WIDTH + 2) )
 						)
 				) begin
 					erase_e = 1;
-					erase_pos = 6'd0;
+					erase_pos = i;
 					ball_dx = ball_dx * -1;
 					active[i] = 0;
 				end
 				
-				if ( (ball_x > 10'd40 && ball_x < 10'd120) && 
-				(( (ball_y + BALL_SIZE) > 10'd38 && (ball_y - BALL_SIZE) < 10'd40 ) || 
-					( (ball_y + BALL_SIZE) > 10'd69 && (ball_y - BALL_SIZE) < 10'd71 )
+				if ( (ball_x > temp2 && ball_x < (temp2 + BLOCK_WIDTH)) && 
+				(( (ball_y + BALL_SIZE) > (temp1 -2) && (ball_y - BALL_SIZE) < temp1 ) || 
+					( (ball_y + BALL_SIZE) > (temp1 + BLOCK_HEIGHT -1) && (ball_y - BALL_SIZE) < (temp1 + BLOCK_HEIGHT +1) )
 				))
 				begin
 					erase_e = 1;
-					erase_pos = 6'd0;
+					erase_pos = i;
 					ball_dy = ball_dy * -1;
 					active[i] = 0;
 				end
-			end		
+			end
 		end
 		
 		win = 1;

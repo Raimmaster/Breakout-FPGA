@@ -9,8 +9,8 @@ module Main(
 		input right_button,
 		input reset_button,
 		input mi_nota,
-		input left_button,
-		output [3:0] tono
+		input left_button
+		//output [3:0] tono
     );
 	//VGA section
 	wire vga_clk;
