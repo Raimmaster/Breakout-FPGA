@@ -44,7 +44,7 @@ Setup/Hold to clock clk50mhz
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-reset_button|   10.036(R)|    0.615(R)|vga_clk           |   0.000|
+reset_button|   11.140(R)|    0.359(R)|vga_clk           |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk50mhz to Pad
@@ -52,11 +52,14 @@ Clock clk50mhz to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-RGB<0>      |    8.045(R)|vga_clk           |   0.000|
-RGB<1>      |    7.961(R)|vga_clk           |   0.000|
-RGB<2>      |    8.723(R)|vga_clk           |   0.000|
-hsync       |    8.307(R)|vga_clk           |   0.000|
-vsync       |    8.034(R)|vga_clk           |   0.000|
+RGB<0>      |    8.273(R)|vga_clk           |   0.000|
+RGB<1>      |    8.334(R)|vga_clk           |   0.000|
+RGB<2>      |    7.973(R)|vga_clk           |   0.000|
+RGB<3>      |    7.486(R)|vga_clk           |   0.000|
+RGB<4>      |    7.561(R)|vga_clk           |   0.000|
+RGB<5>      |    8.517(R)|vga_clk           |   0.000|
+hsync       |    8.006(R)|vga_clk           |   0.000|
+vsync       |    7.993(R)|vga_clk           |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50mhz
@@ -64,18 +67,18 @@ Clock to Setup on destination clock clk50mhz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50mhz       |   11.936|         |         |         |
+clk50mhz       |   12.507|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Jun 27 02:45:11 2016 
+Analysis completed Sat Sep 24 17:06:21 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 130 MB
+Peak Memory Usage: 127 MB
 
 
 

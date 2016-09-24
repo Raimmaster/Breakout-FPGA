@@ -1,5 +1,4 @@
 verilog work "VGA.v"
-verilog work "sine_wave_rom_do.v"
 verilog work "Paddle.v"
 verilog work "clk_divider.v"
 verilog work "ball.v"
