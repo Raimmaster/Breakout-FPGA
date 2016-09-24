@@ -2,7 +2,7 @@
 
 module Main(
 		input clk50mhz,
-		output [2:0] RGB,
+		output [5:0] RGB,
 		output hsync,
 		output vsync,
 		input clk_audio,
@@ -16,7 +16,7 @@ module Main(
 	wire vga_clk;
 	wire clk_paddle;
 	wire clk_ball;
-	wire [2:0] rgb;
+	wire [5:0] rgb;
 	wire hs;
 	wire vs;
 	

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: Main.prj
 
@@ -389,7 +389,7 @@ Synthesizing Unit <VGA>.
 WARNING:Xst:647 - Input <active_position<5:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rgb_in> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <vsync>.
-    Found 3-bit register for signal <RGB>.
+    Found 6-bit register for signal <RGB>.
     Found 1-bit register for signal <hsync>.
     Found 30-bit register for signal <active>.
     Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 94.
@@ -474,7 +474,7 @@ WARNING:Xst:647 - Input <rgb_in> is never used. This port will be preserved and 
     Found 10-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 73.
     Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 73.
     Summary:
-	inferred  55 D-type flip-flop(s).
+	inferred  58 D-type flip-flop(s).
 	inferred  25 Adder/Subtractor(s).
 	inferred  54 Comparator(s).
 Unit <VGA> synthesized.
@@ -518,9 +518,9 @@ Macro Statistics
  1-bit register                                        : 6
  10-bit register                                       : 5
  2-bit register                                        : 11
- 3-bit register                                        : 11
+ 3-bit register                                        : 10
  4-bit register                                        : 1
- 6-bit register                                        : 1
+ 6-bit register                                        : 2
 # Comparators                                          : 107
  10-bit comparator greatequal                          : 27
  10-bit comparator greater                             : 7
@@ -589,8 +589,8 @@ Macro Statistics
  32-bit up counter                                     : 2
 # Accumulators                                         : 2
  10-bit up accumulator                                 : 2
-# Registers                                            : 109
- Flip-Flops                                            : 109
+# Registers                                            : 112
+ Flip-Flops                                            : 112
 # Comparators                                          : 107
  10-bit comparator greatequal                          : 27
  10-bit comparator greater                             : 7
@@ -615,6 +615,7 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 INFO:Xst:1901 - Instance vga_clock_dcm in unit Main of type DCM has been replaced by DCM_SP
+INFO:Xst:2261 - The FF/Latch <RGB_1> in Unit <VGA> is equivalent to the following FF/Latch, which will be removed : <RGB_4> 
 
 Optimizing unit <Main> ...
 
@@ -638,8 +639,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 195
- Flip-Flops                                            : 195
+# Registers                                            : 197
+ Flip-Flops                                            : 197
 
 =========================================================================
 
@@ -665,41 +666,41 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 11
+# IOs                              : 14
 
 Cell Usage :
-# BELS                             : 2054
+# BELS                             : 2060
 #      GND                         : 1
-#      INV                         : 73
+#      INV                         : 70
 #      LUT1                        : 184
-#      LUT2                        : 146
+#      LUT2                        : 147
 #      LUT2_D                      : 1
 #      LUT2_L                      : 1
-#      LUT3                        : 139
+#      LUT3                        : 140
 #      LUT3_D                      : 20
 #      LUT3_L                      : 1
-#      LUT4                        : 536
+#      LUT4                        : 543
 #      LUT4_D                      : 28
-#      LUT4_L                      : 35
+#      LUT4_L                      : 39
 #      MULT_AND                    : 7
 #      MUXCY                       : 505
-#      MUXF5                       : 77
+#      MUXF5                       : 73
 #      MUXF6                       : 8
 #      VCC                         : 1
 #      XORCY                       : 291
-# FlipFlops/Latches                : 195
+# FlipFlops/Latches                : 197
 #      FD                          : 31
 #      FDE                         : 8
-#      FDR                         : 106
+#      FDR                         : 107
 #      FDRE                        : 21
-#      FDRS                        : 1
+#      FDRS                        : 2
 #      FDS                         : 28
 # Clock Buffers                    : 3
 #      BUFG                        : 3
-# IO Buffers                       : 9
+# IO Buffers                       : 12
 #      IBUF                        : 3
 #      IBUFG                       : 1
-#      OBUF                        : 5
+#      OBUF                        : 8
 # DCMs                             : 1
 #      DCM_SP                      : 1
 # MULTs                            : 2
@@ -711,11 +712,11 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                      603  out of   4656    12%  
- Number of Slice Flip Flops:            195  out of   9312     2%  
- Number of 4 input LUTs:               1164  out of   9312    12%  
- Number of IOs:                          11
- Number of bonded IOBs:                   9  out of    190     4%  
+ Number of Slices:                      608  out of   4656    13%  
+ Number of Slice Flip Flops:            197  out of   9312     2%  
+ Number of 4 input LUTs:               1174  out of   9312    12%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  12  out of    190     6%  
  Number of MULT18X18SIOs:                 2  out of     20    10%  
  Number of GCLKs:                         3  out of     24    12%  
  Number of DCMs:                          1  out of      4    25%  
@@ -744,7 +745,7 @@ Clock Signal                       | Clock buffer(FF name)  | Load  |
 clk50mhz                           | IBUFG+BUFG             | 66    |
 clk_paddle_p/clk_buf               | NONE(pd/position_9)    | 10    |
 clk_ball_divider/clk_buf1          | BUFG                   | 74    |
-clk50mhz                           | vga_clock_dcm:CLKFX    | 45    |
+clk50mhz                           | vga_clock_dcm:CLKFX    | 47    |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -757,8 +758,8 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 24.760ns (Maximum Frequency: 40.387MHz)
-   Minimum input arrival time before clock: 12.828ns
-   Maximum output required time after clock: 4.040ns
+   Minimum input arrival time before clock: 13.694ns
+   Maximum output required time after clock: 4.063ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -768,7 +769,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50mhz'
   Clock period: 7.833ns (frequency: 127.663MHz)
-  Total number of paths / destination ports: 73808 / 161
+  Total number of paths / destination ports: 99560 / 166
 -------------------------------------------------------------------------
 Delay:               7.833ns (Levels of Logic = 33)
   Source:            clk_paddle_p/counter_1 (FF)
@@ -858,7 +859,7 @@ Delay:               7.641ns (Levels of Logic = 15)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_ball_divider/clk_buf1'
   Clock period: 24.760ns (frequency: 40.387MHz)
-  Total number of paths / destination ports: 464225213 / 88
+  Total number of paths / destination ports: 464275779 / 88
 -------------------------------------------------------------------------
 Delay:               24.760ns (Levels of Logic = 32)
   Source:            bola/address_3_1 (FF)
@@ -873,7 +874,7 @@ Delay:               24.760ns (Levels of Logic = 32)
      FDR:C->Q             11   0.514   0.945  bola/address_3_1 (bola/address_3_1)
      LUT4:I0->O           20   0.612   0.937  bola/_old_address_4<0>1 (bola/Msub_temp2_addsub0000_cy<0>)
      MULT18X18SIO:A0->P6    9   3.632   0.700  bola/Mmult_temp2_mult0002 (bola/temp2_mult0002<6>)
-     LUT4:I3->O            1   0.612   0.000  bola/Madd__old_temp2_7_cy<6>11_G (N661)
+     LUT4:I3->O            1   0.612   0.000  bola/Madd__old_temp2_7_cy<6>11_G (N673)
      MUXF5:I1->O          13   0.278   0.839  bola/Madd__old_temp2_7_cy<6>11 (bola/Madd__old_temp2_7_cy<6>)
      LUT4:I3->O            9   0.612   0.766  bola/Madd__old_temp2_7_xor<9>11 (bola/Madd_add0000_addsub0000_lut<9>)
      LUT2:I1->O            1   0.612   0.000  bola/Mcompar_mux0000_cmp_lt0001_lut<9> (bola/Mcompar_mux0000_cmp_lt0001_lut<9>)
@@ -884,7 +885,7 @@ Delay:               24.760ns (Levels of Logic = 32)
      MUXF5:I1->O           1   0.278   0.000  bola/Mmux__COND_12_6_f5 (bola/Mmux__COND_12_6_f5)
      MUXF6:I1->O          11   0.451   0.862  bola/Mmux__COND_12_5_f6 (bola/Mmux__COND_12_5_f6)
      LUT4:I1->O           12   0.612   0.820  bola/_old_address_4<3>340_1 (bola/_old_address_4<3>340)
-     LUT4:I3->O            1   0.612   0.000  bola/_mux0018<0>_f5_G (N681)
+     LUT4:I3->O            1   0.612   0.000  bola/_mux0018<0>_f5_G (N693)
      MUXF5:I1->O           2   0.278   0.383  bola/_mux0018<0>_f5 (bola/_mux0018<0>)
      LUT4:I3->O            1   0.612   0.000  bola/_old_win_17_wg_lut<1> (bola/_old_win_17_wg_lut<1>)
      MUXCY:S->O            1   0.404   0.000  bola/_old_win_17_wg_cy<1> (bola/_old_win_17_wg_cy<1>)
@@ -953,63 +954,64 @@ Offset:              2.999ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50mhz'
-  Total number of paths / destination ports: 2430 / 49
+  Total number of paths / destination ports: 4068 / 54
 -------------------------------------------------------------------------
-Offset:              12.828ns (Levels of Logic = 11)
+Offset:              13.694ns (Levels of Logic = 12)
   Source:            reset_button (PAD)
-  Destination:       vga/RGB_2 (FF)
+  Destination:       vga/RGB_0 (FF)
   Destination Clock: clk50mhz rising 0.5X
 
-  Data Path: reset_button to vga/RGB_2
+  Data Path: reset_button to vga/RGB_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O           124   1.106   1.167  reset_button_IBUF (reset_button_IBUF)
      LUT2:I1->O            1   0.612   0.000  vga/_old_vcount_20<0>2491 (vga/_old_vcount_20<0>249)
-     MUXF5:I1->O          10   0.278   0.753  vga/_old_vcount_20<0>249_f5 (vga/N14)
+     MUXF5:I1->O          10   0.278   0.753  vga/_old_vcount_20<0>249_f5 (vga/N15)
      LUT4:I3->O            9   0.612   0.849  vga/_old_vcount_20<6>1 (vga/_old_vcount_20<6>)
-     LUT4:I0->O            1   0.612   0.360  vga/RGB_and0007263_SW0 (N704)
+     LUT4:I0->O            1   0.612   0.360  vga/RGB_and0007263_SW0 (N708)
      LUT4:I3->O            1   0.612   0.426  vga/RGB_and0007263 (vga/RGB_and0007263)
-     LUT4:I1->O            5   0.612   0.690  vga/RGB_and0007273 (vga/N69)
-     LUT4:I0->O            2   0.612   0.532  vga/RGB_and001150 (vga/RGB_and0011)
-     LUT3:I0->O            1   0.612   0.360  vga/RGB_mux0000<2>1128_SW0 (N706)
-     LUT4:I3->O            2   0.612   0.532  vga/RGB_mux0000<2>1128 (vga/N60)
-     LUT3:I0->O            1   0.612   0.000  vga/RGB_mux0000<0>11 (vga/RGB_mux0000<0>1)
-     FDR:D                     0.268          vga/RGB_2
+     LUT4:I1->O            5   0.612   0.607  vga/RGB_and0007273 (vga/N69)
+     LUT4:I1->O            3   0.612   0.603  vga/RGB_and000852 (vga/RGB_and0008)
+     LUT3:I0->O            1   0.612   0.360  vga/RGB_mux0000<5>11_SW0 (N4)
+     LUT4:I3->O            2   0.612   0.410  vga/RGB_mux0000<5>11 (vga/N61)
+     LUT4:I2->O            1   0.612   0.387  vga/RGB_mux0000<5>1_SW0 (N8)
+     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0000<5>12 (vga/RGB_mux0000<5>11)
+     FDRS:D                    0.268          vga/RGB_0
     ----------------------------------------
-    Total                     12.828ns (7.160ns logic, 5.668ns route)
-                                       (55.8% logic, 44.2% route)
+    Total                     13.694ns (7.772ns logic, 5.922ns route)
+                                       (56.8% logic, 43.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
-  Total number of paths / destination ports: 5 / 5
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              4.040ns (Levels of Logic = 1)
-  Source:            vga/vsync (FF)
-  Destination:       vsync (PAD)
+Offset:              4.063ns (Levels of Logic = 1)
+  Source:            vga/RGB_1 (FF)
+  Destination:       RGB<4> (PAD)
   Source Clock:      clk50mhz rising 0.5X
 
-  Data Path: vga/vsync to vsync
+  Data Path: vga/RGB_1 to RGB<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              1   0.514   0.357  vga/vsync (vga/vsync)
-     OBUF:I->O                 3.169          vsync_OBUF (vsync)
+     FDR:C->Q              2   0.514   0.380  vga/RGB_1 (vga/RGB_1)
+     OBUF:I->O                 3.169          RGB_4_OBUF (RGB<4>)
     ----------------------------------------
-    Total                      4.040ns (3.683ns logic, 0.357ns route)
-                                       (91.2% logic, 8.8% route)
+    Total                      4.063ns (3.683ns logic, 0.380ns route)
+                                       (90.6% logic, 9.4% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 14.09 secs
+Total CPU time to Xst completion: 14.38 secs
  
 --> 
 
-Total memory usage is 219200 kilobytes
+Total memory usage is 219184 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   41 (   0 filtered)
-Number of infos    :   25 (   0 filtered)
+Number of infos    :   26 (   0 filtered)
 

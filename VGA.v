@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 module VGA(
    input CLK_25MH,
-   output reg [2:0] RGB,
+   output reg [5:0] RGB,
    output reg hsync,
    output reg vsync,
 	output [9:0] hor_count,
@@ -27,7 +27,7 @@ module VGA(
 		FIFTH_ROW_Y = 10'd240;
 		
 	reg [9:0] hcount;
-   	reg [9:0] vcount;
+	reg [9:0] vcount;
     
 	assign hor_count = hcount;
 	assign ver_count = vcount;
@@ -85,15 +85,15 @@ module VGA(
         end
 
         if (hcount < 640 && vcount < 480) begin
-            RGB = 3'b000;//'
+            RGB = 6'b000;//'
 
         		if(vcount >= ball_y && vcount <= (ball_y + BALL_SIZE)//ball
         			&& hcount >= ball_x && hcount <= (ball_x + BALL_SIZE) )
-        			RGB = 3'b101;//'
+        			RGB = 6'b101101;//'
 
 				if(vcount > 440 && vcount < 450 && 
 					hcount > paddle_pos && hcount < paddle_pos + 100)begin//paddle
-					RGB = 3'b001;//'
+					RGB = 6'b100001;//'
 				end
 				else begin
 				for (i = 0; i < 10; i = i + 1) begin
@@ -102,7 +102,7 @@ module VGA(
 						if(active[i] != 2'b11 && (vcount >= data_y[i] && vcount <= (data_y[i] + BLOCK_HEIGHT)) 
 							&& hcount >= data_x[i] && hcount <= (data_x[i] + BLOCK_WIDTH))
 						begin
-							RGB = 3'b010;//'
+							RGB = 6'b111010;//'
 						end
 					end
 					else begin
@@ -110,14 +110,14 @@ module VGA(
 						if(active[i] != 2'b11 && (vcount >= data_y[i] && vcount <= (data_y[i] + BLOCK_HEIGHT)) 
 							&& hcount >= data_x[i] && hcount <= (data_x[i] + BLOCK_WIDTH))
 						begin
-							RGB = 3'b110;//'
+							RGB = 6'b111110;//'
 						end
 					end
 				end
 				end
         end
         else begin
-            RGB = 3'b000;
+            RGB = 6'b000;
         end
     end
 
