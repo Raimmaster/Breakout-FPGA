@@ -43,7 +43,7 @@ module ball(
 	reg p_sound;
 	assign play_sound1 = p_sound;
 	
-	reg active [11:0];
+	reg [1:0] active [9:0];
 	reg [9:0] temp1;
 	reg [9:0] temp2;
 	reg [5:0] i;
@@ -93,7 +93,7 @@ module ball(
 				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(address-5);
 			end
 
-			if(active[address]) begin
+			if(active[address] < 3) begin
 				if(
 					(ball_y > temp1  && ball_y < (temp1 + BLOCK_HEIGHT) )  && 
 					(( (ball_x + BALL_SIZE) > (temp2) && (ball_x - BALL_SIZE) < temp2 ) 
@@ -104,7 +104,7 @@ module ball(
 					erase_e = 1;
 					erase_pos = address;
 					ball_dx = ball_dx * -1;
-					active[address] = 0;
+					active[address] = active[address] + 1;
 				end
 				
 				if ( (ball_x > temp2 && ball_x < (temp2 + BLOCK_WIDTH)) && 
@@ -115,14 +115,14 @@ module ball(
 					erase_e = 1;
 					erase_pos = address;
 					ball_dy = ball_dy * -1;
-					active[address] = 0;
+					active[address] = active[address] + 1;
 				end
 			end
 		
 		
 		win = 1;
 		for (i = 0; i < 10; i = i + 1) begin
-				if (active[i])
+				if (active[i] < 3)
 					win = 0;
 		end
 			
@@ -149,7 +149,7 @@ module ball(
 			ball_dy = -10'd1;
 			
 			for (i = 0; i < 10; i = i + 1) begin
-				active[i] = 1;			
+				active[i] = 0;			
 			end
 		end
 	end

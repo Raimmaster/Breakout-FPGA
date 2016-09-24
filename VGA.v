@@ -11,7 +11,7 @@ module VGA(
 	input [9:0] ball_x,
 	input [9:0] ball_y,
 	input reset,
-	input erase_enable,
+	input active_write_enable,
 	input [5:0] erase_pos
 );
 	parameter
@@ -26,32 +26,32 @@ module VGA(
 		FIFTH_ROW_Y = 10'd240;
 		
 	reg [9:0] hcount;
-   reg [9:0] vcount;
+   	reg [9:0] vcount;
     
 	assign hor_count = hcount;
 	assign ver_count = vcount;
 	 
-	reg [9:0] data_x [11:0];
-	reg [9:0] data_y [11:0];
-	reg active [11:0];
+	reg [9:0] data_x [9:0];
+	reg [9:0] data_y [9:0];
+	reg [1:0] active [9:0];
 	reg [4:0] i;
 	 
     always @ ( posedge CLK_25MH)
     begin 
-		if(erase_enable)
-			active[erase_pos] = 0;
+		if(active_write_enable)
+			active[erase_pos] = active[erase_pos] + 1;
 			if (reset) begin
 		  	//initialize rows and columns of block
-			for (i = 0; i < 12; i = i + 1) begin
+			for (i = 0; i < 10; i = i + 1) begin
 				if(i < 5) begin
 					data_x[i] = BLOCK_SPACING_X + (BLOCK_SPACING_X + BLOCK_WIDTH) * i;
 					data_y[i] = FIRST_ROW_Y;
-					active[i] = 1;
+					active[i] = 0;
 				end
 				else if (i < 10) begin
 					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-5));
 					data_y[i] = SECOND_ROW_Y;
-					active[i] = 1;
+					active[i] = 0;
 				end
 			end
 		end
@@ -97,7 +97,7 @@ module VGA(
 				for (i = 0; i < 10; i = i + 1) begin
 					//first row of blocks (upper)
 					if(i < 5)begin
-						if(active[i] && (vcount >= data_y[i] && vcount <= (data_y[i] + BLOCK_HEIGHT)) 
+						if(active[i] != 2'b11 && (vcount >= data_y[i] && vcount <= (data_y[i] + BLOCK_HEIGHT)) 
 							&& hcount >= data_x[i] && hcount <= (data_x[i] + BLOCK_WIDTH))
 						begin
 							RGB = 3'b010;//'
@@ -105,7 +105,7 @@ module VGA(
 					end
 					else begin
 						//second row of blocks
-						if(active[i] && (vcount >= data_y[i] && vcount <= (data_y[i] + BLOCK_HEIGHT)) 
+						if(active[i] != 2'b11 && (vcount >= data_y[i] && vcount <= (data_y[i] + BLOCK_HEIGHT)) 
 							&& hcount >= data_x[i] && hcount <= (data_x[i] + BLOCK_WIDTH))
 						begin
 							RGB = 3'b110;//'
