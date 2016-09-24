@@ -1,4 +1,3 @@
-verilog work "Compare10.v"
 verilog work "VGA.v"
 verilog work "Paddle.v"
 verilog work "clk_divider.v"

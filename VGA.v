@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 module VGA(
-    input CLK_25MH,
-    output reg [2:0] RGB,
-    output reg hsync,
-    output reg vsync,
+   input CLK_25MH,
+   output reg [2:0] RGB,
+   output reg hsync,
+   output reg vsync,
 	output [9:0] hor_count,
 	output [9:0] ver_count,
 	input [2:0] rgb_in,
@@ -25,20 +25,8 @@ module VGA(
 		FOURTH_ROW_Y = 10'd190,
 		FIFTH_ROW_Y = 10'd240;
 		
-	reg c_a;
-	reg c_b;
-	
-	wire w_a;
-	wire w_b;
-	wire w_e;
-	wire w_g;
-	wire w_l;
-	assign w_a = c_a;
-	assign w_b = c_b;
-	Compare10 cmp1(w_a, w_b, w_e, w_g, w_l);
-
-   	reg [9:0] hcount;
-   	reg [9:0] vcount;
+	reg [9:0] hcount;
+   reg [9:0] vcount;
     
 	assign hor_count = hcount;
 	assign ver_count = vcount;
@@ -124,95 +112,6 @@ module VGA(
 						end
 					end
 				end
-					/*if(active[10] && (vcount >= data_y[10] && vcount <= (data_y[10] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[10] && hcount <= (data_x[10] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b111;
-					end
-					if(active[11] && (vcount >= data_y[11] && vcount <= (data_y[11] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[11] && hcount <= (data_x[11] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b111;
-					end*/
-					/*
-					//third row of blocks
-					if(active[10] && (vcount >= data_y[10] && vcount <= (data_y[10] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[10] && hcount <= (data_x[10] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b111;
-					end
-					if(active[11] && (vcount >= data_y[11] && vcount <= (data_y[11] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[11] && hcount <= (data_x[11] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b111;
-					end
-					if(active[12] && (vcount >= data_y[12] && vcount <= (data_y[12] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[12] && hcount <= (data_x[12] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b111;
-					end
-					if(active[13] && (vcount >= data_y[13] && vcount <= (data_y[13] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[13] && hcount <= (data_x[13] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b111;
-					end
-					if(active[14] && (vcount >= data_y[14] && vcount <= (data_y[14] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[14] && hcount <= (data_x[14] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b111;
-					end
-					//fourth row of blocks
-					if(active[15] && (vcount >= data_y[15] && vcount <= (data_y[15] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[15] && hcount <= (data_x[15] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b100;
-					end
-					if(active[16] && (vcount >= data_y[16] && vcount <= (data_y[16] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[6] && hcount <= (data_x[6] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b100;
-					end
-					if(active[17] && (vcount >= data_y[17] && vcount <= (data_y[17] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[17] && hcount <= (data_x[17] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b100;
-					end
-					if(active[18] && (vcount >= data_y[18] && vcount <= (data_y[18] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[18] && hcount <= (data_x[18] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b100;
-					end
-					if(active[19] && (vcount >= data_y[19] && vcount <= (data_y[19] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[19] && hcount <= (data_x[19] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b100;
-					end
-					//fifth row of blocks
-					if(active[20] && (vcount >= data_y[20] && vcount <= (data_y[20] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[20] && hcount <= (data_x[20] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b011;
-					end
-					if(active[21] && (vcount >= data_y[21] && vcount <= (data_y[21] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[21] && hcount <= (data_x[21] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b011;
-					end
-					if(active[22] && (vcount >= data_y[22] && vcount <= (data_y[22] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[22] && hcount <= (data_x[22] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b011;
-					end
-					if(active[23] && (vcount >= data_y[23] && vcount <= (data_y[23] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[23] && hcount <= (data_x[23] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b011;
-					end
-					if(active[24] && (vcount >= data_y[24] && vcount <= (data_y[24] + BLOCK_HEIGHT)) 
-						&& hcount >= data_x[24] && hcount <= (data_x[24] + BLOCK_WIDTH))
-					begin
-						RGB = 3'b011;
-					end*/
 				end
         end
         else begin

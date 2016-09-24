@@ -1,0 +1,17 @@
+
+
+
+// Instantiate the module
+Main instance_name (
+    .clk50mhz(clk50mhz), 
+    .RGB(RGB), 
+    .hsync(hsync), 
+    .vsync(vsync), 
+    .clk_audio(clk_audio), 
+    .right_button(right_button), 
+    .reset_button(reset_button), 
+    .mi_nota(mi_nota), 
+    .left_button(left_button)
+    );
+
+
