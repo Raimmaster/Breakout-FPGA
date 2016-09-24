@@ -49,11 +49,12 @@ module Main(
 	wire [2:0] data;
 	wire play_sound1;
 	wire play_sound2;
+	wire [1:0] active_data;
 	//paddle end
 	//ball init
-	ball bola(paddle_pos, reset_button, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, play_sound2);
+	ball bola(paddle_pos, reset_button, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, play_sound2, active_data);
 		
-	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button, erase_enable, erase_pos);
+	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button, erase_enable, erase_pos, active_data);
 	
 	reg [13:0] address_vga;
 	

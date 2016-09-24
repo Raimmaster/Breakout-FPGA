@@ -12,7 +12,8 @@ module VGA(
 	input [9:0] ball_y,
 	input reset,
 	input active_write_enable,
-	input [5:0] erase_pos
+	input [5:0] active_position,
+	input [1:0] active_data
 );
 	parameter
 		BALL_SIZE = 7,
@@ -33,14 +34,15 @@ module VGA(
 	 
 	reg [9:0] data_x [9:0];
 	reg [9:0] data_y [9:0];
-	reg [1:0] active [9:0];
+	reg [2:0] active [9:0];
 	reg [4:0] i;
 	 
     always @ ( posedge CLK_25MH)
     begin 
 		if(active_write_enable)
-			active[erase_pos] = active[erase_pos] + 1;
-			if (reset) begin
+			active[active_position] = active_data;
+		
+		if (reset) begin
 		  	//initialize rows and columns of block
 			for (i = 0; i < 10; i = i + 1) begin
 				if(i < 5) begin

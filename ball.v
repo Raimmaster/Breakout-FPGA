@@ -2,16 +2,17 @@
 
 module ball(
 	input [9:0] paddle_x,
-   //input [9:0] paddle_y,
-   input reset,
-   input clk,
-   output [9:0] x_out,
-   output [9:0] y_out,
+   	//input [9:0] paddle_y,
+   	input reset,
+   	input clk,
+  	output [9:0] x_out,
+   	output [9:0] y_out,
 	output erase_enable,
 	output [5:0] e_pos,
 	output play_sound1,
-	output reg play_sound2
-   );
+	output reg play_sound2,
+	output reg [1:0] active_data
+   	);
 	parameter
 		SCREEN_W = 640,
 		SCREEN_H = 480,
@@ -105,6 +106,7 @@ module ball(
 					erase_pos = address;
 					ball_dx = ball_dx * -1;
 					active[address] = active[address] + 1;
+					active_data = active[address];
 				end
 				
 				if ( (ball_x > temp2 && ball_x < (temp2 + BLOCK_WIDTH)) && 
@@ -116,6 +118,7 @@ module ball(
 					erase_pos = address;
 					ball_dy = ball_dy * -1;
 					active[address] = active[address] + 1;
+					active_data = active[address];
 				end
 			end
 		
