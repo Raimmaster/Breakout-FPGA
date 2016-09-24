@@ -44,7 +44,7 @@ Setup/Hold to clock clk50mhz
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-reset_button|   10.716(R)|    0.186(R)|vga_clk           |   0.000|
+reset_button|   11.063(R)|    0.660(R)|vga_clk           |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk50mhz to Pad
@@ -52,11 +52,11 @@ Clock clk50mhz to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-RGB<0>      |    8.244(R)|vga_clk           |   0.000|
-RGB<1>      |    8.488(R)|vga_clk           |   0.000|
-RGB<2>      |    8.196(R)|vga_clk           |   0.000|
-hsync       |    8.007(R)|vga_clk           |   0.000|
-vsync       |    8.096(R)|vga_clk           |   0.000|
+RGB<0>      |    8.548(R)|vga_clk           |   0.000|
+RGB<1>      |    8.541(R)|vga_clk           |   0.000|
+RGB<2>      |    8.075(R)|vga_clk           |   0.000|
+hsync       |    8.232(R)|vga_clk           |   0.000|
+vsync       |    8.190(R)|vga_clk           |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk50mhz
@@ -64,18 +64,18 @@ Clock to Setup on destination clock clk50mhz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk50mhz       |   12.166|         |         |         |
+clk50mhz       |   12.763|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sat Sep 24 11:53:55 2016 
+Analysis completed Sat Sep 24 12:21:43 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 123 MB
+Peak Memory Usage: 124 MB
 
 
 

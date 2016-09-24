@@ -74,7 +74,7 @@ module ball(
 			//erase_e = 1;
 		end
 		
-		if(address > 10)begin
+		if(address >= 10)begin
 			address = 0;
 		end
 		else begin
@@ -115,7 +115,7 @@ module ball(
 					erase_e = 1;
 					erase_pos = address;
 					ball_dy = ball_dy * -1;
-					active[i] = 0;
+					active[address] = 0;
 				end
 			end
 		
