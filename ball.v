@@ -128,7 +128,7 @@ module ball(
 			
 		p_sound = erase_e;
 		play_sound2 = 0;
-		if( (ball_x > paddle_x && ball_x < (paddle_x + 100)) && ( ( (ball_y + BALL_SIZE) >= 10'd439 && (ball_y - BALL_SIZE) < 10'd440) ) ) //paddle collision
+		if( ball_dy > 0 && (ball_x > paddle_x && ball_x < (paddle_x + 100)) && ( ( (ball_y + BALL_SIZE) >= 10'd439 && (ball_y - BALL_SIZE) < 10'd440) ) ) //paddle collision
 		begin
 			ball_dy = ball_dy * -1;
 			play_sound2 = 1;
@@ -148,7 +148,7 @@ module ball(
 			ball_dx = -10'd1;
 			ball_dy = -10'd1;
 			
-			for (i = 0; i < 12; i = i + 1) begin
+			for (i = 0; i < 10; i = i + 1) begin
 				active[i] = 1;			
 			end
 		end
