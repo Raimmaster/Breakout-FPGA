@@ -135,6 +135,15 @@ module ball(
 		begin
 			ball_dy = ball_dy * -1;
 			play_sound2 = 1;
+			if ((ball_x < paddle_x + 25 || ball_x > paddle_x + 75) && (ball_dx == 1 || ball_dx == -1)) begin
+				ball_dx = ball_dx * 2;
+			end
+			else if (ball_dx == 2) begin
+				ball_dx = 1;
+			end
+			else if (ball_dx == -2) begin
+				ball_dx = -1;
+			end
 		end
 				
 		if (win) begin
