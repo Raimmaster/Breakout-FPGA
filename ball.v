@@ -121,7 +121,7 @@ module ball(
 		
 		
 		win = 1;
-		for (i = 0; i < 12; i = i + 1) begin
+		for (i = 0; i < 10; i = i + 1) begin
 				if (active[i])
 					win = 0;
 		end
