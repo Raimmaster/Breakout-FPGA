@@ -1,14 +1,11 @@
 Release 14.7 Drc P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Sep 25 12:06:43 2016
+Sun Sep 25 13:03:39 2016
 
 drc -z Main.ncd Main.pcf
 
-WARNING:PhysDesignRules:367 - The signal <mi_nota_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
    with the CLKFX and CLKFX180 outputs of the DCM comp vga_clock_dcm, consult
    the device Interactive Data Sheet.
-DRC detected 0 errors and 1 warnings.  Please see the previously displayed
-individual error or warning messages for more details.
+DRC detected 0 errors and 0 warnings.

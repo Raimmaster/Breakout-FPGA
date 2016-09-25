@@ -1,10 +1,10 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Sep 25 12:05:05 2016
+// Written by: Map P.20131013 on Sun Sep 25 13:00:55 2016
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "start_button" LOCATE = SITE "C12" LEVEL 1;
 COMP "hsync" LOCATE = SITE "A7" LEVEL 1;
-COMP "mi_nota" LOCATE = SITE "C12" LEVEL 1;
 COMP "vsync" LOCATE = SITE "D7" LEVEL 1;
 COMP "tono<0>" LOCATE = SITE "D6" LEVEL 1;
 COMP "tono<1>" LOCATE = SITE "C6" LEVEL 1;

@@ -8,7 +8,7 @@ module Main(
 		input clk_audio,
 		input right_button,
 		input reset_button,
-		input mi_nota,
+		input start_button,
 		input left_button,
 		output [3:0] tono
     );
@@ -53,7 +53,7 @@ module Main(
 	//paddle end
 	//ball init
 	//ball bola(paddle_pos, reset_button, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, play_sound2, active_data);
-	ball bola(paddle_pos, reset_button, clk_ball, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, active_data);
+	ball bola(paddle_pos, reset_button, start_button, clk_ball, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, active_data);
 		
 	VGA vga(vga_clk, clk50mhz, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button, erase_enable, erase_pos, active_data);
 	

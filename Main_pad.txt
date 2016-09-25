@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Sep 25 12:06:35 2016
+Sun Sep 25 13:03:34 2016
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -63,7 +63,7 @@ Pinout by Pin Number:
 |C9        |            |DIFFSI   |IP_L07N_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |C10       |left_button |IBUF     |IP_L07P_0                |INPUT    |LVCMOS33   |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |C11       |            |DIFFM    |IO_L05P_0                |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|C12       |mi_nota     |IBUF     |IP_L02N_0                |INPUT    |LVCMOS33   |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|C12       |start_button|IBUF     |IP_L02N_0                |INPUT    |LVCMOS33   |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |C13       |right_button|IBUF     |IP                       |INPUT    |LVCMOS33   |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |C14       |            |         |TDO                      |         |           |              |          |         |           |         |         |          |           |                |
 |C15       |            |DIFFS    |IO_L19N_1/LDC2           |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
