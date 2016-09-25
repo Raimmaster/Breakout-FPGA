@@ -103,7 +103,7 @@ module ball(
 				temp1 = SECOND_ROW_Y;
 				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(address-5);
 			end
-			else if (address < 15) begin
+			/*else if (address < 15) begin
 				temp1 = THIRD_ROW_Y;
 				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(address-10);
 			end
@@ -114,7 +114,7 @@ module ball(
 			else if (address < 25) begin
 				temp1 = FIFTH_ROW_Y;
 				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(address-20);
-			end
+			end*/
 
 			if(active[address] < 3) begin
 				if(
@@ -145,10 +145,47 @@ module ball(
 					active_data = active[address];
 				end
 			end
-		
+			
+			if (address<5) begin
+				temp1 = THIRD_ROW_Y;	
+				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(address);			
+			end
+			else if (address < 10) begin
+				temp1 = FOURTH_ROW_Y;
+				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(address-5);
+			end
+			if(active[address + 10'd10] < 3) begin
+				if(
+					(ball_y >= temp1  && ball_y <= (temp1 + BLOCK_HEIGHT) )  && 
+					(( (ball_x + BALL_SIZE) >= (temp2) && (ball_x - BALL_SIZE) <= temp2 ) 
+						||	
+						( (ball_x + BALL_SIZE) >= (temp2 + BLOCK_WIDTH) && (ball_x - BALL_SIZE) <= (temp2 + BLOCK_WIDTH) )
+						)
+				) begin
+					erase_e = 1;
+					erase_pos = address + 10'd10;
+					ball_dx = ball_dx * -1;
+					active[address + 10'd10] = active[address + 10'd10] + 1;
+					play_sound1 = active[address + 10'd10];
+					active_data = active[address + 10'd10];
+				end
+				
+				else if ( (ball_x >= temp2 && ball_x <= (temp2 + BLOCK_WIDTH)) && 
+				(( (ball_y + BALL_SIZE) >= (temp1) && (ball_y - BALL_SIZE) <= temp1 ) || 
+					( (ball_y + BALL_SIZE) >= (temp1 + BLOCK_HEIGHT) && (ball_y - BALL_SIZE) <= (temp1 + BLOCK_HEIGHT) )
+				))
+				begin
+					erase_e = 1;
+					erase_pos = address + 10'd10;
+					ball_dy = ball_dy * -1;
+					active[address + 10'd10] = active[address + 10'd10] + 1;
+					play_sound1 = active[address + 10'd10];
+					active_data = active[address + 10'd10];
+				end
+			end
 		
 		win = 1;
-		for (i = 0; i < 25; i = i + 1) begin
+		for (i = 0; i < 20; i = i + 1) begin
 				if (active[i] < 3)
 					win = 0;
 		end
@@ -184,7 +221,7 @@ module ball(
 			ball_dx = -10'd1;
 			ball_dy = -10'd1;
 			
-			for (i = 0; i < 25; i = i + 1) begin
+			for (i = 0; i < 20; i = i + 1) begin
 				active[i] = 0;			
 			end
 		end

@@ -1,0 +1,1022 @@
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net 
+clk_ball_divider/clk_buf
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 6265706101 paths analyzed, 513 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  29.652ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net vga_clk
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 325746 paths analyzed, 105 endpoints analyzed, 5 failing endpoints
+ 5 timing errors detected. (5 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  20.642ns.
+--------------------------------------------------------------------------------
+Slack:                  -0.615 (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga/hcount_3 (FF)
+  Destination:          vga/RGB_3 (FF)
+  Requirement:          20.027
+  Data Path Delay:      20.642 (Levels of Logic = 21)
+  Clock Path Skew:      0.000ns
+  Source Clock:         vga_clk rising at 0.000ns
+  Destination Clock:    vga_clk rising at 20.027ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: vga/hcount_3 to vga/RGB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y79.YQ      Tcko                  0.511   vga/hcount<2>
+                                                       vga/hcount_3
+    SLICE_X28Y78.F1      net (fanout=2)        0.453   vga/hcount<3>
+    SLICE_X28Y78.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq00005
+                                                       vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.F4      net (fanout=2)        0.348   vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq0000
+                                                       vga/old_vcount_27_cmp_eq000024
+    SLICE_X24Y84.G3      net (fanout=50)       0.661   vga/old_vcount_27_cmp_eq0000
+    SLICE_X24Y84.Y       Tilo                  0.660   vga/vcount<2>
+                                                       vga/_old_vcount_27<0>137
+    SLICE_X26Y83.G3      net (fanout=10)       0.458   vga/N19
+    SLICE_X26Y83.Y       Tilo                  0.660   vga/vcount<5>
+                                                       vga/_old_vcount_27<5>1
+    SLICE_X24Y81.G1      net (fanout=11)       0.753   vga/_old_vcount_27<5>
+    SLICE_X24Y81.Y       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and001727
+    SLICE_X24Y81.F2      net (fanout=1)        0.348   vga/RGB_and001727
+    SLICE_X24Y81.X       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and0017265
+    SLICE_X31Y80.F3      net (fanout=6)        0.572   vga/N105
+    SLICE_X31Y80.X       Tilo                  0.612   vga/RGB_and0017
+                                                       vga/RGB_and00171
+    SLICE_X31Y78.F4      net (fanout=6)        0.635   vga/RGB_and0017
+    SLICE_X31Y78.X       Tilo                  0.612   vga/N18
+                                                       vga/RGB_mux0000<0>11112
+    SLICE_X31Y79.G2      net (fanout=3)        0.091   vga/N18
+    SLICE_X31Y79.Y       Tilo                  0.612   vga/RGB_mux0000<0>123
+                                                       vga/RGB_mux0001<1>19
+    SLICE_X33Y77.G4      net (fanout=1)        0.303   vga/RGB_mux0001<1>19
+    SLICE_X33Y77.Y       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>93
+    SLICE_X33Y77.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>93
+    SLICE_X33Y77.X       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>140
+    SLICE_X32Y77.G4      net (fanout=1)        0.075   vga/RGB_mux0001<1>140
+    SLICE_X32Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>206
+                                                       vga/RGB_mux0001<1>2062
+                                                       vga/RGB_mux0001<1>206_f5
+    SLICE_X34Y77.G3      net (fanout=1)        0.301   vga/RGB_mux0001<1>206
+    SLICE_X34Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>290
+                                                       vga/RGB_mux0001<1>2902
+                                                       vga/RGB_mux0001<1>290_f5
+    SLICE_X35Y80.F2      net (fanout=1)        0.306   vga/RGB_mux0001<1>290
+    SLICE_X35Y80.X       Tilo                  0.612   vga/RGB_mux0001<1>342
+                                                       vga/RGB_mux0001<1>342
+    SLICE_X34Y80.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>342
+    SLICE_X34Y80.Y       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>392
+    SLICE_X34Y80.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>392
+    SLICE_X34Y80.X       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>444
+    SLICE_X35Y82.F4      net (fanout=1)        0.233   vga/RGB_mux0001<1>444
+    SLICE_X35Y82.X       Tilo                  0.612   vga/RGB_mux0001<1>494
+                                                       vga/RGB_mux0001<1>494
+    SLICE_X34Y82.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>494
+    SLICE_X34Y82.Y       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>546
+    SLICE_X34Y82.F4      net (fanout=2)        0.027   vga/RGB_mux0001<1>546
+    SLICE_X34Y82.X       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>559
+    SLICE_X34Y83.G1      net (fanout=4)        0.149   vga/Madd_RGB_share0000_cy<1>
+    SLICE_X34Y83.Y       Tilo                  0.660   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1_SW2
+    SLICE_X34Y83.F3      net (fanout=1)        0.020   N805
+    SLICE_X34Y83.CLK     Tfck                  0.776   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1
+                                                       vga/RGB_3
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.591 (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga/hcount_1 (FF)
+  Destination:          vga/RGB_3 (FF)
+  Requirement:          20.027
+  Data Path Delay:      20.618 (Levels of Logic = 21)
+  Clock Path Skew:      0.000ns
+  Source Clock:         vga_clk rising at 0.000ns
+  Destination Clock:    vga_clk rising at 20.027ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: vga/hcount_1 to vga/RGB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y78.YQ      Tcko                  0.511   vga/hcount<0>
+                                                       vga/hcount_1
+    SLICE_X28Y78.F2      net (fanout=2)        0.429   vga/hcount<1>
+    SLICE_X28Y78.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq00005
+                                                       vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.F4      net (fanout=2)        0.348   vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq0000
+                                                       vga/old_vcount_27_cmp_eq000024
+    SLICE_X24Y84.G3      net (fanout=50)       0.661   vga/old_vcount_27_cmp_eq0000
+    SLICE_X24Y84.Y       Tilo                  0.660   vga/vcount<2>
+                                                       vga/_old_vcount_27<0>137
+    SLICE_X26Y83.G3      net (fanout=10)       0.458   vga/N19
+    SLICE_X26Y83.Y       Tilo                  0.660   vga/vcount<5>
+                                                       vga/_old_vcount_27<5>1
+    SLICE_X24Y81.G1      net (fanout=11)       0.753   vga/_old_vcount_27<5>
+    SLICE_X24Y81.Y       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and001727
+    SLICE_X24Y81.F2      net (fanout=1)        0.348   vga/RGB_and001727
+    SLICE_X24Y81.X       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and0017265
+    SLICE_X31Y80.F3      net (fanout=6)        0.572   vga/N105
+    SLICE_X31Y80.X       Tilo                  0.612   vga/RGB_and0017
+                                                       vga/RGB_and00171
+    SLICE_X31Y78.F4      net (fanout=6)        0.635   vga/RGB_and0017
+    SLICE_X31Y78.X       Tilo                  0.612   vga/N18
+                                                       vga/RGB_mux0000<0>11112
+    SLICE_X31Y79.G2      net (fanout=3)        0.091   vga/N18
+    SLICE_X31Y79.Y       Tilo                  0.612   vga/RGB_mux0000<0>123
+                                                       vga/RGB_mux0001<1>19
+    SLICE_X33Y77.G4      net (fanout=1)        0.303   vga/RGB_mux0001<1>19
+    SLICE_X33Y77.Y       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>93
+    SLICE_X33Y77.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>93
+    SLICE_X33Y77.X       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>140
+    SLICE_X32Y77.G4      net (fanout=1)        0.075   vga/RGB_mux0001<1>140
+    SLICE_X32Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>206
+                                                       vga/RGB_mux0001<1>2062
+                                                       vga/RGB_mux0001<1>206_f5
+    SLICE_X34Y77.G3      net (fanout=1)        0.301   vga/RGB_mux0001<1>206
+    SLICE_X34Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>290
+                                                       vga/RGB_mux0001<1>2902
+                                                       vga/RGB_mux0001<1>290_f5
+    SLICE_X35Y80.F2      net (fanout=1)        0.306   vga/RGB_mux0001<1>290
+    SLICE_X35Y80.X       Tilo                  0.612   vga/RGB_mux0001<1>342
+                                                       vga/RGB_mux0001<1>342
+    SLICE_X34Y80.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>342
+    SLICE_X34Y80.Y       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>392
+    SLICE_X34Y80.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>392
+    SLICE_X34Y80.X       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>444
+    SLICE_X35Y82.F4      net (fanout=1)        0.233   vga/RGB_mux0001<1>444
+    SLICE_X35Y82.X       Tilo                  0.612   vga/RGB_mux0001<1>494
+                                                       vga/RGB_mux0001<1>494
+    SLICE_X34Y82.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>494
+    SLICE_X34Y82.Y       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>546
+    SLICE_X34Y82.F4      net (fanout=2)        0.027   vga/RGB_mux0001<1>546
+    SLICE_X34Y82.X       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>559
+    SLICE_X34Y83.G1      net (fanout=4)        0.149   vga/Madd_RGB_share0000_cy<1>
+    SLICE_X34Y83.Y       Tilo                  0.660   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1_SW2
+    SLICE_X34Y83.F3      net (fanout=1)        0.020   N805
+    SLICE_X34Y83.CLK     Tfck                  0.776   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1
+                                                       vga/RGB_3
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.588 (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga/hcount_3 (FF)
+  Destination:          vga/RGB_3 (FF)
+  Requirement:          20.027
+  Data Path Delay:      20.615 (Levels of Logic = 21)
+  Clock Path Skew:      0.000ns
+  Source Clock:         vga_clk rising at 0.000ns
+  Destination Clock:    vga_clk rising at 20.027ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: vga/hcount_3 to vga/RGB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y79.YQ      Tcko                  0.511   vga/hcount<2>
+                                                       vga/hcount_3
+    SLICE_X28Y78.F1      net (fanout=2)        0.453   vga/hcount<3>
+    SLICE_X28Y78.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq00005
+                                                       vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.F4      net (fanout=2)        0.348   vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq0000
+                                                       vga/old_vcount_27_cmp_eq000024
+    SLICE_X24Y84.G3      net (fanout=50)       0.661   vga/old_vcount_27_cmp_eq0000
+    SLICE_X24Y84.Y       Tilo                  0.660   vga/vcount<2>
+                                                       vga/_old_vcount_27<0>137
+    SLICE_X26Y83.G3      net (fanout=10)       0.458   vga/N19
+    SLICE_X26Y83.Y       Tilo                  0.660   vga/vcount<5>
+                                                       vga/_old_vcount_27<5>1
+    SLICE_X24Y81.G1      net (fanout=11)       0.753   vga/_old_vcount_27<5>
+    SLICE_X24Y81.Y       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and001727
+    SLICE_X24Y81.F2      net (fanout=1)        0.348   vga/RGB_and001727
+    SLICE_X24Y81.X       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and0017265
+    SLICE_X31Y81.F3      net (fanout=6)        0.572   vga/N105
+    SLICE_X31Y81.X       Tilo                  0.612   vga/RGB_and0019
+                                                       vga/RGB_and00191
+    SLICE_X32Y79.G2      net (fanout=4)        0.605   vga/RGB_and0019
+    SLICE_X32Y79.Y       Tilo                  0.660   vga/RGB_mux0001<1>55
+                                                       vga/RGB_mux0001<1>32
+    SLICE_X32Y79.F3      net (fanout=1)        0.020   vga/RGB_mux0001<1>32
+    SLICE_X32Y79.X       Tilo                  0.660   vga/RGB_mux0001<1>55
+                                                       vga/RGB_mux0001<1>55
+    SLICE_X33Y77.G2      net (fanout=1)        0.281   vga/RGB_mux0001<1>55
+    SLICE_X33Y77.Y       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>93
+    SLICE_X33Y77.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>93
+    SLICE_X33Y77.X       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>140
+    SLICE_X32Y77.G4      net (fanout=1)        0.075   vga/RGB_mux0001<1>140
+    SLICE_X32Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>206
+                                                       vga/RGB_mux0001<1>2062
+                                                       vga/RGB_mux0001<1>206_f5
+    SLICE_X34Y77.G3      net (fanout=1)        0.301   vga/RGB_mux0001<1>206
+    SLICE_X34Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>290
+                                                       vga/RGB_mux0001<1>2902
+                                                       vga/RGB_mux0001<1>290_f5
+    SLICE_X35Y80.F2      net (fanout=1)        0.306   vga/RGB_mux0001<1>290
+    SLICE_X35Y80.X       Tilo                  0.612   vga/RGB_mux0001<1>342
+                                                       vga/RGB_mux0001<1>342
+    SLICE_X34Y80.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>342
+    SLICE_X34Y80.Y       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>392
+    SLICE_X34Y80.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>392
+    SLICE_X34Y80.X       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>444
+    SLICE_X35Y82.F4      net (fanout=1)        0.233   vga/RGB_mux0001<1>444
+    SLICE_X35Y82.X       Tilo                  0.612   vga/RGB_mux0001<1>494
+                                                       vga/RGB_mux0001<1>494
+    SLICE_X34Y82.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>494
+    SLICE_X34Y82.Y       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>546
+    SLICE_X34Y82.F4      net (fanout=2)        0.027   vga/RGB_mux0001<1>546
+    SLICE_X34Y82.X       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>559
+    SLICE_X34Y83.G1      net (fanout=4)        0.149   vga/Madd_RGB_share0000_cy<1>
+    SLICE_X34Y83.Y       Tilo                  0.660   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1_SW2
+    SLICE_X34Y83.F3      net (fanout=1)        0.020   N805
+    SLICE_X34Y83.CLK     Tfck                  0.776   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1
+                                                       vga/RGB_3
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.588 (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga/hcount_3 (FF)
+  Destination:          vga/RGB_3 (FF)
+  Requirement:          20.027
+  Data Path Delay:      20.615 (Levels of Logic = 21)
+  Clock Path Skew:      0.000ns
+  Source Clock:         vga_clk rising at 0.000ns
+  Destination Clock:    vga_clk rising at 20.027ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: vga/hcount_3 to vga/RGB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y79.YQ      Tcko                  0.511   vga/hcount<2>
+                                                       vga/hcount_3
+    SLICE_X28Y78.F1      net (fanout=2)        0.453   vga/hcount<3>
+    SLICE_X28Y78.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq00005
+                                                       vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.F4      net (fanout=2)        0.348   vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq0000
+                                                       vga/old_vcount_27_cmp_eq000024
+    SLICE_X24Y84.G3      net (fanout=50)       0.661   vga/old_vcount_27_cmp_eq0000
+    SLICE_X24Y84.Y       Tilo                  0.660   vga/vcount<2>
+                                                       vga/_old_vcount_27<0>137
+    SLICE_X26Y83.G3      net (fanout=10)       0.458   vga/N19
+    SLICE_X26Y83.Y       Tilo                  0.660   vga/vcount<5>
+                                                       vga/_old_vcount_27<5>1
+    SLICE_X24Y81.G1      net (fanout=11)       0.753   vga/_old_vcount_27<5>
+    SLICE_X24Y81.Y       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and001727
+    SLICE_X24Y81.F2      net (fanout=1)        0.348   vga/RGB_and001727
+    SLICE_X24Y81.X       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and0017265
+    SLICE_X31Y81.F3      net (fanout=6)        0.572   vga/N105
+    SLICE_X31Y81.X       Tilo                  0.612   vga/RGB_and0019
+                                                       vga/RGB_and00191
+    SLICE_X31Y78.F1      net (fanout=4)        0.608   vga/RGB_and0019
+    SLICE_X31Y78.X       Tilo                  0.612   vga/N18
+                                                       vga/RGB_mux0000<0>11112
+    SLICE_X31Y79.G2      net (fanout=3)        0.091   vga/N18
+    SLICE_X31Y79.Y       Tilo                  0.612   vga/RGB_mux0000<0>123
+                                                       vga/RGB_mux0001<1>19
+    SLICE_X33Y77.G4      net (fanout=1)        0.303   vga/RGB_mux0001<1>19
+    SLICE_X33Y77.Y       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>93
+    SLICE_X33Y77.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>93
+    SLICE_X33Y77.X       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>140
+    SLICE_X32Y77.G4      net (fanout=1)        0.075   vga/RGB_mux0001<1>140
+    SLICE_X32Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>206
+                                                       vga/RGB_mux0001<1>2062
+                                                       vga/RGB_mux0001<1>206_f5
+    SLICE_X34Y77.G3      net (fanout=1)        0.301   vga/RGB_mux0001<1>206
+    SLICE_X34Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>290
+                                                       vga/RGB_mux0001<1>2902
+                                                       vga/RGB_mux0001<1>290_f5
+    SLICE_X35Y80.F2      net (fanout=1)        0.306   vga/RGB_mux0001<1>290
+    SLICE_X35Y80.X       Tilo                  0.612   vga/RGB_mux0001<1>342
+                                                       vga/RGB_mux0001<1>342
+    SLICE_X34Y80.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>342
+    SLICE_X34Y80.Y       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>392
+    SLICE_X34Y80.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>392
+    SLICE_X34Y80.X       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>444
+    SLICE_X35Y82.F4      net (fanout=1)        0.233   vga/RGB_mux0001<1>444
+    SLICE_X35Y82.X       Tilo                  0.612   vga/RGB_mux0001<1>494
+                                                       vga/RGB_mux0001<1>494
+    SLICE_X34Y82.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>494
+    SLICE_X34Y82.Y       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>546
+    SLICE_X34Y82.F4      net (fanout=2)        0.027   vga/RGB_mux0001<1>546
+    SLICE_X34Y82.X       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>559
+    SLICE_X34Y83.G1      net (fanout=4)        0.149   vga/Madd_RGB_share0000_cy<1>
+    SLICE_X34Y83.Y       Tilo                  0.660   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1_SW2
+    SLICE_X34Y83.F3      net (fanout=1)        0.020   N805
+    SLICE_X34Y83.CLK     Tfck                  0.776   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1
+                                                       vga/RGB_3
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.564 (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga/hcount_1 (FF)
+  Destination:          vga/RGB_3 (FF)
+  Requirement:          20.027
+  Data Path Delay:      20.591 (Levels of Logic = 21)
+  Clock Path Skew:      0.000ns
+  Source Clock:         vga_clk rising at 0.000ns
+  Destination Clock:    vga_clk rising at 20.027ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: vga/hcount_1 to vga/RGB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y78.YQ      Tcko                  0.511   vga/hcount<0>
+                                                       vga/hcount_1
+    SLICE_X28Y78.F2      net (fanout=2)        0.429   vga/hcount<1>
+    SLICE_X28Y78.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq00005
+                                                       vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.F4      net (fanout=2)        0.348   vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq0000
+                                                       vga/old_vcount_27_cmp_eq000024
+    SLICE_X24Y84.G3      net (fanout=50)       0.661   vga/old_vcount_27_cmp_eq0000
+    SLICE_X24Y84.Y       Tilo                  0.660   vga/vcount<2>
+                                                       vga/_old_vcount_27<0>137
+    SLICE_X26Y83.G3      net (fanout=10)       0.458   vga/N19
+    SLICE_X26Y83.Y       Tilo                  0.660   vga/vcount<5>
+                                                       vga/_old_vcount_27<5>1
+    SLICE_X24Y81.G1      net (fanout=11)       0.753   vga/_old_vcount_27<5>
+    SLICE_X24Y81.Y       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and001727
+    SLICE_X24Y81.F2      net (fanout=1)        0.348   vga/RGB_and001727
+    SLICE_X24Y81.X       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and0017265
+    SLICE_X31Y81.F3      net (fanout=6)        0.572   vga/N105
+    SLICE_X31Y81.X       Tilo                  0.612   vga/RGB_and0019
+                                                       vga/RGB_and00191
+    SLICE_X32Y79.G2      net (fanout=4)        0.605   vga/RGB_and0019
+    SLICE_X32Y79.Y       Tilo                  0.660   vga/RGB_mux0001<1>55
+                                                       vga/RGB_mux0001<1>32
+    SLICE_X32Y79.F3      net (fanout=1)        0.020   vga/RGB_mux0001<1>32
+    SLICE_X32Y79.X       Tilo                  0.660   vga/RGB_mux0001<1>55
+                                                       vga/RGB_mux0001<1>55
+    SLICE_X33Y77.G2      net (fanout=1)        0.281   vga/RGB_mux0001<1>55
+    SLICE_X33Y77.Y       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>93
+    SLICE_X33Y77.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>93
+    SLICE_X33Y77.X       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>140
+    SLICE_X32Y77.G4      net (fanout=1)        0.075   vga/RGB_mux0001<1>140
+    SLICE_X32Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>206
+                                                       vga/RGB_mux0001<1>2062
+                                                       vga/RGB_mux0001<1>206_f5
+    SLICE_X34Y77.G3      net (fanout=1)        0.301   vga/RGB_mux0001<1>206
+    SLICE_X34Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>290
+                                                       vga/RGB_mux0001<1>2902
+                                                       vga/RGB_mux0001<1>290_f5
+    SLICE_X35Y80.F2      net (fanout=1)        0.306   vga/RGB_mux0001<1>290
+    SLICE_X35Y80.X       Tilo                  0.612   vga/RGB_mux0001<1>342
+                                                       vga/RGB_mux0001<1>342
+    SLICE_X34Y80.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>342
+    SLICE_X34Y80.Y       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>392
+    SLICE_X34Y80.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>392
+    SLICE_X34Y80.X       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>444
+    SLICE_X35Y82.F4      net (fanout=1)        0.233   vga/RGB_mux0001<1>444
+    SLICE_X35Y82.X       Tilo                  0.612   vga/RGB_mux0001<1>494
+                                                       vga/RGB_mux0001<1>494
+    SLICE_X34Y82.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>494
+    SLICE_X34Y82.Y       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>546
+    SLICE_X34Y82.F4      net (fanout=2)        0.027   vga/RGB_mux0001<1>546
+    SLICE_X34Y82.X       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>559
+    SLICE_X34Y83.G1      net (fanout=4)        0.149   vga/Madd_RGB_share0000_cy<1>
+    SLICE_X34Y83.Y       Tilo                  0.660   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1_SW2
+    SLICE_X34Y83.F3      net (fanout=1)        0.020   N805
+    SLICE_X34Y83.CLK     Tfck                  0.776   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1
+                                                       vga/RGB_3
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.564 (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga/hcount_1 (FF)
+  Destination:          vga/RGB_3 (FF)
+  Requirement:          20.027
+  Data Path Delay:      20.591 (Levels of Logic = 21)
+  Clock Path Skew:      0.000ns
+  Source Clock:         vga_clk rising at 0.000ns
+  Destination Clock:    vga_clk rising at 20.027ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: vga/hcount_1 to vga/RGB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y78.YQ      Tcko                  0.511   vga/hcount<0>
+                                                       vga/hcount_1
+    SLICE_X28Y78.F2      net (fanout=2)        0.429   vga/hcount<1>
+    SLICE_X28Y78.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq00005
+                                                       vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.F4      net (fanout=2)        0.348   vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq0000
+                                                       vga/old_vcount_27_cmp_eq000024
+    SLICE_X24Y84.G3      net (fanout=50)       0.661   vga/old_vcount_27_cmp_eq0000
+    SLICE_X24Y84.Y       Tilo                  0.660   vga/vcount<2>
+                                                       vga/_old_vcount_27<0>137
+    SLICE_X26Y83.G3      net (fanout=10)       0.458   vga/N19
+    SLICE_X26Y83.Y       Tilo                  0.660   vga/vcount<5>
+                                                       vga/_old_vcount_27<5>1
+    SLICE_X24Y81.G1      net (fanout=11)       0.753   vga/_old_vcount_27<5>
+    SLICE_X24Y81.Y       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and001727
+    SLICE_X24Y81.F2      net (fanout=1)        0.348   vga/RGB_and001727
+    SLICE_X24Y81.X       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and0017265
+    SLICE_X31Y81.F3      net (fanout=6)        0.572   vga/N105
+    SLICE_X31Y81.X       Tilo                  0.612   vga/RGB_and0019
+                                                       vga/RGB_and00191
+    SLICE_X31Y78.F1      net (fanout=4)        0.608   vga/RGB_and0019
+    SLICE_X31Y78.X       Tilo                  0.612   vga/N18
+                                                       vga/RGB_mux0000<0>11112
+    SLICE_X31Y79.G2      net (fanout=3)        0.091   vga/N18
+    SLICE_X31Y79.Y       Tilo                  0.612   vga/RGB_mux0000<0>123
+                                                       vga/RGB_mux0001<1>19
+    SLICE_X33Y77.G4      net (fanout=1)        0.303   vga/RGB_mux0001<1>19
+    SLICE_X33Y77.Y       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>93
+    SLICE_X33Y77.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>93
+    SLICE_X33Y77.X       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>140
+    SLICE_X32Y77.G4      net (fanout=1)        0.075   vga/RGB_mux0001<1>140
+    SLICE_X32Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>206
+                                                       vga/RGB_mux0001<1>2062
+                                                       vga/RGB_mux0001<1>206_f5
+    SLICE_X34Y77.G3      net (fanout=1)        0.301   vga/RGB_mux0001<1>206
+    SLICE_X34Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>290
+                                                       vga/RGB_mux0001<1>2902
+                                                       vga/RGB_mux0001<1>290_f5
+    SLICE_X35Y80.F2      net (fanout=1)        0.306   vga/RGB_mux0001<1>290
+    SLICE_X35Y80.X       Tilo                  0.612   vga/RGB_mux0001<1>342
+                                                       vga/RGB_mux0001<1>342
+    SLICE_X34Y80.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>342
+    SLICE_X34Y80.Y       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>392
+    SLICE_X34Y80.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>392
+    SLICE_X34Y80.X       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>444
+    SLICE_X35Y82.F4      net (fanout=1)        0.233   vga/RGB_mux0001<1>444
+    SLICE_X35Y82.X       Tilo                  0.612   vga/RGB_mux0001<1>494
+                                                       vga/RGB_mux0001<1>494
+    SLICE_X34Y82.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>494
+    SLICE_X34Y82.Y       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>546
+    SLICE_X34Y82.F4      net (fanout=2)        0.027   vga/RGB_mux0001<1>546
+    SLICE_X34Y82.X       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>559
+    SLICE_X34Y83.G1      net (fanout=4)        0.149   vga/Madd_RGB_share0000_cy<1>
+    SLICE_X34Y83.Y       Tilo                  0.660   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1_SW2
+    SLICE_X34Y83.F3      net (fanout=1)        0.020   N805
+    SLICE_X34Y83.CLK     Tfck                  0.776   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1
+                                                       vga/RGB_3
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.556 (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga/hcount_2 (FF)
+  Destination:          vga/RGB_3 (FF)
+  Requirement:          20.027
+  Data Path Delay:      20.583 (Levels of Logic = 21)
+  Clock Path Skew:      0.000ns
+  Source Clock:         vga_clk rising at 0.000ns
+  Destination Clock:    vga_clk rising at 20.027ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: vga/hcount_2 to vga/RGB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y79.XQ      Tcko                  0.514   vga/hcount<2>
+                                                       vga/hcount_2
+    SLICE_X28Y78.F3      net (fanout=2)        0.391   vga/hcount<2>
+    SLICE_X28Y78.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq00005
+                                                       vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.F4      net (fanout=2)        0.348   vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq0000
+                                                       vga/old_vcount_27_cmp_eq000024
+    SLICE_X24Y84.G3      net (fanout=50)       0.661   vga/old_vcount_27_cmp_eq0000
+    SLICE_X24Y84.Y       Tilo                  0.660   vga/vcount<2>
+                                                       vga/_old_vcount_27<0>137
+    SLICE_X26Y83.G3      net (fanout=10)       0.458   vga/N19
+    SLICE_X26Y83.Y       Tilo                  0.660   vga/vcount<5>
+                                                       vga/_old_vcount_27<5>1
+    SLICE_X24Y81.G1      net (fanout=11)       0.753   vga/_old_vcount_27<5>
+    SLICE_X24Y81.Y       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and001727
+    SLICE_X24Y81.F2      net (fanout=1)        0.348   vga/RGB_and001727
+    SLICE_X24Y81.X       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and0017265
+    SLICE_X31Y80.F3      net (fanout=6)        0.572   vga/N105
+    SLICE_X31Y80.X       Tilo                  0.612   vga/RGB_and0017
+                                                       vga/RGB_and00171
+    SLICE_X31Y78.F4      net (fanout=6)        0.635   vga/RGB_and0017
+    SLICE_X31Y78.X       Tilo                  0.612   vga/N18
+                                                       vga/RGB_mux0000<0>11112
+    SLICE_X31Y79.G2      net (fanout=3)        0.091   vga/N18
+    SLICE_X31Y79.Y       Tilo                  0.612   vga/RGB_mux0000<0>123
+                                                       vga/RGB_mux0001<1>19
+    SLICE_X33Y77.G4      net (fanout=1)        0.303   vga/RGB_mux0001<1>19
+    SLICE_X33Y77.Y       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>93
+    SLICE_X33Y77.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>93
+    SLICE_X33Y77.X       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>140
+    SLICE_X32Y77.G4      net (fanout=1)        0.075   vga/RGB_mux0001<1>140
+    SLICE_X32Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>206
+                                                       vga/RGB_mux0001<1>2062
+                                                       vga/RGB_mux0001<1>206_f5
+    SLICE_X34Y77.G3      net (fanout=1)        0.301   vga/RGB_mux0001<1>206
+    SLICE_X34Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>290
+                                                       vga/RGB_mux0001<1>2902
+                                                       vga/RGB_mux0001<1>290_f5
+    SLICE_X35Y80.F2      net (fanout=1)        0.306   vga/RGB_mux0001<1>290
+    SLICE_X35Y80.X       Tilo                  0.612   vga/RGB_mux0001<1>342
+                                                       vga/RGB_mux0001<1>342
+    SLICE_X34Y80.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>342
+    SLICE_X34Y80.Y       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>392
+    SLICE_X34Y80.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>392
+    SLICE_X34Y80.X       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>444
+    SLICE_X35Y82.F4      net (fanout=1)        0.233   vga/RGB_mux0001<1>444
+    SLICE_X35Y82.X       Tilo                  0.612   vga/RGB_mux0001<1>494
+                                                       vga/RGB_mux0001<1>494
+    SLICE_X34Y82.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>494
+    SLICE_X34Y82.Y       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>546
+    SLICE_X34Y82.F4      net (fanout=2)        0.027   vga/RGB_mux0001<1>546
+    SLICE_X34Y82.X       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>559
+    SLICE_X34Y83.G1      net (fanout=4)        0.149   vga/Madd_RGB_share0000_cy<1>
+    SLICE_X34Y83.Y       Tilo                  0.660   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1_SW2
+    SLICE_X34Y83.F3      net (fanout=1)        0.020   N805
+    SLICE_X34Y83.CLK     Tfck                  0.776   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1
+                                                       vga/RGB_3
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.539 (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga/hcount_0 (FF)
+  Destination:          vga/RGB_3 (FF)
+  Requirement:          20.027
+  Data Path Delay:      20.566 (Levels of Logic = 21)
+  Clock Path Skew:      0.000ns
+  Source Clock:         vga_clk rising at 0.000ns
+  Destination Clock:    vga_clk rising at 20.027ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: vga/hcount_0 to vga/RGB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y78.XQ      Tcko                  0.514   vga/hcount<0>
+                                                       vga/hcount_0
+    SLICE_X28Y78.F4      net (fanout=2)        0.374   vga/hcount<0>
+    SLICE_X28Y78.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq00005
+                                                       vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.F4      net (fanout=2)        0.348   vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq0000
+                                                       vga/old_vcount_27_cmp_eq000024
+    SLICE_X24Y84.G3      net (fanout=50)       0.661   vga/old_vcount_27_cmp_eq0000
+    SLICE_X24Y84.Y       Tilo                  0.660   vga/vcount<2>
+                                                       vga/_old_vcount_27<0>137
+    SLICE_X26Y83.G3      net (fanout=10)       0.458   vga/N19
+    SLICE_X26Y83.Y       Tilo                  0.660   vga/vcount<5>
+                                                       vga/_old_vcount_27<5>1
+    SLICE_X24Y81.G1      net (fanout=11)       0.753   vga/_old_vcount_27<5>
+    SLICE_X24Y81.Y       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and001727
+    SLICE_X24Y81.F2      net (fanout=1)        0.348   vga/RGB_and001727
+    SLICE_X24Y81.X       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and0017265
+    SLICE_X31Y80.F3      net (fanout=6)        0.572   vga/N105
+    SLICE_X31Y80.X       Tilo                  0.612   vga/RGB_and0017
+                                                       vga/RGB_and00171
+    SLICE_X31Y78.F4      net (fanout=6)        0.635   vga/RGB_and0017
+    SLICE_X31Y78.X       Tilo                  0.612   vga/N18
+                                                       vga/RGB_mux0000<0>11112
+    SLICE_X31Y79.G2      net (fanout=3)        0.091   vga/N18
+    SLICE_X31Y79.Y       Tilo                  0.612   vga/RGB_mux0000<0>123
+                                                       vga/RGB_mux0001<1>19
+    SLICE_X33Y77.G4      net (fanout=1)        0.303   vga/RGB_mux0001<1>19
+    SLICE_X33Y77.Y       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>93
+    SLICE_X33Y77.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>93
+    SLICE_X33Y77.X       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>140
+    SLICE_X32Y77.G4      net (fanout=1)        0.075   vga/RGB_mux0001<1>140
+    SLICE_X32Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>206
+                                                       vga/RGB_mux0001<1>2062
+                                                       vga/RGB_mux0001<1>206_f5
+    SLICE_X34Y77.G3      net (fanout=1)        0.301   vga/RGB_mux0001<1>206
+    SLICE_X34Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>290
+                                                       vga/RGB_mux0001<1>2902
+                                                       vga/RGB_mux0001<1>290_f5
+    SLICE_X35Y80.F2      net (fanout=1)        0.306   vga/RGB_mux0001<1>290
+    SLICE_X35Y80.X       Tilo                  0.612   vga/RGB_mux0001<1>342
+                                                       vga/RGB_mux0001<1>342
+    SLICE_X34Y80.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>342
+    SLICE_X34Y80.Y       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>392
+    SLICE_X34Y80.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>392
+    SLICE_X34Y80.X       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>444
+    SLICE_X35Y82.F4      net (fanout=1)        0.233   vga/RGB_mux0001<1>444
+    SLICE_X35Y82.X       Tilo                  0.612   vga/RGB_mux0001<1>494
+                                                       vga/RGB_mux0001<1>494
+    SLICE_X34Y82.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>494
+    SLICE_X34Y82.Y       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>546
+    SLICE_X34Y82.F4      net (fanout=2)        0.027   vga/RGB_mux0001<1>546
+    SLICE_X34Y82.X       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>559
+    SLICE_X34Y83.G1      net (fanout=4)        0.149   vga/Madd_RGB_share0000_cy<1>
+    SLICE_X34Y83.Y       Tilo                  0.660   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1_SW2
+    SLICE_X34Y83.F3      net (fanout=1)        0.020   N805
+    SLICE_X34Y83.CLK     Tfck                  0.776   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1
+                                                       vga/RGB_3
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.529 (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga/hcount_2 (FF)
+  Destination:          vga/RGB_3 (FF)
+  Requirement:          20.027
+  Data Path Delay:      20.556 (Levels of Logic = 21)
+  Clock Path Skew:      0.000ns
+  Source Clock:         vga_clk rising at 0.000ns
+  Destination Clock:    vga_clk rising at 20.027ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: vga/hcount_2 to vga/RGB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y79.XQ      Tcko                  0.514   vga/hcount<2>
+                                                       vga/hcount_2
+    SLICE_X28Y78.F3      net (fanout=2)        0.391   vga/hcount<2>
+    SLICE_X28Y78.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq00005
+                                                       vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.F4      net (fanout=2)        0.348   vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq0000
+                                                       vga/old_vcount_27_cmp_eq000024
+    SLICE_X24Y84.G3      net (fanout=50)       0.661   vga/old_vcount_27_cmp_eq0000
+    SLICE_X24Y84.Y       Tilo                  0.660   vga/vcount<2>
+                                                       vga/_old_vcount_27<0>137
+    SLICE_X26Y83.G3      net (fanout=10)       0.458   vga/N19
+    SLICE_X26Y83.Y       Tilo                  0.660   vga/vcount<5>
+                                                       vga/_old_vcount_27<5>1
+    SLICE_X24Y81.G1      net (fanout=11)       0.753   vga/_old_vcount_27<5>
+    SLICE_X24Y81.Y       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and001727
+    SLICE_X24Y81.F2      net (fanout=1)        0.348   vga/RGB_and001727
+    SLICE_X24Y81.X       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and0017265
+    SLICE_X31Y81.F3      net (fanout=6)        0.572   vga/N105
+    SLICE_X31Y81.X       Tilo                  0.612   vga/RGB_and0019
+                                                       vga/RGB_and00191
+    SLICE_X32Y79.G2      net (fanout=4)        0.605   vga/RGB_and0019
+    SLICE_X32Y79.Y       Tilo                  0.660   vga/RGB_mux0001<1>55
+                                                       vga/RGB_mux0001<1>32
+    SLICE_X32Y79.F3      net (fanout=1)        0.020   vga/RGB_mux0001<1>32
+    SLICE_X32Y79.X       Tilo                  0.660   vga/RGB_mux0001<1>55
+                                                       vga/RGB_mux0001<1>55
+    SLICE_X33Y77.G2      net (fanout=1)        0.281   vga/RGB_mux0001<1>55
+    SLICE_X33Y77.Y       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>93
+    SLICE_X33Y77.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>93
+    SLICE_X33Y77.X       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>140
+    SLICE_X32Y77.G4      net (fanout=1)        0.075   vga/RGB_mux0001<1>140
+    SLICE_X32Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>206
+                                                       vga/RGB_mux0001<1>2062
+                                                       vga/RGB_mux0001<1>206_f5
+    SLICE_X34Y77.G3      net (fanout=1)        0.301   vga/RGB_mux0001<1>206
+    SLICE_X34Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>290
+                                                       vga/RGB_mux0001<1>2902
+                                                       vga/RGB_mux0001<1>290_f5
+    SLICE_X35Y80.F2      net (fanout=1)        0.306   vga/RGB_mux0001<1>290
+    SLICE_X35Y80.X       Tilo                  0.612   vga/RGB_mux0001<1>342
+                                                       vga/RGB_mux0001<1>342
+    SLICE_X34Y80.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>342
+    SLICE_X34Y80.Y       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>392
+    SLICE_X34Y80.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>392
+    SLICE_X34Y80.X       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>444
+    SLICE_X35Y82.F4      net (fanout=1)        0.233   vga/RGB_mux0001<1>444
+    SLICE_X35Y82.X       Tilo                  0.612   vga/RGB_mux0001<1>494
+                                                       vga/RGB_mux0001<1>494
+    SLICE_X34Y82.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>494
+    SLICE_X34Y82.Y       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>546
+    SLICE_X34Y82.F4      net (fanout=2)        0.027   vga/RGB_mux0001<1>546
+    SLICE_X34Y82.X       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>559
+    SLICE_X34Y83.G1      net (fanout=4)        0.149   vga/Madd_RGB_share0000_cy<1>
+    SLICE_X34Y83.Y       Tilo                  0.660   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1_SW2
+    SLICE_X34Y83.F3      net (fanout=1)        0.020   N805
+    SLICE_X34Y83.CLK     Tfck                  0.776   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1
+                                                       vga/RGB_3
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.529 (requirement - (data path - clock path skew + uncertainty))
+  Source:               vga/hcount_2 (FF)
+  Destination:          vga/RGB_3 (FF)
+  Requirement:          20.027
+  Data Path Delay:      20.556 (Levels of Logic = 21)
+  Clock Path Skew:      0.000ns
+  Source Clock:         vga_clk rising at 0.000ns
+  Destination Clock:    vga_clk rising at 20.027ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: vga/hcount_2 to vga/RGB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y79.XQ      Tcko                  0.514   vga/hcount<2>
+                                                       vga/hcount_2
+    SLICE_X28Y78.F3      net (fanout=2)        0.391   vga/hcount<2>
+    SLICE_X28Y78.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq00005
+                                                       vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.F4      net (fanout=2)        0.348   vga/old_vcount_27_cmp_eq00005
+    SLICE_X28Y81.X       Tilo                  0.660   vga/old_vcount_27_cmp_eq0000
+                                                       vga/old_vcount_27_cmp_eq000024
+    SLICE_X24Y84.G3      net (fanout=50)       0.661   vga/old_vcount_27_cmp_eq0000
+    SLICE_X24Y84.Y       Tilo                  0.660   vga/vcount<2>
+                                                       vga/_old_vcount_27<0>137
+    SLICE_X26Y83.G3      net (fanout=10)       0.458   vga/N19
+    SLICE_X26Y83.Y       Tilo                  0.660   vga/vcount<5>
+                                                       vga/_old_vcount_27<5>1
+    SLICE_X24Y81.G1      net (fanout=11)       0.753   vga/_old_vcount_27<5>
+    SLICE_X24Y81.Y       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and001727
+    SLICE_X24Y81.F2      net (fanout=1)        0.348   vga/RGB_and001727
+    SLICE_X24Y81.X       Tilo                  0.660   vga/N105
+                                                       vga/RGB_and0017265
+    SLICE_X31Y81.F3      net (fanout=6)        0.572   vga/N105
+    SLICE_X31Y81.X       Tilo                  0.612   vga/RGB_and0019
+                                                       vga/RGB_and00191
+    SLICE_X31Y78.F1      net (fanout=4)        0.608   vga/RGB_and0019
+    SLICE_X31Y78.X       Tilo                  0.612   vga/N18
+                                                       vga/RGB_mux0000<0>11112
+    SLICE_X31Y79.G2      net (fanout=3)        0.091   vga/N18
+    SLICE_X31Y79.Y       Tilo                  0.612   vga/RGB_mux0000<0>123
+                                                       vga/RGB_mux0001<1>19
+    SLICE_X33Y77.G4      net (fanout=1)        0.303   vga/RGB_mux0001<1>19
+    SLICE_X33Y77.Y       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>93
+    SLICE_X33Y77.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>93
+    SLICE_X33Y77.X       Tilo                  0.612   vga/RGB_mux0001<1>140
+                                                       vga/RGB_mux0001<1>140
+    SLICE_X32Y77.G4      net (fanout=1)        0.075   vga/RGB_mux0001<1>140
+    SLICE_X32Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>206
+                                                       vga/RGB_mux0001<1>2062
+                                                       vga/RGB_mux0001<1>206_f5
+    SLICE_X34Y77.G3      net (fanout=1)        0.301   vga/RGB_mux0001<1>206
+    SLICE_X34Y77.X       Tif5x                 1.000   vga/RGB_mux0001<1>290
+                                                       vga/RGB_mux0001<1>2902
+                                                       vga/RGB_mux0001<1>290_f5
+    SLICE_X35Y80.F2      net (fanout=1)        0.306   vga/RGB_mux0001<1>290
+    SLICE_X35Y80.X       Tilo                  0.612   vga/RGB_mux0001<1>342
+                                                       vga/RGB_mux0001<1>342
+    SLICE_X34Y80.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>342
+    SLICE_X34Y80.Y       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>392
+    SLICE_X34Y80.F4      net (fanout=1)        0.020   vga/RGB_mux0001<1>392
+    SLICE_X34Y80.X       Tilo                  0.660   vga/RGB_mux0001<1>444
+                                                       vga/RGB_mux0001<1>444
+    SLICE_X35Y82.F4      net (fanout=1)        0.233   vga/RGB_mux0001<1>444
+    SLICE_X35Y82.X       Tilo                  0.612   vga/RGB_mux0001<1>494
+                                                       vga/RGB_mux0001<1>494
+    SLICE_X34Y82.G3      net (fanout=1)        0.019   vga/RGB_mux0001<1>494
+    SLICE_X34Y82.Y       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>546
+    SLICE_X34Y82.F4      net (fanout=2)        0.027   vga/RGB_mux0001<1>546
+    SLICE_X34Y82.X       Tilo                  0.660   vga/Madd_RGB_share0000_cy<1>
+                                                       vga/RGB_mux0001<1>559
+    SLICE_X34Y83.G1      net (fanout=4)        0.149   vga/Madd_RGB_share0000_cy<1>
+    SLICE_X34Y83.Y       Tilo                  0.660   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1_SW2
+    SLICE_X34Y83.F3      net (fanout=1)        0.020   N805
+    SLICE_X34Y83.CLK     Tfck                  0.776   vga/RGB<3>
+                                                       vga/RGB_mux0000<3>1
+                                                       vga/RGB_3
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net clk_paddle_p/clk_buf
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 950 paths analyzed, 30 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.048ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net temp
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 19 paths analyzed, 19 endpoints analyzed, 5 failing endpoints
+ 5 timing errors detected. (5 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   2.636ns.
+--------------------------------------------------------------------------------
+Slack:                  -0.048 (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_audio_1 (FF)
+  Destination:          address_audio_4 (FF)
+  Requirement:          2.588
+  Data Path Delay:      2.294 (Levels of Logic = 1)
+  Clock Path Skew:      -0.342ns (1.370 - 1.712)
+  Source Clock:         temp rising at 0.000ns
+  Destination Clock:    temp rising at 2.588ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: address_audio_1 to address_audio_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y78.YQ      Tcko                  0.511   address_audio<1>
+                                                       address_audio_1
+    SLICE_X22Y79.G1      net (fanout=11)       0.667   address_audio<1>
+    SLICE_X22Y79.CLK     Tgck                  1.116   address_audio<4>
+                                                       Result<4>2
+                                                       Result<4>_f5
+                                                       address_audio_4
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.043 (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_audio_1 (FF)
+  Destination:          address_audio_4 (FF)
+  Requirement:          2.588
+  Data Path Delay:      2.289 (Levels of Logic = 1)
+  Clock Path Skew:      -0.342ns (1.370 - 1.712)
+  Source Clock:         temp rising at 0.000ns
+  Destination Clock:    temp rising at 2.588ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: address_audio_1 to address_audio_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y78.YQ      Tcko                  0.511   address_audio<1>
+                                                       address_audio_1
+    SLICE_X22Y79.F1      net (fanout=11)       0.662   address_audio<1>
+    SLICE_X22Y79.CLK     Tfck                  1.116   address_audio<4>
+                                                       Result<4>1
+                                                       Result<4>_f5
+                                                       address_audio_4
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.040 (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_audio_0 (FF)
+  Destination:          address_audio_4 (FF)
+  Requirement:          2.588
+  Data Path Delay:      2.286 (Levels of Logic = 1)
+  Clock Path Skew:      -0.342ns (1.370 - 1.712)
+  Source Clock:         temp rising at 0.000ns
+  Destination Clock:    temp rising at 2.588ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: address_audio_0 to address_audio_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y78.YQ      Tcko                  0.567   address_audio<0>
+                                                       address_audio_0
+    SLICE_X22Y79.F3      net (fanout=12)       0.603   address_audio<0>
+    SLICE_X22Y79.CLK     Tfck                  1.116   address_audio<4>
+                                                       Result<4>1
+                                                       Result<4>_f5
+                                                       address_audio_4
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.040 (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_audio_0 (FF)
+  Destination:          address_audio_4 (FF)
+  Requirement:          2.588
+  Data Path Delay:      2.286 (Levels of Logic = 1)
+  Clock Path Skew:      -0.342ns (1.370 - 1.712)
+  Source Clock:         temp rising at 0.000ns
+  Destination Clock:    temp rising at 2.588ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: address_audio_0 to address_audio_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y78.YQ      Tcko                  0.567   address_audio<0>
+                                                       address_audio_0
+    SLICE_X22Y79.G3      net (fanout=12)       0.603   address_audio<0>
+    SLICE_X22Y79.CLK     Tgck                  1.116   address_audio<4>
+                                                       Result<4>2
+                                                       Result<4>_f5
+                                                       address_audio_4
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.006 (requirement - (data path - clock path skew + uncertainty))
+  Source:               address_audio_3 (FF)
+  Destination:          address_audio_4 (FF)
+  Requirement:          2.588
+  Data Path Delay:      2.252 (Levels of Logic = 1)
+  Clock Path Skew:      -0.342ns (1.370 - 1.712)
+  Source Clock:         temp rising at 0.000ns
+  Destination Clock:    temp rising at 2.588ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: address_audio_3 to address_audio_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y79.XQ      Tcko                  0.514   address_audio<3>
+                                                       address_audio_3
+    SLICE_X22Y79.G2      net (fanout=9)        0.622   address_audio<3>
+    SLICE_X22Y79.CLK     Tgck                  1.116   address_audio<4>
+                                                       Result<4>2
+                                                       Result<4>_f5
+                                                       address_audio_4
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net clk50mhz_IBUFG
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 107722 paths analyzed, 676 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.117ns.
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+
