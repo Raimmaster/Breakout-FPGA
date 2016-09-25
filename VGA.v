@@ -56,25 +56,25 @@ module VGA(
 				else if (i < 10) begin
 					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-5));
 					data_y[i] = SECOND_ROW_Y;					
-					block_colors[i] = 6'b010101;
+					block_colors[i] = 6'b110101;
 					active[i] = 0;
 				end
 				else if (i < 15) begin
 					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-10));
 					data_y[i] = THIRD_ROW_Y;					
-					block_colors[i] = 6'b010101;
+					block_colors[i] = 6'b011111;
 					active[i] = 0;
 				end
 				else if (i < 20) begin
 					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-15));
 					data_y[i] = FOURTH_ROW_Y;					
-					block_colors[i] = 6'b010101;
+					block_colors[i] = 6'b100101;
 					active[i] = 0;
 				end
 				else if (i < 25) begin
 					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-20));
 					data_y[i] = FIFTH_ROW_Y;					
-					block_colors[i] = 6'b010101;
+					block_colors[i] = 6'b000010;
 					active[i] = 0;
 				end
 				
