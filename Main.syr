@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: Main.prj
 
@@ -247,11 +247,11 @@ INFO:Xst:2679 - Register <data_y<6>> in unit <VGA> has a constant value of 00010
 INFO:Xst:2679 - Register <data_y<7>> in unit <VGA> has a constant value of 0001011010 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <data_y<8>> in unit <VGA> has a constant value of 0001011010 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <data_y<9>> in unit <VGA> has a constant value of 0001011010 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <block_colors<0>> in unit <VGA> has a constant value of 001110 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <block_colors<1>> in unit <VGA> has a constant value of 001110 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <block_colors<2>> in unit <VGA> has a constant value of 001110 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <block_colors<3>> in unit <VGA> has a constant value of 001110 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <block_colors<4>> in unit <VGA> has a constant value of 001110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<0>> in unit <VGA> has a constant value of 001001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<1>> in unit <VGA> has a constant value of 001001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<2>> in unit <VGA> has a constant value of 001001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<3>> in unit <VGA> has a constant value of 001001 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<4>> in unit <VGA> has a constant value of 001001 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <block_colors<5>> in unit <VGA> has a constant value of 010101 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <block_colors<6>> in unit <VGA> has a constant value of 010101 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <block_colors<7>> in unit <VGA> has a constant value of 010101 during circuit operation. The register is replaced by logic.
@@ -685,18 +685,18 @@ Design Statistics
 # IOs                              : 14
 
 Cell Usage :
-# BELS                             : 2081
+# BELS                             : 2070
 #      GND                         : 1
 #      INV                         : 77
 #      LUT1                        : 197
-#      LUT2                        : 200
+#      LUT2                        : 195
 #      LUT2_D                      : 1
-#      LUT3                        : 145
+#      LUT3                        : 147
 #      LUT3_D                      : 17
-#      LUT3_L                      : 5
-#      LUT4                        : 454
+#      LUT3_L                      : 4
+#      LUT4                        : 448
 #      LUT4_D                      : 26
-#      LUT4_L                      : 16
+#      LUT4_L                      : 15
 #      MULT_AND                    : 8
 #      MUXCY                       : 547
 #      MUXF5                       : 70
@@ -727,9 +727,9 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                      594  out of   4656    12%  
+ Number of Slices:                      590  out of   4656    12%  
  Number of Slice Flip Flops:            198  out of   9312     2%  
- Number of 4 input LUTs:               1138  out of   9312    12%  
+ Number of 4 input LUTs:               1127  out of   9312    12%  
  Number of IOs:                          14
  Number of bonded IOBs:                  12  out of    190     6%  
  Number of MULT18X18SIOs:                 2  out of     20    10%  
@@ -772,8 +772,8 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 23.306ns (Maximum Frequency: 42.908MHz)
-   Minimum input arrival time before clock: 19.316ns
+   Minimum period: 23.546ns (Maximum Frequency: 42.471MHz)
+   Minimum input arrival time before clock: 17.690ns
    Maximum output required time after clock: 4.040ns
    Maximum combinational path delay: No path found
 
@@ -783,10 +783,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50mhz'
-  Clock period: 10.366ns (frequency: 96.465MHz)
-  Total number of paths / destination ports: 396634 / 168
+  Clock period: 9.553ns (frequency: 104.674MHz)
+  Total number of paths / destination ports: 250645 / 168
 -------------------------------------------------------------------------
-Delay:               20.733ns (Levels of Logic = 20)
+Delay:               19.107ns (Levels of Logic = 17)
   Source:            vga/hcount_3 (FF)
   Destination:       vga/RGB_3 (FF)
   Source Clock:      clk50mhz rising 0.5X
@@ -800,27 +800,24 @@ Delay:               20.733ns (Levels of Logic = 20)
      LUT4:I0->O            1   0.612   0.387  vga/old_vcount_18_cmp_eq00005 (vga/old_vcount_18_cmp_eq00005)
      LUT4:I2->O           12   0.612   0.969  vga/old_vcount_18_cmp_eq000024 (vga/old_vcount_18_cmp_eq0000)
      LUT2:I0->O           10   0.612   0.902  vga/_old_vcount_18<0>11 (vga/N3)
-     LUT4:I0->O           10   0.612   0.902  vga/_old_vcount_18<5>1 (vga/_old_vcount_18<5>)
-     LUT3:I0->O            1   0.612   0.509  vga/RGB_and0007217 (vga/RGB_and0007217)
-     LUT4:I0->O            1   0.612   0.360  vga/RGB_and0007220 (vga/RGB_and0007220)
-     LUT4:I3->O            8   0.612   0.712  vga/RGB_and0007276 (vga/N611)
-     LUT4:I1->O            1   0.612   0.000  vga/RGB_and00091 (vga/RGB_and00091)
-     MUXF5:I1->O           6   0.278   0.721  vga/RGB_and0009_f5 (vga/RGB_and0009)
+     LUT4:I0->O            9   0.612   0.849  vga/_old_vcount_18<6>1 (vga/_old_vcount_18<6>)
+     LUT4:I0->O            1   0.612   0.360  vga/RGB_and0007263_SW0 (N509)
+     LUT4:I3->O            1   0.612   0.426  vga/RGB_and0007263 (vga/RGB_and0007263)
+     LUT4:I1->O            9   0.612   0.849  vga/RGB_and0007273 (vga/N611)
+     LUT4:I0->O            5   0.612   0.690  vga/RGB_and0009 (vga/RGB_and0009)
      LUT4:I0->O            1   0.612   0.000  vga/RGB_mux0011<1>371 (vga/RGB_mux0011<1>371)
-     MUXF5:I1->O           1   0.278   0.387  vga/RGB_mux0011<1>37_f5 (vga/RGB_mux0011<1>37)
-     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0011<1>72_F (N602)
-     MUXF5:I0->O           1   0.278   0.426  vga/RGB_mux0011<1>72 (vga/RGB_mux0011<1>72)
+     MUXF5:I1->O           1   0.278   0.426  vga/RGB_mux0011<1>37_f5 (vga/RGB_mux0011<1>37)
+     LUT4:I1->O            1   0.612   0.426  vga/RGB_mux0011<1>72 (vga/RGB_mux0011<1>72)
      LUT4:I1->O            1   0.612   0.387  vga/RGB_mux0011<1>120 (vga/RGB_mux0011<1>120)
-     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0011<1>168_F (N606)
+     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0011<1>168_F (N571)
      MUXF5:I0->O           1   0.278   0.426  vga/RGB_mux0011<1>168 (vga/RGB_mux0011<1>168)
-     LUT4:I1->O            3   0.612   0.481  vga/RGB_mux0011<1>220 (vga/RGB_mux0011<1>220)
-     LUT3:I2->O            2   0.612   0.449  vga/RGB_mux0011<1>233 (vga/RGB_mux0011<1>)
-     LUT3:I1->O            1   0.612   0.426  vga/RGB_mux0010<3>144 (vga/RGB_mux0010<3>144)
-     LUT4:I1->O            1   0.612   0.000  vga/RGB_mux0010<3>178 (vga/RGB_mux0010<3>1)
+     LUT4:I1->O            4   0.612   0.529  vga/RGB_mux0011<1>220 (vga/RGB_mux0011<1>220)
+     LUT4:I2->O            1   0.612   0.360  vga/RGB_mux0010<3>1_SW1 (N561)
+     LUT4:I3->O            1   0.612   0.000  vga/RGB_mux0010<3>1 (vga/RGB_mux0010<3>1)
      FDR:D                     0.268          vga/RGB_3
     ----------------------------------------
-    Total                     20.733ns (11.686ns logic, 9.047ns route)
-                                       (56.4% logic, 43.6% route)
+    Total                     19.107ns (10.518ns logic, 8.589ns route)
+                                       (55.0% logic, 45.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_paddle_p/clk_buf'
@@ -860,10 +857,10 @@ Delay:               7.708ns (Levels of Logic = 15)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_ball_divider/clk_buf1'
-  Clock period: 23.306ns (frequency: 42.908MHz)
-  Total number of paths / destination ports: 71475180 / 87
+  Clock period: 23.546ns (frequency: 42.471MHz)
+  Total number of paths / destination ports: 72053975 / 87
 -------------------------------------------------------------------------
-Delay:               23.306ns (Levels of Logic = 23)
+Delay:               23.546ns (Levels of Logic = 23)
   Source:            bola/address_0 (FF)
   Destination:       bola/ball_x_9 (FF)
   Source Clock:      clk_ball_divider/clk_buf1 rising
@@ -873,12 +870,12 @@ Delay:               23.306ns (Levels of Logic = 23)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             18   0.514   0.911  bola/address_0 (bola/address_0)
-     LUT4:I3->O           18   0.612   0.908  bola/_old_address_4<1>1 (bola/_old_address_4<1>)
-     MULT18X18SIO:A1->P3   13   3.251   0.905  bola/Mmult_temp2_mult0002 (bola/temp2_mult0002<3>)
-     LUT2_D:I1->O          3   0.612   0.454  bola/old_temp2_7_mux0000<3>1_SW0 (N263)
-     LUT4:I3->O           16   0.612   0.909  bola/Madd__old_temp2_7_xor<4>11 (bola/Madd_add0000_addsub0000_cy<4>)
-     LUT3:I2->O            2   0.612   0.383  bola/Madd_add0000_addsub0000_cy<8>1_SW0 (N138)
+     FDR:C->Q             18   0.514   1.060  bola/address_0 (bola/address_0)
+     LUT4:I0->O           18   0.612   0.908  bola/_old_address_4<1>1 (bola/_old_address_4<1>)
+     MULT18X18SIO:A1->P3   12   3.251   0.847  bola/Mmult_temp2_mult0002 (bola/temp2_mult0002<3>)
+     LUT3_D:I2->O          8   0.612   0.646  bola/old_temp2_7_mux0000<3>1 (bola/Madd__old_temp2_7_cy<3>)
+     LUT4:I3->O           13   0.612   0.866  bola/Madd__old_temp2_7_xor<4>11 (bola/Madd_add0000_addsub0000_cy<4>)
+     LUT3:I2->O            2   0.612   0.383  bola/Madd_add0000_addsub0000_cy<8>1_SW0 (N133)
      LUT4:I3->O            5   0.612   0.538  bola/Madd_add0000_addsub0000_cy<8>1 (bola/Madd_add0000_addsub0000_cy<8>)
      MULT_AND:I1->LO       0   0.645   0.000  bola/Madd_add0000_index0000_mand (bola/Madd_add0000_index0000_mand1)
      MUXCY:DI->O           1   0.773   0.000  bola/Mcompar_mux0000_cmp_le0002_cy<10> (bola/Mcompar_mux0000_cmp_le0002_cy<10>)
@@ -887,7 +884,7 @@ Delay:               23.306ns (Levels of Logic = 23)
      LUT4_L:I3->LO         1   0.612   0.130  bola/old_ball_dx_16_and000128 (bola/old_ball_dx_16_and000128)
      LUT4:I2->O            3   0.612   0.454  bola/old_ball_dx_16_and0001214 (bola/N9)
      LUT4_D:I3->O         16   0.612   0.882  bola/old_ball_dx_16_and0001 (bola/old_ball_dx_16_and0001)
-     LUT4:I3->O            1   0.612   0.360  bola/_old_ball_dx_16<3>1_SW0 (N185)
+     LUT4:I3->O            1   0.612   0.360  bola/_old_ball_dx_16<3>1_SW0 (N180)
      LUT4:I3->O            2   0.612   0.449  bola/_old_ball_dx_16<3>1 (bola/_old_ball_dx_16<3>)
      LUT2:I1->O            1   0.612   0.000  bola/Maccum_ball_x_lut<3> (bola/Maccum_ball_x_lut<3>)
      MUXCY:S->O            1   0.404   0.000  bola/Maccum_ball_x_cy<3> (bola/Maccum_ball_x_cy<3>)
@@ -899,8 +896,8 @@ Delay:               23.306ns (Levels of Logic = 23)
      XORCY:CI->O           1   0.699   0.000  bola/Maccum_ball_x_xor<9> (bola/Result<9>)
      FDR:D                     0.268          bola/ball_x_9
     ----------------------------------------
-    Total                     23.306ns (14.555ns logic, 8.751ns route)
-                                       (62.5% logic, 37.5% route)
+    Total                     23.546ns (14.555ns logic, 8.991ns route)
+                                       (61.8% logic, 38.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_paddle_p/clk_buf'
@@ -947,9 +944,9 @@ Offset:              3.006ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50mhz'
-  Total number of paths / destination ports: 21242 / 56
+  Total number of paths / destination ports: 12796 / 56
 -------------------------------------------------------------------------
-Offset:              19.316ns (Levels of Logic = 19)
+Offset:              17.690ns (Levels of Logic = 16)
   Source:            reset_button (PAD)
   Destination:       vga/RGB_3 (FF)
   Destination Clock: clk50mhz rising 0.5X
@@ -960,27 +957,24 @@ Offset:              19.316ns (Levels of Logic = 19)
     ----------------------------------------  ------------
      IBUF:I->O           153   1.106   1.174  reset_button_IBUF (reset_button_IBUF)
      LUT2:I1->O           10   0.612   0.902  vga/_old_vcount_18<0>11 (vga/N3)
-     LUT4:I0->O           10   0.612   0.902  vga/_old_vcount_18<5>1 (vga/_old_vcount_18<5>)
-     LUT3:I0->O            1   0.612   0.509  vga/RGB_and0007217 (vga/RGB_and0007217)
-     LUT4:I0->O            1   0.612   0.360  vga/RGB_and0007220 (vga/RGB_and0007220)
-     LUT4:I3->O            8   0.612   0.712  vga/RGB_and0007276 (vga/N611)
-     LUT4:I1->O            1   0.612   0.000  vga/RGB_and00091 (vga/RGB_and00091)
-     MUXF5:I1->O           6   0.278   0.721  vga/RGB_and0009_f5 (vga/RGB_and0009)
+     LUT4:I0->O            9   0.612   0.849  vga/_old_vcount_18<6>1 (vga/_old_vcount_18<6>)
+     LUT4:I0->O            1   0.612   0.360  vga/RGB_and0007263_SW0 (N509)
+     LUT4:I3->O            1   0.612   0.426  vga/RGB_and0007263 (vga/RGB_and0007263)
+     LUT4:I1->O            9   0.612   0.849  vga/RGB_and0007273 (vga/N611)
+     LUT4:I0->O            5   0.612   0.690  vga/RGB_and0009 (vga/RGB_and0009)
      LUT4:I0->O            1   0.612   0.000  vga/RGB_mux0011<1>371 (vga/RGB_mux0011<1>371)
-     MUXF5:I1->O           1   0.278   0.387  vga/RGB_mux0011<1>37_f5 (vga/RGB_mux0011<1>37)
-     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0011<1>72_F (N602)
-     MUXF5:I0->O           1   0.278   0.426  vga/RGB_mux0011<1>72 (vga/RGB_mux0011<1>72)
+     MUXF5:I1->O           1   0.278   0.426  vga/RGB_mux0011<1>37_f5 (vga/RGB_mux0011<1>37)
+     LUT4:I1->O            1   0.612   0.426  vga/RGB_mux0011<1>72 (vga/RGB_mux0011<1>72)
      LUT4:I1->O            1   0.612   0.387  vga/RGB_mux0011<1>120 (vga/RGB_mux0011<1>120)
-     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0011<1>168_F (N606)
+     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0011<1>168_F (N571)
      MUXF5:I0->O           1   0.278   0.426  vga/RGB_mux0011<1>168 (vga/RGB_mux0011<1>168)
-     LUT4:I1->O            3   0.612   0.481  vga/RGB_mux0011<1>220 (vga/RGB_mux0011<1>220)
-     LUT3:I2->O            2   0.612   0.449  vga/RGB_mux0011<1>233 (vga/RGB_mux0011<1>)
-     LUT3:I1->O            1   0.612   0.426  vga/RGB_mux0010<3>144 (vga/RGB_mux0010<3>144)
-     LUT4:I1->O            1   0.612   0.000  vga/RGB_mux0010<3>178 (vga/RGB_mux0010<3>1)
+     LUT4:I1->O            4   0.612   0.529  vga/RGB_mux0011<1>220 (vga/RGB_mux0011<1>220)
+     LUT4:I2->O            1   0.612   0.360  vga/RGB_mux0010<3>1_SW1 (N561)
+     LUT4:I3->O            1   0.612   0.000  vga/RGB_mux0010<3>1 (vga/RGB_mux0010<3>1)
      FDR:D                     0.268          vga/RGB_3
     ----------------------------------------
-    Total                     19.316ns (11.054ns logic, 8.262ns route)
-                                       (57.2% logic, 42.8% route)
+    Total                     17.690ns (9.886ns logic, 7.804ns route)
+                                       (55.9% logic, 44.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
@@ -1005,11 +999,11 @@ Offset:              4.040ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.70 secs
+Total CPU time to Xst completion: 13.51 secs
  
 --> 
 
-Total memory usage is 220224 kilobytes
+Total memory usage is 219568 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   41 (   0 filtered)
