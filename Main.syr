@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: Main.prj
 
@@ -247,6 +247,16 @@ INFO:Xst:2679 - Register <data_y<6>> in unit <VGA> has a constant value of 00010
 INFO:Xst:2679 - Register <data_y<7>> in unit <VGA> has a constant value of 0001011010 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <data_y<8>> in unit <VGA> has a constant value of 0001011010 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <data_y<9>> in unit <VGA> has a constant value of 0001011010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<0>> in unit <VGA> has a constant value of 001110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<1>> in unit <VGA> has a constant value of 001110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<2>> in unit <VGA> has a constant value of 001110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<3>> in unit <VGA> has a constant value of 001110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<4>> in unit <VGA> has a constant value of 001110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<5>> in unit <VGA> has a constant value of 010101 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<6>> in unit <VGA> has a constant value of 010101 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<7>> in unit <VGA> has a constant value of 010101 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<8>> in unit <VGA> has a constant value of 010101 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <block_colors<9>> in unit <VGA> has a constant value of 010101 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <clk_divider_1>.
     Related source file is "clk_divider.v".
@@ -396,91 +406,93 @@ WARNING:Xst:647 - Input <rgb_in> is never used. This port will be preserved and 
     Found 6-bit register for signal <RGB>.
     Found 1-bit register for signal <hsync>.
     Found 30-bit register for signal <active>.
-    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 94.
-    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 90.
-    Found 10-bit adder carry out for signal <add0002$addsub0000> created at line 90.
+    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 98.
+    Found 10-bit adder carry out for signal <add0001$addsub0000> created at line 94.
+    Found 10-bit adder carry out for signal <add0002$addsub0000> created at line 94.
     Found 10-bit register for signal <hcount>.
-    Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 80.
-    Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 80.
-    Found 10-bit adder for signal <old_hcount_22$addsub0000> created at line 70.
-    Found 10-bit adder for signal <old_vcount_21$addsub0000> created at line 66.
-    Found 10-bit adder for signal <RGB$addsub0000> created at line 110.
-    Found 10-bit adder for signal <RGB$addsub0001> created at line 110.
-    Found 10-bit adder for signal <RGB$addsub0002> created at line 110.
-    Found 10-bit adder for signal <RGB$addsub0003> created at line 110.
-    Found 10-bit adder for signal <RGB$addsub0004> created at line 110.
-    Found 10-bit adder for signal <RGB$addsub0005> created at line 110.
-    Found 10-bit adder for signal <RGB$addsub0006> created at line 110.
-    Found 10-bit adder for signal <RGB$addsub0007> created at line 110.
-    Found 10-bit adder for signal <RGB$addsub0008> created at line 110.
-    Found 10-bit adder for signal <RGB$addsub0009> created at line 110.
-    Found 10-bit adder for signal <RGB$addsub0010> created at line 102.
-    Found 10-bit adder for signal <RGB$addsub0011> created at line 102.
-    Found 10-bit adder for signal <RGB$addsub0012> created at line 102.
-    Found 10-bit adder for signal <RGB$addsub0013> created at line 102.
-    Found 10-bit adder for signal <RGB$addsub0014> created at line 102.
-    Found 10-bit adder for signal <RGB$addsub0015> created at line 102.
-    Found 10-bit adder for signal <RGB$addsub0016> created at line 102.
-    Found 10-bit adder for signal <RGB$addsub0017> created at line 102.
-    Found 10-bit adder for signal <RGB$addsub0018> created at line 102.
-    Found 10-bit adder for signal <RGB$addsub0019> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0000> created at line 110.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0001> created at line 110.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0002> created at line 110.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0003> created at line 110.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0004> created at line 110.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0005> created at line 110.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0006> created at line 110.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0007> created at line 110.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0008> created at line 110.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0009> created at line 110.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0010> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0011> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0012> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0013> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0014> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0015> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0016> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0017> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0018> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0019> created at line 102.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0020> created at line 90.
-    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0021> created at line 90.
-    Found 10-bit comparator greater for signal <RGB$cmp_gt0000> created at line 94.
-    Found 10-bit comparator greater for signal <RGB$cmp_gt0001> created at line 94.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0000> created at line 110.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0001> created at line 110.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0002> created at line 110.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0003> created at line 110.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0004> created at line 110.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0005> created at line 110.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0006> created at line 110.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0007> created at line 110.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0008> created at line 110.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0009> created at line 110.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0010> created at line 102.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0011> created at line 102.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0012> created at line 102.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0013> created at line 102.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0014> created at line 102.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0015> created at line 102.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0016> created at line 102.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0017> created at line 102.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0018> created at line 102.
-    Found 10-bit comparator lessequal for signal <RGB$cmp_le0019> created at line 102.
-    Found 11-bit comparator lessequal for signal <RGB$cmp_le0020> created at line 90.
-    Found 11-bit comparator lessequal for signal <RGB$cmp_le0021> created at line 90.
-    Found 10-bit comparator less for signal <RGB$cmp_lt0000> created at line 87.
-    Found 10-bit comparator less for signal <RGB$cmp_lt0001> created at line 87.
-    Found 10-bit comparator less for signal <RGB$cmp_lt0002> created at line 94.
-    Found 11-bit comparator less for signal <RGB$cmp_lt0003> created at line 94.
+    Found 10-bit comparator greatequal for signal <hsync$cmp_ge0000> created at line 84.
+    Found 10-bit comparator less for signal <hsync$cmp_lt0000> created at line 84.
+    Found 10-bit adder for signal <old_hcount_22$addsub0000> created at line 74.
+    Found 10-bit adder for signal <old_vcount_21$addsub0000> created at line 70.
+    Found 10-bit adder for signal <RGB$addsub0000> created at line 114.
+    Found 10-bit adder for signal <RGB$addsub0001> created at line 114.
+    Found 10-bit adder for signal <RGB$addsub0002> created at line 114.
+    Found 10-bit adder for signal <RGB$addsub0003> created at line 114.
+    Found 10-bit adder for signal <RGB$addsub0004> created at line 114.
+    Found 10-bit adder for signal <RGB$addsub0005> created at line 114.
+    Found 10-bit adder for signal <RGB$addsub0006> created at line 114.
+    Found 10-bit adder for signal <RGB$addsub0007> created at line 114.
+    Found 10-bit adder for signal <RGB$addsub0008> created at line 114.
+    Found 10-bit adder for signal <RGB$addsub0009> created at line 114.
+    Found 10-bit adder for signal <RGB$addsub0010> created at line 106.
+    Found 10-bit adder for signal <RGB$addsub0011> created at line 106.
+    Found 10-bit adder for signal <RGB$addsub0012> created at line 106.
+    Found 10-bit adder for signal <RGB$addsub0013> created at line 106.
+    Found 10-bit adder for signal <RGB$addsub0014> created at line 106.
+    Found 10-bit adder for signal <RGB$addsub0015> created at line 106.
+    Found 10-bit adder for signal <RGB$addsub0016> created at line 106.
+    Found 10-bit adder for signal <RGB$addsub0017> created at line 106.
+    Found 10-bit adder for signal <RGB$addsub0018> created at line 106.
+    Found 10-bit adder for signal <RGB$addsub0019> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0000> created at line 114.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0001> created at line 114.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0002> created at line 114.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0003> created at line 114.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0004> created at line 114.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0005> created at line 114.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0006> created at line 114.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0007> created at line 114.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0008> created at line 114.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0009> created at line 114.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0010> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0011> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0012> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0013> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0014> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0015> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0016> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0017> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0018> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0019> created at line 106.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0020> created at line 94.
+    Found 10-bit comparator greatequal for signal <RGB$cmp_ge0021> created at line 94.
+    Found 10-bit comparator greater for signal <RGB$cmp_gt0000> created at line 98.
+    Found 10-bit comparator greater for signal <RGB$cmp_gt0001> created at line 98.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0000> created at line 114.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0001> created at line 114.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0002> created at line 114.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0003> created at line 114.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0004> created at line 114.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0005> created at line 114.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0006> created at line 114.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0007> created at line 114.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0008> created at line 114.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0009> created at line 114.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0010> created at line 106.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0011> created at line 106.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0012> created at line 106.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0013> created at line 106.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0014> created at line 106.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0015> created at line 106.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0016> created at line 106.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0017> created at line 106.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0018> created at line 106.
+    Found 10-bit comparator lessequal for signal <RGB$cmp_le0019> created at line 106.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0020> created at line 94.
+    Found 11-bit comparator lessequal for signal <RGB$cmp_le0021> created at line 94.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0000> created at line 91.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0001> created at line 91.
+    Found 10-bit comparator less for signal <RGB$cmp_lt0002> created at line 98.
+    Found 11-bit comparator less for signal <RGB$cmp_lt0003> created at line 98.
+    Found 6-bit adder for signal <RGB$share0000>.
     Found 10-bit register for signal <vcount>.
-    Found 10-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 73.
-    Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 73.
+    Found 10-bit comparator greatequal for signal <vsync$cmp_ge0000> created at line 77.
+    Found 10-bit comparator less for signal <vsync$cmp_lt0000> created at line 77.
     Summary:
 	inferred  58 D-type flip-flop(s).
-	inferred  25 Adder/Subtractor(s).
+	inferred  26 Adder/Subtractor(s).
 	inferred  54 Comparator(s).
+	inferred   3 Multiplexer(s).
 Unit <VGA> synthesized.
 
 
@@ -505,7 +517,7 @@ Macro Statistics
 # Multipliers                                          : 2
  4x7-bit multiplier                                    : 1
  5x8-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 49
+# Adders/Subtractors                                   : 50
  10-bit adder                                          : 30
  10-bit adder carry out                                : 10
  10-bit addsub                                         : 1
@@ -514,6 +526,7 @@ Macro Statistics
  32-bit adder                                          : 2
  4-bit adder                                           : 1
  5-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
 # Counters                                             : 2
  32-bit up counter                                     : 2
 # Accumulators                                         : 2
@@ -580,7 +593,7 @@ Macro Statistics
 # Multipliers                                          : 2
  4x7-bit multiplier                                    : 1
  5x8-bit multiplier                                    : 1
-# Adders/Subtractors                                   : 49
+# Adders/Subtractors                                   : 50
  10-bit adder                                          : 30
  10-bit adder carry out                                : 10
  10-bit addsub                                         : 1
@@ -589,6 +602,7 @@ Macro Statistics
  32-bit adder                                          : 2
  4-bit adder                                           : 1
  5-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
 # Counters                                             : 2
  32-bit up counter                                     : 2
 # Accumulators                                         : 2
@@ -619,7 +633,6 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 INFO:Xst:1901 - Instance vga_clock_dcm in unit Main of type DCM has been replaced by DCM_SP
-INFO:Xst:2261 - The FF/Latch <RGB_1> in Unit <VGA> is equivalent to the following FF/Latch, which will be removed : <RGB_4> 
 
 Optimizing unit <Main> ...
 
@@ -632,7 +645,7 @@ WARNING:Xst:2677 - Node <bola/play_sound2> of sequential type is unconnected in 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 12.
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 13.
 FlipFlop bola/address_0 has been replicated 1 time(s)
 FlipFlop bola/address_1 has been replicated 1 time(s)
 FlipFlop bola/address_2 has been replicated 1 time(s)
@@ -644,8 +657,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 198
- Flip-Flops                                            : 198
+# Registers                                            : 199
+ Flip-Flops                                            : 199
 
 =========================================================================
 
@@ -674,29 +687,29 @@ Design Statistics
 # IOs                              : 14
 
 Cell Usage :
-# BELS                             : 2219
+# BELS                             : 2290
 #      GND                         : 1
 #      INV                         : 80
 #      LUT1                        : 197
-#      LUT2                        : 166
+#      LUT2                        : 182
 #      LUT2_D                      : 2
 #      LUT2_L                      : 1
-#      LUT3                        : 144
+#      LUT3                        : 159
 #      LUT3_D                      : 21
 #      LUT3_L                      : 13
-#      LUT4                        : 561
+#      LUT4                        : 572
 #      LUT4_D                      : 41
 #      LUT4_L                      : 40
 #      MULT_AND                    : 7
 #      MUXCY                       : 547
-#      MUXF5                       : 78
+#      MUXF5                       : 107
 #      MUXF6                       : 8
 #      VCC                         : 1
 #      XORCY                       : 311
-# FlipFlops/Latches                : 198
+# FlipFlops/Latches                : 199
 #      FD                          : 31
 #      FDE                         : 8
-#      FDR                         : 108
+#      FDR                         : 109
 #      FDRE                        : 21
 #      FDRS                        : 2
 #      FDS                         : 28
@@ -717,9 +730,9 @@ Device utilization summary:
 
 Selected Device : 3s500eft256-5 
 
- Number of Slices:                      655  out of   4656    14%  
- Number of Slice Flip Flops:            198  out of   9312     2%  
- Number of 4 input LUTs:               1266  out of   9312    13%  
+ Number of Slices:                      676  out of   4656    14%  
+ Number of Slice Flip Flops:            199  out of   9312     2%  
+ Number of 4 input LUTs:               1308  out of   9312    14%  
  Number of IOs:                          14
  Number of bonded IOBs:                  12  out of    190     6%  
  Number of MULT18X18SIOs:                 2  out of     20    10%  
@@ -750,7 +763,7 @@ Clock Signal                       | Clock buffer(FF name)  | Load  |
 clk50mhz                           | IBUFG+BUFG             | 66    |
 clk_paddle_p/clk_buf               | NONE(pd/position_9)    | 10    |
 clk_ball_divider/clk_buf1          | BUFG                   | 75    |
-clk50mhz                           | vga_clock_dcm:CLKFX    | 47    |
+clk50mhz                           | vga_clock_dcm:CLKFX    | 48    |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -763,8 +776,8 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: 24.630ns (Maximum Frequency: 40.600MHz)
-   Minimum input arrival time before clock: 13.694ns
-   Maximum output required time after clock: 4.063ns
+   Minimum input arrival time before clock: 19.091ns
+   Maximum output required time after clock: 4.040ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -773,57 +786,43 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk50mhz'
-  Clock period: 7.833ns (frequency: 127.663MHz)
-  Total number of paths / destination ports: 99560 / 166
+  Clock period: 10.254ns (frequency: 97.523MHz)
+  Total number of paths / destination ports: 391630 / 168
 -------------------------------------------------------------------------
-Delay:               7.833ns (Levels of Logic = 33)
-  Source:            clk_paddle_p/counter_1 (FF)
-  Destination:       clk_paddle_p/counter_0 (FF)
-  Source Clock:      clk50mhz rising
-  Destination Clock: clk50mhz rising
+Delay:               20.508ns (Levels of Logic = 19)
+  Source:            vga/hcount_3 (FF)
+  Destination:       vga/RGB_3 (FF)
+  Source Clock:      clk50mhz rising 0.5X
+  Destination Clock: clk50mhz rising 0.5X
 
-  Data Path: clk_paddle_p/counter_1 to clk_paddle_p/counter_0
+  Data Path: vga/hcount_3 to vga/RGB_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.514   0.532  clk_paddle_p/counter_1 (clk_paddle_p/counter_1)
-     LUT1:I0->O            1   0.612   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<1>_rt (clk_paddle_p/Madd_old_counter_1_add0000_cy<1>_rt)
-     MUXCY:S->O            1   0.404   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<1> (clk_paddle_p/Madd_old_counter_1_add0000_cy<1>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<2> (clk_paddle_p/Madd_old_counter_1_add0000_cy<2>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<3> (clk_paddle_p/Madd_old_counter_1_add0000_cy<3>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<4> (clk_paddle_p/Madd_old_counter_1_add0000_cy<4>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<5> (clk_paddle_p/Madd_old_counter_1_add0000_cy<5>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<6> (clk_paddle_p/Madd_old_counter_1_add0000_cy<6>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<7> (clk_paddle_p/Madd_old_counter_1_add0000_cy<7>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<8> (clk_paddle_p/Madd_old_counter_1_add0000_cy<8>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<9> (clk_paddle_p/Madd_old_counter_1_add0000_cy<9>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<10> (clk_paddle_p/Madd_old_counter_1_add0000_cy<10>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<11> (clk_paddle_p/Madd_old_counter_1_add0000_cy<11>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<12> (clk_paddle_p/Madd_old_counter_1_add0000_cy<12>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<13> (clk_paddle_p/Madd_old_counter_1_add0000_cy<13>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<14> (clk_paddle_p/Madd_old_counter_1_add0000_cy<14>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<15> (clk_paddle_p/Madd_old_counter_1_add0000_cy<15>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<16> (clk_paddle_p/Madd_old_counter_1_add0000_cy<16>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<17> (clk_paddle_p/Madd_old_counter_1_add0000_cy<17>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<18> (clk_paddle_p/Madd_old_counter_1_add0000_cy<18>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<19> (clk_paddle_p/Madd_old_counter_1_add0000_cy<19>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<20> (clk_paddle_p/Madd_old_counter_1_add0000_cy<20>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<21> (clk_paddle_p/Madd_old_counter_1_add0000_cy<21>)
-     MUXCY:CI->O           1   0.051   0.000  clk_paddle_p/Madd_old_counter_1_add0000_cy<22> (clk_paddle_p/Madd_old_counter_1_add0000_cy<22>)
-     XORCY:CI->O           1   0.699   0.509  clk_paddle_p/Madd_old_counter_1_add0000_xor<23> (clk_paddle_p/old_counter_1_add0000<23>)
-     LUT4:I0->O            1   0.612   0.000  clk_paddle_p/clk_buf_cmp_eq00001_wg_lut<0> (clk_paddle_p/clk_buf_cmp_eq00001_wg_lut<0>)
-     MUXCY:S->O            1   0.404   0.000  clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<0> (clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<0>)
-     MUXCY:CI->O           1   0.052   0.000  clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<1> (clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<1>)
-     MUXCY:CI->O           1   0.052   0.000  clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<2> (clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<2>)
-     MUXCY:CI->O           1   0.052   0.000  clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<3> (clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<3>)
-     MUXCY:CI->O           1   0.052   0.000  clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<4> (clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<4>)
-     MUXCY:CI->O           1   0.052   0.000  clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<5> (clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<5>)
-     MUXCY:CI->O           1   0.052   0.000  clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<6> (clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<6>)
-     MUXCY:CI->O          33   0.289   1.073  clk_paddle_p/clk_buf_cmp_eq00001_wg_cy<7> (clk_paddle_p/clk_buf_cmp_eq0000)
-     FDR:R                     0.795          clk_paddle_p/counter_0
+     FD:C->Q               3   0.514   0.603  vga/hcount_3 (vga/hcount_3)
+     LUT4:I0->O            1   0.612   0.387  vga/old_vcount_21_cmp_eq00005 (vga/old_vcount_21_cmp_eq00005)
+     LUT4:I2->O           12   0.612   0.969  vga/old_vcount_21_cmp_eq000024 (vga/old_vcount_21_cmp_eq0000)
+     LUT2:I0->O           10   0.612   0.902  vga/_old_vcount_21<0>11 (vga/N3)
+     LUT4:I0->O            9   0.612   0.849  vga/_old_vcount_21<6>1 (vga/_old_vcount_21<6>)
+     LUT4:I0->O            1   0.612   0.360  vga/RGB_and0007263_SW0 (N819)
+     LUT4:I3->O            1   0.612   0.426  vga/RGB_and0007263 (vga/RGB_and0007263)
+     LUT4:I1->O           11   0.612   0.862  vga/RGB_and0007273 (vga/N611)
+     LUT4:I1->O            1   0.612   0.000  vga/RGB_and00091 (vga/RGB_and00091)
+     MUXF5:I1->O           6   0.278   0.721  vga/RGB_and0009_f5 (vga/RGB_and0009)
+     LUT4:I0->O            1   0.612   0.000  vga/RGB_mux0011<1>371 (vga/RGB_mux0011<1>371)
+     MUXF5:I1->O           1   0.278   0.426  vga/RGB_mux0011<1>37_f5 (vga/RGB_mux0011<1>37)
+     LUT4:I1->O            1   0.612   0.426  vga/RGB_mux0011<1>72 (vga/RGB_mux0011<1>72)
+     LUT4:I1->O            1   0.612   0.387  vga/RGB_mux0011<1>119 (vga/RGB_mux0011<1>119)
+     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0011<1>167_F (N919)
+     MUXF5:I0->O           1   0.278   0.426  vga/RGB_mux0011<1>167 (vga/RGB_mux0011<1>167)
+     LUT4:I1->O            3   0.612   0.481  vga/RGB_mux0011<1>219 (vga/RGB_mux0011<1>219)
+     LUT3:I2->O            2   0.612   0.449  vga/RGB_mux0011<1>232 (vga/RGB_mux0011<1>)
+     LUT3:I1->O            1   0.612   0.426  vga/RGB_mux0010<3>144 (vga/RGB_mux0010<3>144)
+     LUT4:I1->O            1   0.612   0.000  vga/RGB_mux0010<3>178 (vga/RGB_mux0010<3>1)
+     FDR:D                     0.268          vga/RGB_3
     ----------------------------------------
-    Total                      7.833ns (5.719ns logic, 2.114ns route)
-                                       (73.0% logic, 27.0% route)
+    Total                     20.508ns (11.408ns logic, 9.100ns route)
+                                       (55.6% logic, 44.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_paddle_p/clk_buf'
@@ -879,13 +878,13 @@ Delay:               24.630ns (Levels of Logic = 32)
      FDR:C->Q             12   0.514   0.969  bola/address_3_1 (bola/address_3_1)
      LUT4:I0->O           18   0.612   0.908  bola/_old_address_4<2>1 (bola/Msub_temp2_addsub0000_lut<2>)
      MULT18X18SIO:A2->P6    8   3.632   0.646  bola/Mmult_temp2_mult0002 (bola/temp2_mult0002<6>)
-     LUT4:I3->O            1   0.612   0.000  bola/Madd__old_temp2_7_cy<6>11_G (N715)
+     LUT4:I3->O            1   0.612   0.000  bola/Madd__old_temp2_7_cy<6>11_G (N780)
      MUXF5:I1->O          11   0.278   0.796  bola/Madd__old_temp2_7_cy<6>11 (bola/Madd__old_temp2_7_cy<6>)
      LUT4:I3->O            9   0.612   0.766  bola/Madd__old_temp2_7_xor<9>11 (bola/Madd_add0000_addsub0000_lut<9>)
      LUT2:I1->O            1   0.612   0.000  bola/Mcompar_mux0000_cmp_lt0001_lut<9> (bola/Mcompar_mux0000_cmp_lt0001_lut<9>)
      MUXCY:S->O            1   0.404   0.000  bola/Mcompar_mux0000_cmp_lt0001_cy<9> (bola/Mcompar_mux0000_cmp_lt0001_cy<9>)
      MUXCY:CI->O          18   0.399   0.938  bola/Mcompar_mux0000_cmp_lt0001_cy<10> (bola/Mcompar_mux0000_cmp_lt0001_cy<10>)
-     LUT4:I2->O            1   0.612   0.360  bola/mux0000_and0002_SW7 (N392)
+     LUT4:I2->O            1   0.612   0.360  bola/mux0000_and0002_SW7 (N457)
      LUT4:I3->O            1   0.612   0.000  bola/Mmux__COND_12_7 (bola/Mmux__COND_12_7)
      MUXF5:I1->O           1   0.278   0.000  bola/Mmux__COND_12_6_f5 (bola/Mmux__COND_12_6_f5)
      MUXF6:I1->O          11   0.451   0.862  bola/Mmux__COND_12_5_f6 (bola/Mmux__COND_12_5_f6)
@@ -918,7 +917,7 @@ Delay:               24.630ns (Levels of Logic = 32)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_paddle_p/clk_buf'
   Total number of paths / destination ports: 320 / 10
 -------------------------------------------------------------------------
-Offset:              7.824ns (Levels of Logic = 6)
+Offset:              7.832ns (Levels of Logic = 6)
   Source:            reset_button (PAD)
   Destination:       pd/position_9 (FF)
   Destination Clock: clk_paddle_p/clk_buf rising
@@ -927,7 +926,7 @@ Offset:              7.824ns (Levels of Logic = 6)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           124   1.106   1.250  reset_button_IBUF (reset_button_IBUF)
+     IBUF:I->O           153   1.106   1.257  reset_button_IBUF (reset_button_IBUF)
      LUT2:I0->O            1   0.612   0.426  pd/_old_position_3<1>1 (pd/_old_position_3<1>)
      LUT4:I1->O            1   0.612   0.426  pd/position_mux0000<0>118 (pd/position_mux0000<0>118)
      LUT4:I1->O            1   0.612   0.387  pd/position_mux0000<0>166 (pd/position_mux0000<0>166)
@@ -935,14 +934,14 @@ Offset:              7.824ns (Levels of Logic = 6)
      LUT4:I0->O            1   0.612   0.000  pd/position_mux0000<0>1 (pd/position_mux0000<0>)
      FD:D                      0.268          pd/position_0
     ----------------------------------------
-    Total                      7.824ns (4.434ns logic, 3.390ns route)
-                                       (56.7% logic, 43.3% route)
+    Total                      7.832ns (4.434ns logic, 3.398ns route)
+                                       (56.6% logic, 43.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_ball_divider/clk_buf1'
   Total number of paths / destination ports: 60 / 60
 -------------------------------------------------------------------------
-Offset:              2.999ns (Levels of Logic = 1)
+Offset:              3.006ns (Levels of Logic = 1)
   Source:            reset_button (PAD)
   Destination:       bola/ball_y_9 (FF)
   Destination Clock: clk_ball_divider/clk_buf1 rising
@@ -951,72 +950,78 @@ Offset:              2.999ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           124   1.106   1.098  reset_button_IBUF (reset_button_IBUF)
+     IBUF:I->O           153   1.106   1.105  reset_button_IBUF (reset_button_IBUF)
      FDS:S                     0.795          bola/ball_dx_0
     ----------------------------------------
-    Total                      2.999ns (1.901ns logic, 1.098ns route)
-                                       (63.4% logic, 36.6% route)
+    Total                      3.006ns (1.901ns logic, 1.105ns route)
+                                       (63.2% logic, 36.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50mhz'
-  Total number of paths / destination ports: 4068 / 54
+  Total number of paths / destination ports: 21125 / 56
 -------------------------------------------------------------------------
-Offset:              13.694ns (Levels of Logic = 12)
+Offset:              19.091ns (Levels of Logic = 18)
   Source:            reset_button (PAD)
-  Destination:       vga/RGB_0 (FF)
+  Destination:       vga/RGB_3 (FF)
   Destination Clock: clk50mhz rising 0.5X
 
-  Data Path: reset_button to vga/RGB_0
+  Data Path: reset_button to vga/RGB_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           124   1.106   1.167  reset_button_IBUF (reset_button_IBUF)
-     LUT2:I1->O            1   0.612   0.000  vga/_old_vcount_21<0>2491 (vga/_old_vcount_21<0>249)
-     MUXF5:I1->O          10   0.278   0.753  vga/_old_vcount_21<0>249_f5 (vga/N15)
-     LUT4:I3->O            9   0.612   0.849  vga/_old_vcount_21<6>1 (vga/_old_vcount_21<6>)
-     LUT4:I0->O            1   0.612   0.360  vga/RGB_and0007263_SW0 (N754)
+     IBUF:I->O           153   1.106   1.174  reset_button_IBUF (reset_button_IBUF)
+     LUT2:I1->O           10   0.612   0.902  vga/_old_vcount_21<0>11 (vga/N3)
+     LUT4:I0->O            9   0.612   0.849  vga/_old_vcount_21<6>1 (vga/_old_vcount_21<6>)
+     LUT4:I0->O            1   0.612   0.360  vga/RGB_and0007263_SW0 (N819)
      LUT4:I3->O            1   0.612   0.426  vga/RGB_and0007263 (vga/RGB_and0007263)
-     LUT4:I1->O            5   0.612   0.607  vga/RGB_and0007273 (vga/N69)
-     LUT4:I1->O            3   0.612   0.603  vga/RGB_and000852 (vga/RGB_and0008)
-     LUT3:I0->O            1   0.612   0.360  vga/RGB_mux0000<5>11_SW0 (N4)
-     LUT4:I3->O            2   0.612   0.410  vga/RGB_mux0000<5>11 (vga/N61)
-     LUT4:I2->O            1   0.612   0.387  vga/RGB_mux0000<5>1_SW0 (N8)
-     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0000<5>12 (vga/RGB_mux0000<5>11)
-     FDRS:D                    0.268          vga/RGB_0
+     LUT4:I1->O           11   0.612   0.862  vga/RGB_and0007273 (vga/N611)
+     LUT4:I1->O            1   0.612   0.000  vga/RGB_and00091 (vga/RGB_and00091)
+     MUXF5:I1->O           6   0.278   0.721  vga/RGB_and0009_f5 (vga/RGB_and0009)
+     LUT4:I0->O            1   0.612   0.000  vga/RGB_mux0011<1>371 (vga/RGB_mux0011<1>371)
+     MUXF5:I1->O           1   0.278   0.426  vga/RGB_mux0011<1>37_f5 (vga/RGB_mux0011<1>37)
+     LUT4:I1->O            1   0.612   0.426  vga/RGB_mux0011<1>72 (vga/RGB_mux0011<1>72)
+     LUT4:I1->O            1   0.612   0.387  vga/RGB_mux0011<1>119 (vga/RGB_mux0011<1>119)
+     LUT3:I2->O            1   0.612   0.000  vga/RGB_mux0011<1>167_F (N919)
+     MUXF5:I0->O           1   0.278   0.426  vga/RGB_mux0011<1>167 (vga/RGB_mux0011<1>167)
+     LUT4:I1->O            3   0.612   0.481  vga/RGB_mux0011<1>219 (vga/RGB_mux0011<1>219)
+     LUT3:I2->O            2   0.612   0.449  vga/RGB_mux0011<1>232 (vga/RGB_mux0011<1>)
+     LUT3:I1->O            1   0.612   0.426  vga/RGB_mux0010<3>144 (vga/RGB_mux0010<3>144)
+     LUT4:I1->O            1   0.612   0.000  vga/RGB_mux0010<3>178 (vga/RGB_mux0010<3>1)
+     FDR:D                     0.268          vga/RGB_3
     ----------------------------------------
-    Total                     13.694ns (7.772ns logic, 5.922ns route)
-                                       (56.8% logic, 43.2% route)
+    Total                     19.091ns (10.776ns logic, 8.315ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50mhz'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              4.063ns (Levels of Logic = 1)
-  Source:            vga/RGB_1 (FF)
-  Destination:       RGB<4> (PAD)
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            vga/vsync (FF)
+  Destination:       vsync (PAD)
   Source Clock:      clk50mhz rising 0.5X
 
-  Data Path: vga/RGB_1 to RGB<4>
+  Data Path: vga/vsync to vsync
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.514   0.380  vga/RGB_1 (vga/RGB_1)
-     OBUF:I->O                 3.169          RGB_4_OBUF (RGB<4>)
+     FDR:C->Q              1   0.514   0.357  vga/vsync (vga/vsync)
+     OBUF:I->O                 3.169          vsync_OBUF (vsync)
     ----------------------------------------
-    Total                      4.063ns (3.683ns logic, 0.380ns route)
-                                       (90.6% logic, 9.4% route)
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 15.54 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.30 secs
  
 --> 
 
-Total memory usage is 219072 kilobytes
+Total memory usage is 220080 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   41 (   0 filtered)
-Number of infos    :   26 (   0 filtered)
+Number of infos    :   35 (   0 filtered)
 
