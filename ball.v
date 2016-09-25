@@ -131,12 +131,12 @@ module ball(
 					win = 0;
 		end
 			
-		p_sound = erase_e;
-		play_sound2 = 0;
+		//p_sound = erase_e;
+		//play_sound2 = 0;
 		if( ball_dy > 0 && (ball_x > paddle_x && ball_x < (paddle_x + 100)) && ( ( (ball_y + BALL_SIZE) >= 10'd439 && (ball_y - BALL_SIZE) < 10'd440) ) ) //paddle collision
 		begin
 			ball_dy = ball_dy * -1;
-			play_sound2 = 1;
+			play_sound1 = 3'b100;
 			if ((ball_x < paddle_x + 25 || ball_x > paddle_x + 75) && (ball_dx == 1 || ball_dx == -1)) begin
 				ball_dx = ball_dx * 2;
 			end
