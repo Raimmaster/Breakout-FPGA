@@ -96,10 +96,10 @@ module ball(
 
 			if(active[address] < 3) begin
 				if(
-					(ball_y > temp1  && ball_y < (temp1 + BLOCK_HEIGHT) )  && 
-					(( (ball_x + BALL_SIZE) > (temp2) && (ball_x - BALL_SIZE) < temp2 ) 
+					(ball_y >= temp1  && ball_y <= (temp1 + BLOCK_HEIGHT) )  && 
+					(( (ball_x + BALL_SIZE) >= (temp2) && (ball_x - BALL_SIZE) <= temp2 ) 
 						||	
-						( (ball_x + BALL_SIZE) > (temp2 + BLOCK_WIDTH) && (ball_x - BALL_SIZE) < (temp2 + BLOCK_WIDTH) )
+						( (ball_x + BALL_SIZE) >= (temp2 + BLOCK_WIDTH) && (ball_x - BALL_SIZE) <= (temp2 + BLOCK_WIDTH) )
 						)
 				) begin
 					erase_e = 1;
@@ -109,9 +109,9 @@ module ball(
 					active_data = active[address];
 				end
 				
-				if ( (ball_x > temp2 && ball_x < (temp2 + BLOCK_WIDTH)) && 
-				(( (ball_y + BALL_SIZE) > (temp1) && (ball_y - BALL_SIZE) < temp1 ) || 
-					( (ball_y + BALL_SIZE) > (temp1 + BLOCK_HEIGHT) && (ball_y - BALL_SIZE) < (temp1 + BLOCK_HEIGHT) )
+				else if ( (ball_x >= temp2 && ball_x <= (temp2 + BLOCK_WIDTH)) && 
+				(( (ball_y + BALL_SIZE) >= (temp1) && (ball_y - BALL_SIZE) <= temp1 ) || 
+					( (ball_y + BALL_SIZE) >= (temp1 + BLOCK_HEIGHT) && (ball_y - BALL_SIZE) <= (temp1 + BLOCK_HEIGHT) )
 				))
 				begin
 					erase_e = 1;
