@@ -53,9 +53,9 @@ module Main(
 	//paddle end
 	//ball init
 	//ball bola(paddle_pos, reset_button, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, play_sound2, active_data);
-	ball bola(paddle_pos, reset_button, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, active_data);
+	ball bola(paddle_pos, reset_button, clk_ball, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, active_data);
 		
-	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button, erase_enable, erase_pos, active_data);
+	VGA vga(vga_clk, clk50mhz, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button, erase_enable, erase_pos, active_data);
 	
 	reg [13:0] address_vga;
 	
@@ -120,7 +120,6 @@ module Main(
 				3'b010: temp = clk_out_re;
 				3'b011: temp = clk_out_mi;
 				3'b100: temp = clk_out_sol;
-				default: temp = clk_out_do;
 			endcase
 	end
 	/*

@@ -1,11 +1,15 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Sep 24 19:23:01 2016
+// Written by: Map P.20131013 on Sun Sep 25 00:21:38 2016
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "hsync" LOCATE = SITE "A7" LEVEL 1;
 COMP "mi_nota" LOCATE = SITE "C12" LEVEL 1;
 COMP "vsync" LOCATE = SITE "D7" LEVEL 1;
+COMP "tono<0>" LOCATE = SITE "D6" LEVEL 1;
+COMP "tono<1>" LOCATE = SITE "C6" LEVEL 1;
+COMP "tono<2>" LOCATE = SITE "F8" LEVEL 1;
+COMP "tono<3>" LOCATE = SITE "E7" LEVEL 1;
 COMP "RGB<0>" LOCATE = SITE "A9" LEVEL 1;
 COMP "RGB<1>" LOCATE = SITE "D9" LEVEL 1;
 COMP "RGB<2>" LOCATE = SITE "E8" LEVEL 1;

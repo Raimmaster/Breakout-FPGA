@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 module VGA(
    input CLK_25MH,
+	input CLK_50MH,
    output reg [5:0] RGB,
    output reg hsync,
    output reg vsync,
@@ -32,21 +33,20 @@ module VGA(
 	assign hor_count = hcount;
 	assign ver_count = vcount;
 	 
-	reg [9:0] data_x [9:0];
-	reg [9:0] data_y [9:0];
-	reg [2:0] active [9:0];
+	reg [9:0] data_x [24:0];
+	reg [9:0] data_y [24:0];
+	reg [2:0] active [24:0];
 	reg [4:0] i;
 	
-	reg [5:0] block_colors [9:0];
-
-    always @ ( posedge CLK_25MH)
-    begin 
+	reg [5:0] block_colors [24:0];
+	
+	always @ (posedge CLK_50MH) begin
 		if(active_write_enable)
 			active[active_position] = active_data;
-		
+			
 		if (reset) begin
 		  	//initialize rows and columns of block
-			for (i = 0; i < 10; i = i + 1) begin
+			for (i = 0; i < 25; i = i + 1) begin
 				if(i < 5) begin
 					data_x[i] = BLOCK_SPACING_X + (BLOCK_SPACING_X + BLOCK_WIDTH) * i;
 					data_y[i] = FIRST_ROW_Y;
@@ -59,9 +59,32 @@ module VGA(
 					block_colors[i] = 6'b010101;
 					active[i] = 0;
 				end
+				else if (i < 15) begin
+					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-10));
+					data_y[i] = THIRD_ROW_Y;					
+					block_colors[i] = 6'b010101;
+					active[i] = 0;
+				end
+				else if (i < 20) begin
+					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-15));
+					data_y[i] = FOURTH_ROW_Y;					
+					block_colors[i] = 6'b010101;
+					active[i] = 0;
+				end
+				else if (i < 25) begin
+					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-20));
+					data_y[i] = FIFTH_ROW_Y;					
+					block_colors[i] = 6'b010101;
+					active[i] = 0;
+				end
+				
 			end
 		end
-       else if (hcount == 799) begin
+	end
+
+    always @ ( posedge CLK_25MH)
+    begin 
+      if (hcount == 799) begin
             hcount = 0;
             if (vcount == 524) begin
                 vcount = 0;
@@ -100,14 +123,15 @@ module VGA(
 					RGB = 6'b100001;//'
 				end
 				else begin
-				for (i = 0; i < 10; i = i + 1) begin
+				for (i = 0; i < 25; i = i + 1) begin
 					//first row of blocks (upper)
-					if(i < 5)begin
+					//if(i < 5)begin
 						if(active[i] != 2'b11 && (vcount >= data_y[i] && vcount <= (data_y[i] + BLOCK_HEIGHT)) 
 							&& hcount >= data_x[i] && hcount <= (data_x[i] + BLOCK_WIDTH))
 						begin
 							RGB = block_colors[i] + active[i] + 6'b000001;
 						end
+					/*
 					end
 					else begin
 						//second row of blocks
@@ -117,6 +141,7 @@ module VGA(
 							RGB = block_colors[i] + active[i] + 6'b000001;
 						end
 					end
+					*/
 				end
 				end
         end

@@ -5,6 +5,7 @@ module ball(
    	//input [9:0] paddle_y,
    	input reset,
    	input clk,
+		input clk_50mh,
   	output [9:0] x_out,
    	output [9:0] y_out,
 	output erase_enable,
@@ -38,13 +39,12 @@ module ball(
 	
 	reg erase_e;
 	reg [5:0] erase_pos;
-	reg [3:0] address;
+	reg [5:0] address;
 	reg win;
 	
-	//reg p_sound;
-	//assign play_sound1 = p_sound;
+	//reg p_sound	//assign play_sound1 = p_sound;
 	
-	reg [1:0] active [9:0];
+	reg [1:0] active [24:0];
 	reg [9:0] temp1;
 	reg [9:0] temp2;
 	reg [5:0] i;
@@ -52,6 +52,10 @@ module ball(
 
 	assign e_pos = erase_pos;
 	assign erase_enable = erase_e;
+	
+	always @ (posedge clk_50mh) begin
+	
+	end
 
 	always @ (posedge clk) begin
 		erase_e = 0;
@@ -75,11 +79,23 @@ module ball(
 			//erase_e = 1;
 		end
 		
-		if(address >= 10)begin
+		if(address >= 25)begin
 			address = 0;
 		end
 		else begin
 			address = address + 1;
+			if(address >= 25)
+				address = 0;
+			if (ball_y >= FIFTH_ROW_Y && address < 19)
+				address = 19;
+			else if (ball_y >= FOURTH_ROW_Y && (address < 14 || address > 19))
+				address = 14;
+			else if (ball_y >= THIRD_ROW_Y && (address < 9 || address > 14))
+				address = 9;
+			else if (ball_y >= SECOND_ROW_Y && (address < 4  || address > 9))
+				address = 5;
+			else if (ball_y >= 0 &&( (address > 4)))
+				address = 0;
 		end
 		
 		///*
@@ -89,9 +105,21 @@ module ball(
 				temp1 = FIRST_ROW_Y;	
 				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *address;			
 			end
-			else begin
+			else if (address < 10) begin
 				temp1 = SECOND_ROW_Y;
 				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(address-5);
+			end
+			else if (address < 15) begin
+				temp1 = THIRD_ROW_Y;
+				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(address-10);
+			end
+			else if (address < 20) begin
+				temp1 = FOURTH_ROW_Y;
+				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(address-15);
+			end
+			else if (address < 25) begin
+				temp1 = FIFTH_ROW_Y;
+				temp2 = BLOCK_SPACING_X + (BLOCK_WIDTH + BLOCK_SPACING_X) *(address-20);
 			end
 
 			if(active[address] < 3) begin
