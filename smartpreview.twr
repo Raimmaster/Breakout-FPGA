@@ -1,0 +1,225 @@
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net clk50mhz_IBUFG
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 35906 paths analyzed, 224 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.671ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net 
+clk_ball_divider/clk_buf
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 494288010 paths analyzed, 380 endpoints analyzed, 1 failing endpoint
+ 1 timing error detected. (1 setup error, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  24.690ns.
+--------------------------------------------------------------------------------
+Slack:                  -0.024 (requirement - (data path - clock path skew + uncertainty))
+  Source:               bola/address_2_1 (FF)
+  Destination:          bola/ball_y_9 (FF)
+  Requirement:          24.666
+  Data Path Delay:      24.690 (Levels of Logic = 20)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_ball_divider/clk_buf rising at 0.000ns
+  Destination Clock:    clk_ball_divider/clk_buf rising at 24.666ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: bola/address_2_1 to bola/ball_y_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y34.YQ      Tcko                  0.511   bola/address_2_1
+                                                       bola/address_2_1
+    SLICE_X34Y36.G2      net (fanout=12)       0.816   bola/address_2_1
+    SLICE_X34Y36.Y       Tilo                  0.660   bola/erase_pos<3>
+                                                       bola/_old_address_4<2>1
+    MULT18X18_X1Y4.A2    net (fanout=17)       1.532   bola/Msub_temp2_addsub0000_lut<2>
+    MULT18X18_X1Y4.P6    Tmult                 3.632   bola/Mmult_temp2_mult0002
+                                                       bola/Mmult_temp2_mult0002
+    SLICE_X40Y36.F3      net (fanout=8)        1.129   bola/temp2_mult0002<6>
+    SLICE_X40Y36.X       Tif5x                 1.000   bola/Madd__old_temp2_7_cy<6>
+                                                       bola/Madd__old_temp2_7_cy<6>11_G
+                                                       bola/Madd__old_temp2_7_cy<6>11
+    SLICE_X36Y36.F2      net (fanout=11)       0.677   bola/Madd__old_temp2_7_cy<6>
+    SLICE_X36Y36.X       Tilo                  0.660   bola/Madd_add0000_addsub0000_lut<9>
+                                                       bola/Madd__old_temp2_7_xor<9>11
+    SLICE_X38Y36.G2      net (fanout=9)        0.432   bola/Madd_add0000_addsub0000_lut<9>
+    SLICE_X38Y36.COUT    Topcyg                0.984   bola/Mcompar_mux0000_cmp_gt0001_cy<9>
+                                                       bola/Mcompar_mux0000_cmp_gt0001_lut<9>
+                                                       bola/Mcompar_mux0000_cmp_gt0001_cy<9>
+    SLICE_X38Y37.CIN     net (fanout=1)        0.000   bola/Mcompar_mux0000_cmp_gt0001_cy<9>
+    SLICE_X38Y37.XB      Tcinxb                0.431   bola/Mcompar_mux0000_cmp_gt0001_cy<10>
+                                                       bola/Mcompar_mux0000_cmp_gt0001_cy<10>
+    SLICE_X28Y38.F2      net (fanout=18)       1.244   bola/Mcompar_mux0000_cmp_gt0001_cy<10>
+    SLICE_X28Y38.X       Tilo                  0.660   N451
+                                                       bola/mux0000_and0002_SW3
+    SLICE_X30Y38.G3      net (fanout=1)        0.300   N451
+    SLICE_X30Y38.Y       Tilo                  0.660   bola/_old_address_4<3>1328
+                                                       bola/_mux0008<1>1
+    SLICE_X30Y38.F4      net (fanout=3)        0.039   bola/_mux0008<1>
+    SLICE_X30Y38.X       Tilo                  0.660   bola/_old_address_4<3>1328
+                                                       bola/_old_address_4<3>1328
+    SLICE_X40Y39.G1      net (fanout=4)        0.707   bola/_old_address_4<3>1328
+    SLICE_X40Y39.Y       Tilo                  0.660   bola/active_2_1
+                                                       bola/Madd_COND_13_addsub0000_xor<1>11_SW0
+    SLICE_X40Y38.G1      net (fanout=15)       0.569   N280
+    SLICE_X40Y38.Y       Tilo                  0.660   bola/active_1_1
+                                                       bola/_mux0011<1>
+    SLICE_X41Y40.F1      net (fanout=1)        0.351   bola/_mux0011<1>
+    SLICE_X41Y40.COUT    Topcyf                1.011   bola/_old_win_18_wg_cy<1>
+                                                       bola/_old_win_18_wg_lut<0>
+                                                       bola/_old_win_18_wg_cy<0>
+                                                       bola/_old_win_18_wg_cy<1>
+    SLICE_X41Y41.CIN     net (fanout=1)        0.000   bola/_old_win_18_wg_cy<1>
+    SLICE_X41Y41.COUT    Tbyp                  0.103   bola/_old_win_18_wg_cy<3>
+                                                       bola/_old_win_18_wg_cy<2>
+                                                       bola/_old_win_18_wg_cy<3>
+    SLICE_X41Y42.CIN     net (fanout=1)        0.000   bola/_old_win_18_wg_cy<3>
+    SLICE_X41Y42.XB      Tcinxb                0.352   bola/active_9_0
+                                                       bola/_old_win_18_wg_cy<4>
+    SLICE_X38Y51.G3      net (fanout=38)       1.061   bola/_old_win_18
+    SLICE_X38Y51.Y       Tilo                  0.660   bola/ball_dy<1>
+                                                       bola/_old_ball_dy_20<0>1
+    SLICE_X35Y50.F2      net (fanout=1)        0.337   bola/_old_ball_dy_20<0>
+    SLICE_X35Y50.COUT    Topcyf                1.011   bola/ball_y<0>
+                                                       bola/Maccum_ball_y_lut<0>
+                                                       bola/Maccum_ball_y_cy<0>
+                                                       bola/Maccum_ball_y_cy<1>
+    SLICE_X35Y51.CIN     net (fanout=1)        0.000   bola/Maccum_ball_y_cy<1>
+    SLICE_X35Y51.COUT    Tbyp                  0.103   bola/ball_y<2>
+                                                       bola/Maccum_ball_y_cy<2>
+                                                       bola/Maccum_ball_y_cy<3>
+    SLICE_X35Y52.CIN     net (fanout=1)        0.000   bola/Maccum_ball_y_cy<3>
+    SLICE_X35Y52.COUT    Tbyp                  0.103   bola/ball_y<4>
+                                                       bola/Maccum_ball_y_cy<4>
+                                                       bola/Maccum_ball_y_cy<5>
+    SLICE_X35Y53.CIN     net (fanout=1)        0.000   bola/Maccum_ball_y_cy<5>
+    SLICE_X35Y53.COUT    Tbyp                  0.103   bola/ball_y<6>
+                                                       bola/Maccum_ball_y_cy<6>
+                                                       bola/Maccum_ball_y_cy<7>
+    SLICE_X35Y54.CIN     net (fanout=1)        0.000   bola/Maccum_ball_y_cy<7>
+    SLICE_X35Y54.CLK     Tcinck                0.872   bola/ball_y<8>
+                                                       bola/Maccum_ball_y_cy<8>
+                                                       bola/Maccum_ball_y_xor<9>
+                                                       bola/ball_y_9
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -0.021 (requirement - (data path - clock path skew + uncertainty))
+  Source:               bola/address_2_1 (FF)
+  Destination:          bola/ball_y_9 (FF)
+  Requirement:          24.666
+  Data Path Delay:      24.687 (Levels of Logic = 20)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_ball_divider/clk_buf rising at 0.000ns
+  Destination Clock:    clk_ball_divider/clk_buf rising at 24.666ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: bola/address_2_1 to bola/ball_y_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y34.YQ      Tcko                  0.511   bola/address_2_1
+                                                       bola/address_2_1
+    SLICE_X34Y36.G2      net (fanout=12)       0.816   bola/address_2_1
+    SLICE_X34Y36.Y       Tilo                  0.660   bola/erase_pos<3>
+                                                       bola/_old_address_4<2>1
+    MULT18X18_X1Y4.A2    net (fanout=17)       1.532   bola/Msub_temp2_addsub0000_lut<2>
+    MULT18X18_X1Y4.P6    Tmult                 3.632   bola/Mmult_temp2_mult0002
+                                                       bola/Mmult_temp2_mult0002
+    SLICE_X40Y36.F3      net (fanout=8)        1.129   bola/temp2_mult0002<6>
+    SLICE_X40Y36.X       Tif5x                 1.000   bola/Madd__old_temp2_7_cy<6>
+                                                       bola/Madd__old_temp2_7_cy<6>11_G
+                                                       bola/Madd__old_temp2_7_cy<6>11
+    SLICE_X36Y36.F2      net (fanout=11)       0.677   bola/Madd__old_temp2_7_cy<6>
+    SLICE_X36Y36.X       Tilo                  0.660   bola/Madd_add0000_addsub0000_lut<9>
+                                                       bola/Madd__old_temp2_7_xor<9>11
+    SLICE_X38Y36.G2      net (fanout=9)        0.432   bola/Madd_add0000_addsub0000_lut<9>
+    SLICE_X38Y36.COUT    Topcyg                0.984   bola/Mcompar_mux0000_cmp_gt0001_cy<9>
+                                                       bola/Mcompar_mux0000_cmp_gt0001_lut<9>
+                                                       bola/Mcompar_mux0000_cmp_gt0001_cy<9>
+    SLICE_X38Y37.CIN     net (fanout=1)        0.000   bola/Mcompar_mux0000_cmp_gt0001_cy<9>
+    SLICE_X38Y37.XB      Tcinxb                0.431   bola/Mcompar_mux0000_cmp_gt0001_cy<10>
+                                                       bola/Mcompar_mux0000_cmp_gt0001_cy<10>
+    SLICE_X28Y38.F2      net (fanout=18)       1.244   bola/Mcompar_mux0000_cmp_gt0001_cy<10>
+    SLICE_X28Y38.X       Tilo                  0.660   N451
+                                                       bola/mux0000_and0002_SW3
+    SLICE_X30Y38.G3      net (fanout=1)        0.300   N451
+    SLICE_X30Y38.Y       Tilo                  0.660   bola/_old_address_4<3>1328
+                                                       bola/_mux0008<1>1
+    SLICE_X30Y38.F4      net (fanout=3)        0.039   bola/_mux0008<1>
+    SLICE_X30Y38.X       Tilo                  0.660   bola/_old_address_4<3>1328
+                                                       bola/_old_address_4<3>1328
+    SLICE_X40Y39.G1      net (fanout=4)        0.707   bola/_old_address_4<3>1328
+    SLICE_X40Y39.Y       Tilo                  0.660   bola/active_2_1
+                                                       bola/Madd_COND_13_addsub0000_xor<1>11_SW0
+    SLICE_X38Y39.G1      net (fanout=15)       0.613   N280
+    SLICE_X38Y39.Y       Tilo                  0.660   bola/active_4_1
+                                                       bola/_mux0014<1>
+    SLICE_X41Y40.F3      net (fanout=1)        0.304   bola/_mux0014<1>
+    SLICE_X41Y40.COUT    Topcyf                1.011   bola/_old_win_18_wg_cy<1>
+                                                       bola/_old_win_18_wg_lut<0>
+                                                       bola/_old_win_18_wg_cy<0>
+                                                       bola/_old_win_18_wg_cy<1>
+    SLICE_X41Y41.CIN     net (fanout=1)        0.000   bola/_old_win_18_wg_cy<1>
+    SLICE_X41Y41.COUT    Tbyp                  0.103   bola/_old_win_18_wg_cy<3>
+                                                       bola/_old_win_18_wg_cy<2>
+                                                       bola/_old_win_18_wg_cy<3>
+    SLICE_X41Y42.CIN     net (fanout=1)        0.000   bola/_old_win_18_wg_cy<3>
+    SLICE_X41Y42.XB      Tcinxb                0.352   bola/active_9_0
+                                                       bola/_old_win_18_wg_cy<4>
+    SLICE_X38Y51.G3      net (fanout=38)       1.061   bola/_old_win_18
+    SLICE_X38Y51.Y       Tilo                  0.660   bola/ball_dy<1>
+                                                       bola/_old_ball_dy_20<0>1
+    SLICE_X35Y50.F2      net (fanout=1)        0.337   bola/_old_ball_dy_20<0>
+    SLICE_X35Y50.COUT    Topcyf                1.011   bola/ball_y<0>
+                                                       bola/Maccum_ball_y_lut<0>
+                                                       bola/Maccum_ball_y_cy<0>
+                                                       bola/Maccum_ball_y_cy<1>
+    SLICE_X35Y51.CIN     net (fanout=1)        0.000   bola/Maccum_ball_y_cy<1>
+    SLICE_X35Y51.COUT    Tbyp                  0.103   bola/ball_y<2>
+                                                       bola/Maccum_ball_y_cy<2>
+                                                       bola/Maccum_ball_y_cy<3>
+    SLICE_X35Y52.CIN     net (fanout=1)        0.000   bola/Maccum_ball_y_cy<3>
+    SLICE_X35Y52.COUT    Tbyp                  0.103   bola/ball_y<4>
+                                                       bola/Maccum_ball_y_cy<4>
+                                                       bola/Maccum_ball_y_cy<5>
+    SLICE_X35Y53.CIN     net (fanout=1)        0.000   bola/Maccum_ball_y_cy<5>
+    SLICE_X35Y53.COUT    Tbyp                  0.103   bola/ball_y<6>
+                                                       bola/Maccum_ball_y_cy<6>
+                                                       bola/Maccum_ball_y_cy<7>
+    SLICE_X35Y54.CIN     net (fanout=1)        0.000   bola/Maccum_ball_y_cy<7>
+    SLICE_X35Y54.CLK     Tcinck                0.872   bola/ball_y<8>
+                                                       bola/Maccum_ball_y_cy<8>
+                                                       bola/Maccum_ball_y_xor<9>
+                                                       bola/ball_y_9
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net vga_clk
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 355724 paths analyzed, 108 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  16.744ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net clk_paddle_p/clk_buf
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 950 paths analyzed, 30 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.737ns.
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+

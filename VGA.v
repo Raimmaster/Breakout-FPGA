@@ -50,13 +50,13 @@ module VGA(
 				if(i < 5) begin
 					data_x[i] = BLOCK_SPACING_X + (BLOCK_SPACING_X + BLOCK_WIDTH) * i;
 					data_y[i] = FIRST_ROW_Y;
-					block_colors[i] = 6'b101110;
+					block_colors[i] = 6'b001110;
 					active[i] = 0;
 				end
 				else if (i < 10) begin
 					data_x[i] = BLOCK_SPACING_X + ((BLOCK_SPACING_X + BLOCK_WIDTH) * (i-5));
 					data_y[i] = SECOND_ROW_Y;					
-					block_colors[i] = 6'b100101;
+					block_colors[i] = 6'b010101;
 					active[i] = 0;
 				end
 			end
@@ -93,7 +93,7 @@ module VGA(
 
         		if(vcount >= ball_y && vcount <= (ball_y + BALL_SIZE)//ball
         			&& hcount >= ball_x && hcount <= (ball_x + BALL_SIZE) )
-        			RGB = 6'b101101;//'
+        			RGB = 6'b111000;//'
 
 				if(vcount > 440 && vcount < 450 && 
 					hcount > paddle_pos && hcount < paddle_pos + 100)begin//paddle
