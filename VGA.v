@@ -33,9 +33,9 @@ module VGA(
 	assign hor_count = hcount;
 	assign ver_count = vcount;
 	 
-	reg [9:0] data_x [24:0];
-	reg [9:0] data_y [24:0];
-	reg [2:0] active [24:0];
+	reg [9:0] data_x [19:0];
+	reg [9:0] data_y [19:0];
+	reg [2:0] active [19:0];
 	reg [4:0] i;
 	
 	reg [5:0] block_colors [24:0];
@@ -46,7 +46,7 @@ module VGA(
 			
 		if (reset) begin
 		  	//initialize rows and columns of block
-			for (i = 0; i < 25; i = i + 1) begin
+			for (i = 0; i < 20; i = i + 1) begin
 				if(i < 5) begin
 					data_x[i] = BLOCK_SPACING_X + (BLOCK_SPACING_X + BLOCK_WIDTH) * i;
 					data_y[i] = FIRST_ROW_Y;
@@ -123,7 +123,7 @@ module VGA(
 					RGB = 6'b100001;//'
 				end
 				else begin
-				for (i = 0; i < 25; i = i + 1) begin
+				for (i = 0; i < 20; i = i + 1) begin
 					//first row of blocks (upper)
 					//if(i < 5)begin
 						if(active[i] != 2'b11 && (vcount >= data_y[i] && vcount <= (data_y[i] + BLOCK_HEIGHT)) 

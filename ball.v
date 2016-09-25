@@ -79,26 +79,20 @@ module ball(
 			//erase_e = 1;
 		end
 		
-		if(address >= 25)begin
-			address = 0;
-		end
-		else begin
-			address = address + 1;
-			if(address >= 25)
-				address = 0;
-			if (ball_y >= FIFTH_ROW_Y && address < 19)
-				address = 19;
-			else if (ball_y >= FOURTH_ROW_Y && (address < 14 || address > 19))
-				address = 14;
-			else if (ball_y >= THIRD_ROW_Y && (address < 9 || address > 14))
-				address = 9;
-			else if (ball_y >= SECOND_ROW_Y && (address < 4  || address > 9))
-				address = 5;
-			else if (ball_y >= 0 &&( (address > 4)))
-				address = 0;
-		end
 		
-		///*
+		address = address + 10'd1;
+		if(address >= 10'd10)
+			address = 10'd0;
+		/*if (ball_y >= FIFTH_ROW_Y)
+			address = 10'd19;
+		else if (ball_y >= FOURTH_ROW_Y && (address > 19))
+			address = 10'd14;
+		else if (ball_y >= THIRD_ROW_Y && (address > 14))
+			address = 10'd9;
+		else if (ball_y >= SECOND_ROW_Y && (address > 9))
+			address = 10'd5;
+		else if (ball_y >= 0 &&( (address > 4)))
+			address = 10'd0;*/
 		
 					
 			if (address<5) begin
@@ -154,7 +148,7 @@ module ball(
 		
 		
 		win = 1;
-		for (i = 0; i < 10; i = i + 1) begin
+		for (i = 0; i < 25; i = i + 1) begin
 				if (active[i] < 3)
 					win = 0;
 		end
@@ -190,7 +184,7 @@ module ball(
 			ball_dx = -10'd1;
 			ball_dy = -10'd1;
 			
-			for (i = 0; i < 10; i = i + 1) begin
+			for (i = 0; i < 25; i = i + 1) begin
 				active[i] = 0;			
 			end
 		end
