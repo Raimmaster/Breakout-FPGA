@@ -9,8 +9,8 @@ module Main(
 		input right_button,
 		input reset_button,
 		input mi_nota,
-		input left_button
-		//output [3:0] tono
+		input left_button,
+		output [3:0] tono
     );
 	//VGA section
 	wire vga_clk;
@@ -47,12 +47,13 @@ module Main(
 	Paddle pd(left_button, right_button, reset_button, clk_paddle, paddle_pos);
 	
 	wire [2:0] data;
-	wire play_sound1;
-	wire play_sound2;
+	wire [3:0] play_sound1;
+	//wire play_sound2;
 	wire [1:0] active_data;
 	//paddle end
 	//ball init
-	ball bola(paddle_pos, reset_button, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, play_sound2, active_data);
+	//ball bola(paddle_pos, reset_button, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, play_sound2, active_data);
+	ball bola(paddle_pos, reset_button, clk_ball, ball_x, ball_y, erase_enable, erase_pos, play_sound1, active_data);
 		
 	VGA vga(vga_clk, rgb, hs, vs, hcount, vcount, data, paddle_pos, ball_x, ball_y, reset_button, erase_enable, erase_pos, active_data);
 	
@@ -62,20 +63,6 @@ module Main(
 	assign hsync = hs;
 	assign vsync = vs;
 	
-	//debian_rom d_rom(address_vga, data);
-	/*
-	always @(posedge vga_clk)
-		begin
-			if(vcount < 100)begin
-				if(hcount < 100) begin
-					address_vga = address_vga + 1;
-				end
-			end
-			else begin
-				address_vga = 0;
-			end
-		end
-	*/
 	////Audio section
 	/*
 	C	2986 BAA
@@ -84,7 +71,8 @@ module Main(
 	G	1993 7C9	
 	Dividir entre 2 para cambiar de posedge y negedge
 	*/
-	/*wire clk_out_do;
+	
+	wire clk_out_do;
 	wire clk_out_re;
 	wire clk_out_mi;
 	wire clk_out_sol;
@@ -120,7 +108,6 @@ module Main(
 	
 	sinewave_rom_do rom_tono(address_audio, tono);
 
-
 	always @(posedge clk_actual) 
 	begin
 		address_audio = address_audio + 1;
@@ -128,15 +115,14 @@ module Main(
 	
 	always @ (posedge clk50mhz) begin
 			temp = 0;
-			if(play_sound1) begin
-				temp = clk_out_do;
-			end
-			
-			if(play_sound2) begin
-				temp = clk_out_re;
-			end
-		
-	end*/
+			case(play_sound1)
+				3'b001: temp = clk_out_do;
+				3'b010: temp = clk_out_re;
+				3'b011: temp = clk_out_mi;
+				3'b100: temp = clk_out_sol;
+				default: temp = clk_out_do;
+			endcase
+	end
 	/*
 	always @()
 	begin

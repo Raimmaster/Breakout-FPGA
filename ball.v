@@ -9,8 +9,8 @@ module ball(
    	output [9:0] y_out,
 	output erase_enable,
 	output [5:0] e_pos,
-	output play_sound1,
-	output reg play_sound2,
+	output reg [2:0] play_sound1,
+	//output reg play_sound2,
 	output reg [1:0] active_data
    	);
 	parameter
@@ -41,8 +41,8 @@ module ball(
 	reg [3:0] address;
 	reg win;
 	
-	reg p_sound;
-	assign play_sound1 = p_sound;
+	//reg p_sound;
+	//assign play_sound1 = p_sound;
 	
 	reg [1:0] active [9:0];
 	reg [9:0] temp1;
@@ -63,14 +63,14 @@ module ball(
 		
 		if(ball_y <= 1) //screen boundaries check
 		begin
-			p_sound = 1;
+			play_sound1 = 3'b001;
 			ball_dy = ball_dy * -1;
 			//erase_e = 1;
 		end
 		
 		if(ball_y > SCREEN_H - BALL_SIZE) //screen boundaries check
 		begin
-			play_sound2 = 1;
+			play_sound1 = 3'b100;
 			ball_dy = 0;
 			//erase_e = 1;
 		end
@@ -106,6 +106,7 @@ module ball(
 					erase_pos = address;
 					ball_dx = ball_dx * -1;
 					active[address] = active[address] + 1;
+					play_sound1 = active[address];
 					active_data = active[address];
 				end
 				
@@ -118,6 +119,7 @@ module ball(
 					erase_pos = address;
 					ball_dy = ball_dy * -1;
 					active[address] = active[address] + 1;
+					play_sound1 = active[address];
 					active_data = active[address];
 				end
 			end

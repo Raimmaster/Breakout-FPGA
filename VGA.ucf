@@ -27,10 +27,10 @@ Net "VSYNC" LOC="D7" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
 #clk50mhz is the same for audio
 #Net "clk50mhz" LOC="B8";
 
-#Net "tono[3]" LOC="A10" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
-#Net "tono[2]" LOC="E11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
-#Net "tono[1]" LOC="E10" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
-#Net "tono[0]" LOC="D10" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "tono[3]" LOC="E7" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "tono[2]" LOC="F8" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "tono[1]" LOC="C6" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "tono[0]" LOC="D6" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
 
 Net "right_button" LOC="C13" | IOSTANDARD = LVCMOS33;
 Net "reset_button" LOC="D12" | IOSTANDARD = LVCMOS33;
